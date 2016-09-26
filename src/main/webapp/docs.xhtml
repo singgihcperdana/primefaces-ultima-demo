@@ -10,7 +10,7 @@
             .docs h1 {
                 margin-top: 30px;
             }
-            
+
             .docs pre {
                 font-family: monospace;
                 background-color: #0C2238;
@@ -20,7 +20,7 @@
                 border-radius: 3px;
                 overflow: auto;
             }
-            
+
             .video-container {
                 position: relative;
                 width: 100%;
@@ -35,19 +35,19 @@
                 height: 100%;
             }
         </style></head><body class="main-body layout-compact">
-        
+
         <div class="layout-wrapper menu-layout-static">
 
     <div class="topbar clearfix">
-        <div class="topbar-left">            
+        <div class="topbar-left">
             <div class="logo"></div>
         </div>
-        
+
         <div class="topbar-right">
             <a id="menu-button" href="#">
                 <i></i>
             </a>
-            
+
             <a id="topbar-menu-button" href="#">
                 <i class="material-icons">menu</i>
             </a>
@@ -154,14 +154,14 @@
                 <li class="search-item"><span class="md-inputfield"><input id="j_idt27" name="j_idt27" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt27_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt27",{id:"j_idt27"});</script>
                         <label>Search</label>
                         <i class="topbar-icon material-icons"></i></span>
-                    
+
                 </li>
             </ul>
         </div>
     </div>
 <form id="menuform" name="menuform" method="post" action="/ultima/docs.xhtml" enctype="application/x-www-form-urlencoded">
 <input type="hidden" name="menuform" value="menuform" />
- 
+
         <div class="layout-menu ">
             <div class="nano">
                 <div class="nano-content menu-scroll-content">
@@ -172,7 +172,7 @@
                                 <i class="material-icons"></i>
                             </a>
                         </div>
-                    
+
                         <ul id="profile-menu" class="ultima-menu">
                             <li role="menuitem">
                                 <a href="#" class="ripplelink">
@@ -203,28 +203,28 @@
             </div>
         </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-8050804188970256494:1164661857248534643" autocomplete="off" />
 </form>
-            
+
             <div class="layout-main">
-    
+
         <div class="ui-g">
             <div class="ui-g-12">
                 <div class="card docs">
                     <h1>Layout</h1>
-                    <p>Ultima provides a main template.xhtml and additional <i>topbar</i>, <i>menu</i> and <i>footer</i> fragments for the base layout. 
-                        These xhtml files must be placed under WEB-INF folder and client pages should reference the template.xhtml as their template. 
+                    <p>Ultima provides a main template.xhtml and additional <i>topbar</i>, <i>menu</i> and <i>footer</i> fragments for the base layout.
+                        These xhtml files must be placed under WEB-INF folder and client pages should reference the template.xhtml as their template.
                         Provided empty-page.xhtml is a sample content page using the main template.xhtml that defines "content" as the main ui:define placeholder.</p>
-                    
-                    <p>Other required resources are the css, js and images that are located inside resources/ultima-layout folder, simply copy the ultima-layout folder to your %WEB-APP-FOLDER%/resources folder 
+
+                    <p>Other required resources are the css, js and images that are located inside resources/ultima-layout folder, simply copy the ultima-layout folder to your %WEB-APP-FOLDER%/resources folder
                         so that final path would be %WEB-APP-FOLDER%/resources/ultima-layout/. Please refer to demo app or maven project of the demo app as the reference.</p>
-                    
+
                     <h1>Size</h1>
                     <p>Ultima comes in two sizes, default is closer to the material design specification with bigger fonts and paddings whereas the alternative compact size
                     shrinks the dimensions of the UI elements. To activate the compact mode add "layout-compact" style class to the h:body element at template.xhtml.</p>
-                    
-                    <h1>Theme</h1>    
-                    <p>Ultima provides 12 PrimeFaces themes out of the box, setup of a theme simple as defining primefaces.THEME context parameter in web.xml such as "primefaces-ultima-indigo". Full list of 
+
+                    <h1>Theme</h1>
+                    <p>Ultima provides 12 PrimeFaces themes out of the box, setup of a theme simple as defining primefaces.THEME context parameter in web.xml such as "primefaces-ultima-indigo". Full list of
                     available themes are;</p>
-                    
+
                     <ul>
                         <li>primefaces-ultima-blue</li>
                         <li>primefaces-ultima-blue-grey</li>
@@ -239,7 +239,7 @@
                         <li>primefaces-ultima-purple-cyan</li>
                         <li>primefaces-ultima-teal</li>
                     </ul>
-                    
+
                     <p>A custom theme can be developed by the following steps.</p>
                     <ul>
                         <li>Choose a custom theme name such as primefaces-ultima-myown.</li>
@@ -250,10 +250,10 @@
                         <li>Set primefaces.THEME context parameter as <i>ultima-myown</i></li>
                         <li>Either bundle the css in a jar file or serve from webapp/resources/primefaces-ultima-myown folder</li>
                     </ul>
-                    
-                    <p>Here are the variables required to create a theme, you may need to change the last line according to the 
+
+                    <p>Here are the variables required to create a theme, you may need to change the last line according to the
                         relative path of the sass folder in your application.</p>
-                        
+
 <pre>
 $primaryColor: #009688;
 $primaryDarkColor: #00695C;
@@ -264,19 +264,19 @@ $accentLightColor: #E6EE9C;
 $accentTextColor: #212121;
 
 @import '../sass/theme/_theme';
-</pre> 
-                        
+</pre>
+
                     <p> An example sass command to compile the css would be;</p>
-                        
+
 <pre>
 sass src/main/webapp/resources/primefaces-ultima-myown/theme.scss src/main/webapp/resources/primefaces-ultima-myown/theme.css  --sourcemap=none
-</pre> 
+</pre>
 
                     <p>Watch mode is handy to avoid compiling everytime when a change is made, instead use the following command
                     so that sass generates the file whenever you make a customization. This builds all css files whenever a change is made to any scss file.</p>
 <pre>
 sass -w src/main/webapp/resources/ --sourcemap=none
-</pre> 
+</pre>
 
                     <p>Same can also be applied to layout itself;</p>
                     <ul>
@@ -286,10 +286,10 @@ sass -w src/main/webapp/resources/ --sourcemap=none
                         <li>Build the scss to generate css</li>
                         <li>Serve the css by importing it using a link tag or h:outputStylesheet.</li>
                     </ul>
-                    
-                    <p>Here are the variables required to create a layout, you may need to change the last line according to the 
+
+                    <p>Here are the variables required to create a layout, you may need to change the last line according to the
                         relative path of the sass folder in your application.</p>
-                    
+
 <pre>
 $primaryColor: #03A9F4;
 $primaryDarkColor: #0277BD;
@@ -302,12 +302,13 @@ $darkMenuBgColor: #424242;
 $darkMenuHoverColor: #676767;
 
 @import '/../sass/layout/_layout';
-</pre> 
+</pre>
 
                     <p>Check out the video tutorial that follows the steps above to create the dark-blue theme and layout</p>
                     <div class="video-container">
-                        <video src="http://www.youtube.com/watch?v=XmU7QYFYuPk" controls="controls" autoplay>                     </div>
-                    
+                        <video src="http://www.youtube.com/watch?v=XmU7QYFYuPk" controls="controls" autoplay="autoplay"/>
+                    </div>
+
                     <p>For both cases, several .scss files such as _layout.scss, _theme.scss or _variables.scss has to be present relative to your scss files, these are available inside the sass folder in the distribution.</p>
                     <p>In case you'd like to customize the structure not just the colors, the _variables.scss is where the structural variables (e.g. font size, paddings) for the layout are defined.</p>
 <pre>
@@ -351,11 +352,11 @@ $hoverTextColor: #000000;
 $dividerColor: #bdbdbd;
 $dividerLightColor: #cacaca;
 $grayBgColor: #757575;
-</pre>        
+</pre>
 
-                                            
-                    <h1>Menu</h1>    
-                    <p>Menu is a regular JSF component that supports PrimeFaces MenuModel API allowing both declarative and programmatic approaches. 
+
+                    <h1>Menu</h1>
+                    <p>Menu is a regular JSF component that supports PrimeFaces MenuModel API allowing both declarative and programmatic approaches.
                     State is saved via a cookie and to remove it define a widgetVar to the menu and call PF('yourwidgetvar').clearMenuState(). To use the menu
                     add the primefaces-ultima-{version}.jar to your classpath and import the http://primefaces.org/ultima namespace.</p>
 <pre>
@@ -363,7 +364,7 @@ xmlns:pu="http://primefaces.org/ultima"&gt;
 
 &lt;pu:menu&gt;
 &lt;/pu:menu&gt;
-</pre>  
+</pre>
                     <p>Menu has 3 modes, static, overlay and horizontal. Layout wrapper element in template.xhtml is used to define which mode to use by adding specific classes. List
                     below indicates the style classes for each mode.</p>
                     <ul>
@@ -371,48 +372,48 @@ xmlns:pu="http://primefaces.org/ultima"&gt;
                         <li>Overlay: "layout-wrapper menu-layout-overlay"</li>
                         <li>Horizontal: "layout-wrapper menu-layout-static menu-layout-horizontal"</li>
                     </ul>
-                    
+
                     <p>For example to create a horizontal menu, the div element should be in following form;</p>
 <pre>
 &lt;div class="layout-wrapper menu-layout-static menu-layout-horizontal"&gt;
     &lt;ui:include src="./topbar.xhtml" /&gt;
     &lt;ui:include src="./menu.xhtml" /&gt;
-    
+
     &lt;div class="layout-main"&gt;
         &lt;ui:insert name="content"/&gt;
-        
+
         &lt;ui:include src="./footer.xhtml" /&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</pre>            
+</pre>
 
                     <p>It is also possible to leave the choice to the user by keeping the preference at a bean and usign an EL expression to bind it so that user can switch between modes. Sample
-                    application has an example implementation of such use case.</p>          
+                    application has an example implementation of such use case.</p>
 <pre>
 &lt;div class="layout-wrapper menu-layout-static"&gt;
 
 &lt;/div&gt;
-</pre>  
-                    
+</pre>
+
                     <h1>Profile Modes</h1>
                     <p>There are two possible locations for the user profile menu, first version is inline located inside the main menu and second option is the topbar menu. For inline mode,
                     profile content should be placed above the &lt;pu:menu /&gt;component and for inline mode content goes in topbar-items list. The sample demo application provides examples for
                     both cases and even takes it to the next step by making it dynamic with an EL expression.</p>
-                        
+
                     <h1>Utilities</h1>
                     <p>Ultima provides various helper features such as material iconset compatible with PrimeFaces components and helper classes. Visit <a href="/ultima/utils.xhtml">Utils</a> page for details.</p>
-                    
+
                     <h1>Ripple Effect</h1>
                     <p>Various elements display a ripple element on mousedown event, if you prefer to remove this effect, simply remove the ripple.js and ripple.css files from template.xhtml.</p>
-                                
+
                     <h1>Grid CSS</h1>
-                    <p>Ultima uses new PrimeFaces Grid CSS (ui-g-*) throughout the samples, we strongly suggest using Grid CSS as your layout framework as it is well tested and supported by PrimeFaces. Grid CSS 
-                    is automatically included on newer versions however if your PrimeFaces version is older than 5.3.14, add the provided grid.css file under /ultima-layout/css/ folder to your template manually.</p>            
-                
+                    <p>Ultima uses new PrimeFaces Grid CSS (ui-g-*) throughout the samples, we strongly suggest using Grid CSS as your layout framework as it is well tested and supported by PrimeFaces. Grid CSS
+                    is automatically included on newer versions however if your PrimeFaces version is older than 5.3.14, add the provided grid.css file under /ultima-layout/css/ folder to your template manually.</p>
+
                 </div>
             </div>
         </div>
-    
+
     <div class="footer">
         <div class="card clearfix">
             <span class="footer-text-left">PrimeFaces ULTIMA</span>
