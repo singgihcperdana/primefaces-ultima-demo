@@ -1,0 +1,174 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <div class="topbar clearfix">
+        <div class="topbar-left">
+            <div class="logo"/>
+        </div>
+
+        <div class="topbar-right">
+            <a id="menu-button" href="#">
+                <i/>
+            </a>
+
+            <a id="topbar-menu-button" href="#">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="topbar-items fadeInDown animated">
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons"/>
+                        <span class="topbar-item-name">Settings</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"/>
+                                <span>Change Theme</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"/>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"/>
+                                <span>Lock Screen</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"/>
+                                <span>Wallpaper</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons animated swing"/>
+                        <span class="topbar-badge animated rubberBand">5</span>
+                        <span class="topbar-item-name">Messages</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message">
+                                <!--<img id="j_idt15" src="/ultima/javax.faces.resource/images/avatar1.png.xhtml?ln=ultima-layout" alt="" width="35" />-->
+                                <p:graphicImage value="#{resource['ultima-layout:images/avatar1.png']}" width="35"/>
+                                <span>Give me a call</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message">
+                                <!--<img id="j_idt17" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />-->
+                                <p:graphicImage value="#{resource['ultima-layout:images/avatar2.png']}" width="35"/>
+                                <span>Sales reports attached</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message">
+                                <!--<img id="j_idt19" src="/ultima/javax.faces.resource/images/avatar3.png.xhtml?ln=ultima-layout" alt="" width="35" />-->
+                                <p:graphicImage value="#{resource['ultima-layout:images/avatar3.png']}" width="35"/>
+                                <span>About your invoice</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message">
+                                <!--<img id="j_idt21" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />-->
+                                <p:graphicImage value="#{resource['ultima-layout:images/avatar2.png']}" width="35"/>
+                                <span>Meeting today at 10pm</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message">
+                                <!--<img id="j_idt23" src="/ultima/javax.faces.resource/images/avatar4.png.xhtml?ln=ultima-layout" alt="" width="35" />-->
+                                <p:graphicImage value="#{resource['ultima-layout:images/avatar4.png']}" width="35"/>
+                                <span>Out of office</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons"/>
+                        <span class="topbar-badge animated rubberBand">4</span>
+                        <span class="topbar-item-name">Notifications</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"/>
+                                <span>Pending tasks</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"/>
+                                <span>Meeting today at 3pm</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"/>
+                                <span>Download documents</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"/>
+                                <span>Book flight</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="search-item">
+                    <span class="md-inputfield">
+                        <p:inputText placeholder="Search"/>
+                        <!--<input id="j_idt26" name="j_idt26" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+                        <script id="j_idt26_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt26",{id:"j_idt26"});</script>-->
+                        <label>Search</label>
+                        <i class="topbar-icon material-icons"/>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--    <div class="topbar clearfix">
+            <a id="ultima-menu-button" href="#">
+                <span class="fa fa-bars"/>
+            </a>
+
+            <span class="topbar-title"><ui:insert name="topbar-title"/></span>
+
+            <a id="options-menu-button" href="#">
+                <span class="fa fa-ellipsis-h"/>
+            </a>
+
+            <div id="topbar-icons" class="animated">
+                <span class="topbar-search">
+                    <input type="text" placeholder="Search" />
+                    <p:inputText placeholder="Search"/>
+                    <span class="topbar-search-icon fa fa-search"/>
+                </span>
+                <a href="#">
+                    <span class="topbar-item-text">Messages</span>
+                    <span class="topbar-icon fa fa-envelope-o animated swing"/>
+                    <span class="topbar-badge animated rubberBand">5</span>
+                </a>
+                <a href="#">
+                    <span class="topbar-item-text">Settings</span>
+                    <span class="topbar-icon fa fa-gear"/>
+                </a>
+                <a href="#">
+                    <span class="topbar-item-text">User</span>
+                    <span class="topbar-icon fa fa-user"/>
+                </a>
+            </div>
+        </div>-->
+</ui:composition>

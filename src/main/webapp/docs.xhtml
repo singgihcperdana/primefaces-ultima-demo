@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="theme-color" content="#3F51B5" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-indigo" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/nanoscroller.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/animate.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/ripple.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/layout-indigo.css.xhtml?ln=ultima-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+        <title>PrimeFaces Ultima</title><script type="text/javascript" src="/ultima/javax.faces.resource/js/nanoscroller.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/layout.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/ripple.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/swipe.js.xhtml?ln=ultima-layout"></script>
+        <style type="text/css">
+            .docs h1 {
+                margin-top: 30px;
+            }
+            
+            .docs pre {
+                font-family: monospace;
+                background-color: #0C2238;
+                color: #dddddd;
+                padding: 1em;
+                font-size: 14px;
+                border-radius: 3px;
+                overflow: auto;
+            }
+            
+            .video-container {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;
+            }
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style></head><body class="main-body layout-compact">
+        
+        <div class="layout-wrapper menu-layout-static">
+
+    <div class="topbar clearfix">
+        <div class="topbar-left">            
+            <div class="logo"></div>
+        </div>
+        
+        <div class="topbar-right">
+            <a id="menu-button" href="#">
+                <i></i>
+            </a>
+            
+            <a id="topbar-menu-button" href="#">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="topbar-items fadeInDown animated">
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons"></i>
+                        <span class="topbar-item-name">Settings</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Change Theme</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Lock Screen</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Wallpaper</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons animated swing"></i>
+                        <span class="topbar-badge animated rubberBand">5</span>
+                        <span class="topbar-item-name">Messages</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt16" src="/ultima/javax.faces.resource/images/avatar1.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Give me a call</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt18" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Sales reports attached</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt20" src="/ultima/javax.faces.resource/images/avatar3.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>About your invoice</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt22" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Meeting today at 10pm</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt24" src="/ultima/javax.faces.resource/images/avatar4.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Out of office</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons"></i>
+                        <span class="topbar-badge animated rubberBand">4</span>
+                        <span class="topbar-item-name">Notifications</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Pending tasks</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Meeting today at 3pm</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Download documents</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Book flight</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="search-item"><span class="md-inputfield"><input id="j_idt27" name="j_idt27" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt27_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt27",{id:"j_idt27"});</script>
+                        <label>Search</label>
+                        <i class="topbar-icon material-icons"></i></span>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+<form id="menuform" name="menuform" method="post" action="/ultima/docs.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menuform" value="menuform" />
+ 
+        <div class="layout-menu ">
+            <div class="nano">
+                <div class="nano-content menu-scroll-content">
+                        <div class="profile">
+                            <div class="profile-image"></div>
+                            <a id="profile-options" href="#">
+                                <span class="profile-name">Jane Williams</span>
+                                <i class="material-icons"></i>
+                            </a>
+                        </div>
+                    
+                        <ul id="profile-menu" class="ultima-menu">
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">person</i>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">security</i>
+                                    <span>Privacy</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">settings_application</i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">power_settings_new</i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul><ul id="menuform:j_idt33" class="ultima-menu clearfix"><li id="menuform:um_dashboard" role="menuitem"><a href="/ultima/dashboard.xhtml"><i class="material-icons"></i><span>Dashboard</span></a></li><li id="menuform:themes" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">palette</i><span>Themes</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:theme1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme1':'menuform:theme1'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Indigo - Pink</span></a></li><li id="menuform:theme2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme2':'menuform:theme2'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Brown - Green</span></a></li><li id="menuform:theme3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme3':'menuform:theme3'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Blue - Amber</span></a></li><li id="menuform:theme4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme4':'menuform:theme4'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Blue Grey - Green</span></a></li><li id="menuform:theme5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme5':'menuform:theme5'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Dark - Blue</span></a></li><li id="menuform:theme6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme6':'menuform:theme6'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Dark - Green</span></a></li><li id="menuform:theme7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme7':'menuform:theme7'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Green - Yellow</span></a></li><li id="menuform:theme8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme8':'menuform:theme8'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Purple - Cyan</span></a></li><li id="menuform:theme9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme9':'menuform:theme9'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Purple - Amber</span></a></li><li id="menuform:theme10" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme10':'menuform:theme10'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Teal - Lime</span></a></li><li id="menuform:theme11" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme11':'menuform:theme11'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Cyan - Amber</span></a></li><li id="menuform:theme12" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme12':'menuform:theme12'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Grey - Deep Orange</span></a></li></ul></li><li id="menuform:um_customization" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">settings_application</i><span>Customization</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:custom1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom1':'menuform:custom1'}).submit('menuform');return false;"><i class="material-icons">fiber_manual_record</i><span>Compact Size</span></a></li><li id="menuform:custom2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom2':'menuform:custom2'}).submit('menuform');return false;"><i class="material-icons">fiber_smart_record</i><span>Material Size</span></a></li><li id="menuform:custom3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom3':'menuform:custom3'}).submit('menuform');return false;"><i class="material-icons">menu</i><span>Static Menu</span></a></li><li id="menuform:custom4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom4':'menuform:custom4'}).submit('menuform');return false;"><i class="material-icons">exit_to_app</i><span>Overlay Menu</span></a></li><li id="menuform:custom5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom5':'menuform:custom5'}).submit('menuform');return false;"><i class="material-icons">border_horizontal</i><span>Horizontal Menu</span></a></li><li id="menuform:custom6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom6':'menuform:custom6'}).submit('menuform');return false;"><i class="material-icons">label_outline</i><span>Light Menu</span></a></li><li id="menuform:custom7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom7':'menuform:custom7'}).submit('menuform');return false;"><i class="material-icons">label</i><span>Dark Menu</span></a></li><li id="menuform:custom8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom8':'menuform:custom8'}).submit('menuform');return false;"><i class="material-icons">contacts</i><span>Inline Profile</span></a></li><li id="menuform:custom9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom9':'menuform:custom9'}).submit('menuform');return false;"><i class="material-icons">person_pin</i><span>Top Profile</span></a></li></ul></li><li id="menuform:um_components" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">list</i><span>Components</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sample" role="menuitem"><a href="/ultima/sample.xhtml"><i class="material-icons">desktop_mac</i><span>Sample Page</span></a></li><li id="menuform:um_forms" role="menuitem"><a href="/ultima/forms.xhtml"><i class="material-icons">input</i><span>Forms</span></a></li><li id="menuform:um_data" role="menuitem"><a href="/ultima/data.xhtml"><i class="material-icons">grid_on</i><span>Data</span></a></li><li id="menuform:um_panels" role="menuitem"><a href="/ultima/panel.xhtml"><i class="material-icons">content_paste</i><span>Panels</span></a></li><li id="menuform:um_overlays" role="menuitem"><a href="/ultima/overlay.xhtml"><i class="material-icons">content_copy</i><span>Overlays</span></a></li><li id="menuform:um_menus" role="menuitem"><a href="/ultima/menu.xhtml"><i class="material-icons">menu</i><span>Menus</span></a></li><li id="menuform:um_messages" role="menuitem"><a href="/ultima/messages.xhtml"><i class="material-icons">message</i><span>Messages</span></a></li><li id="menuform:um_charts" role="menuitem"><a href="/ultima/charts.xhtml"><i class="material-icons">insert_chart</i><span>Charts</span></a></li><li id="menuform:um_file" role="menuitem"><a href="/ultima/file.xhtml"><i class="material-icons">attach_file</i><span>File</span></a></li><li id="menuform:um_misc" role="menuitem"><a href="/ultima/misc.xhtml"><i class="material-icons">toys</i><span>Misc</span></a></li></ul></li><li id="menuform:um_default" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">get_app</i><span>Template Pages</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_db_landing" role="menuitem"><a href="/ultima/landing.xhtml"><i class="material-icons">flight_land</i><span>Landing</span></a></li><li id="menuform:um_empty" role="menuitem"><a href="/ultima/empty.xhtml"><i class="material-icons">hourglass_empty</i><span>Empty Page</span></a></li><li id="menuform:um_login" role="menuitem"><a href="/ultima/login.xhtml"><i class="material-icons">verified_user</i><span>Login Page</span></a></li><li id="menuform:um_error" role="menuitem"><a href="/ultima/error.xhtml"><i class="material-icons">error</i><span>Error Page</span></a></li><li id="menuform:um_404" role="menuitem"><a href="/ultima/404.xhtml"><i class="material-icons">error_outline</i><span>404 Page</span></a></li><li id="menuform:um_access" role="menuitem"><a href="/ultima/access.xhtml"><i class="material-icons">security</i><span>Access Denied Page</span></a></li></ul></li><li id="menuform:um_hierarchy" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">menu</i><span>Menu Hierarchy</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm1" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm11" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk111" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.1</span></a></li><li id="menuform:um_lnk112" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.2</span></a></li><li id="menuform:um_lnk113" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.3</span></a></li></ul></li><li id="menuform:um_sm12" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk121" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.2.1</span></a></li></ul></li></ul></li><li id="menuform:um_sm2" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm21" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk211" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.1.1</span></a></li><li id="menuform:um_lnk212" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.1.2</span></a></li></ul></li><li id="menuform:um_sm22" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk221" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.2.1</span></a></li></ul></li></ul></li></ul></li><li id="menuform:um_utils" role="menuitem"><a href="/ultima/utils.xhtml"><i class="material-icons">build</i><span>Utils</span></a></li><li id="menuform:um_doc" role="menuitem"><a href="/ultima/docs.xhtml"><i class="material-icons">find_in_page</i><span>Documentation</span></a></li></ul><script id="menuform:j_idt33_s" type="text/javascript">PrimeFaces.cw("Ultima","me",{id:"menuform:j_idt33"});</script>
+                </div>
+            </div>
+        </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-8050804188970256494:1164661857248534643" autocomplete="off" />
+</form>
+            
+            <div class="layout-main">
+    
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card docs">
+                    <h1>Layout</h1>
+                    <p>Ultima provides a main template.xhtml and additional <i>topbar</i>, <i>menu</i> and <i>footer</i> fragments for the base layout. 
+                        These xhtml files must be placed under WEB-INF folder and client pages should reference the template.xhtml as their template. 
+                        Provided empty-page.xhtml is a sample content page using the main template.xhtml that defines "content" as the main ui:define placeholder.</p>
+                    
+                    <p>Other required resources are the css, js and images that are located inside resources/ultima-layout folder, simply copy the ultima-layout folder to your %WEB-APP-FOLDER%/resources folder 
+                        so that final path would be %WEB-APP-FOLDER%/resources/ultima-layout/. Please refer to demo app or maven project of the demo app as the reference.</p>
+                    
+                    <h1>Size</h1>
+                    <p>Ultima comes in two sizes, default is closer to the material design specification with bigger fonts and paddings whereas the alternative compact size
+                    shrinks the dimensions of the UI elements. To activate the compact mode add "layout-compact" style class to the h:body element at template.xhtml.</p>
+                    
+                    <h1>Theme</h1>    
+                    <p>Ultima provides 12 PrimeFaces themes out of the box, setup of a theme simple as defining primefaces.THEME context parameter in web.xml such as "primefaces-ultima-indigo". Full list of 
+                    available themes are;</p>
+                    
+                    <ul>
+                        <li>primefaces-ultima-blue</li>
+                        <li>primefaces-ultima-blue-grey</li>
+                        <li>primefaces-ultima-brown</li>
+                        <li>primefaces-ultima-cyan</li>
+                        <li>primefaces-ultima-dark-blue</li>
+                        <li>primefaces-ultima-dark-green</li>
+                        <li>primefaces-ultima-green</li>
+                        <li>primefaces-ultima-grey</li>
+                        <li>primefaces-ultima-indigo</li>
+                        <li>primefaces-ultima-purple-amber</li>
+                        <li>primefaces-ultima-purple-cyan</li>
+                        <li>primefaces-ultima-teal</li>
+                    </ul>
+                    
+                    <p>A custom theme can be developed by the following steps.</p>
+                    <ul>
+                        <li>Choose a custom theme name such as primefaces-ultima-myown.</li>
+                        <li>Create a folder named primefaces-ultima-myown and place an empty theme.scss inside</li>
+                        <li>Copy the sass folder from the distribution to your application.</li>
+                        <li>Define the variables listed below and import the <i>/sass/theme/_theme.scss</i> file.</li>
+                        <li>Build the scss to generate css</li>
+                        <li>Set primefaces.THEME context parameter as <i>ultima-myown</i></li>
+                        <li>Either bundle the css in a jar file or serve from webapp/resources/primefaces-ultima-myown folder</li>
+                    </ul>
+                    
+                    <p>Here are the variables required to create a theme, you may need to change the last line according to the 
+                        relative path of the sass folder in your application.</p>
+                        
+<pre>
+$primaryColor: #009688;
+$primaryDarkColor: #00695C;
+$primaryLightColor: #80CBC4;
+$accentColor: #CDDC39;
+$accentDarkColor: #9E9D24;
+$accentLightColor: #E6EE9C;
+$accentTextColor: #212121;
+
+@import '../sass/theme/_theme';
+</pre> 
+                        
+                    <p> An example sass command to compile the css would be;</p>
+                        
+<pre>
+sass src/main/webapp/resources/primefaces-ultima-myown/theme.scss src/main/webapp/resources/primefaces-ultima-myown/theme.css  --sourcemap=none
+</pre> 
+
+                    <p>Watch mode is handy to avoid compiling everytime when a change is made, instead use the following command
+                    so that sass generates the file whenever you make a customization. This builds all css files whenever a change is made to any scss file.</p>
+<pre>
+sass -w src/main/webapp/resources/ --sourcemap=none
+</pre> 
+
+                    <p>Same can also be applied to layout itself;</p>
+                    <ul>
+                        <li>Choose a layout name such as layout-myown.</li>
+                        <li>Create an empty file named layout-myown.scss inside resources/ultima-layout/css folder.</li>
+                        <li>Define the variables listed below and import the <i>/sass/layout/_layout.scss</i> file.</li>
+                        <li>Build the scss to generate css</li>
+                        <li>Serve the css by importing it using a link tag or h:outputStylesheet.</li>
+                    </ul>
+                    
+                    <p>Here are the variables required to create a layout, you may need to change the last line according to the 
+                        relative path of the sass folder in your application.</p>
+                    
+<pre>
+$primaryColor: #03A9F4;
+$primaryDarkColor: #0277BD;
+$primaryLightColor: #81D4FA;
+$accentColor: #FFC107;
+$accentDarkColor: #FF8F00;
+$accentLightColor: #FFE082;
+$accentTextColor: #212121;
+$darkMenuBgColor: #424242;
+$darkMenuHoverColor: #676767;
+
+@import '/../sass/layout/_layout';
+</pre> 
+
+                    <p>Check out the video tutorial that follows the steps above to create the dark-blue theme and layout</p>
+                    <div class="video-container">
+                        <video src="http://www.youtube.com/watch?v=XmU7QYFYuPk" controls="controls" autoplay>                     </div>
+                    
+                    <p>For both cases, several .scss files such as _layout.scss, _theme.scss or _variables.scss has to be present relative to your scss files, these are available inside the sass folder in the distribution.</p>
+                    <p>In case you'd like to customize the structure not just the colors, the _variables.scss is where the structural variables (e.g. font size, paddings) for the layout are defined.</p>
+<pre>
+$textColor: #212121;
+$textSecondaryColor: #757575;
+
+/* Material Mode */
+$fontSize: 16px;
+$lineHeight: 24px;
+$headerFontSize: 16px;
+$headerPadding: 10px 16px;
+$contentFontSize: 16px;
+$contentPadding: 10px 16px;
+$inputHeaderFontSize: 16px;
+$inputHeaderPadding: 10px 16px;
+$inputFontSize: 16px;
+$buttonFontSize: 16px;
+$inputOptionFontSize: 16px;
+$inputOptionPadding: 10px 14px;
+$iconFontSize: 24px;
+
+/* Compact Mode */
+$c-fontSize: 14px;
+$c-lineHeight: 18px;
+$c-headerFontSize: 14px;
+$c-headerPadding: 8px 14px;
+$c-contentFontSize: 14px;
+$c-contentPadding: 8px 14px;
+$c-iconFontSize: 20px;
+$c-buttonFontSize: 14px;
+$c-inputFontSize: 14px;
+$c-inputHeaderFontSize: 14px;
+$c-inputHeaderPadding: 6px 10px;
+$c-inputOptionFontSize: 14px;
+$c-inputOptionPadding: 6px 10px;
+$c-dtPadding: 6px 10px;
+
+/* Common */
+$hoverBgColor: #e8e8e8;
+$hoverTextColor: #000000;
+$dividerColor: #bdbdbd;
+$dividerLightColor: #cacaca;
+$grayBgColor: #757575;
+</pre>        
+
+                                            
+                    <h1>Menu</h1>    
+                    <p>Menu is a regular JSF component that supports PrimeFaces MenuModel API allowing both declarative and programmatic approaches. 
+                    State is saved via a cookie and to remove it define a widgetVar to the menu and call PF('yourwidgetvar').clearMenuState(). To use the menu
+                    add the primefaces-ultima-{version}.jar to your classpath and import the http://primefaces.org/ultima namespace.</p>
+<pre>
+xmlns:pu="http://primefaces.org/ultima"&gt;
+
+&lt;pu:menu&gt;
+&lt;/pu:menu&gt;
+</pre>  
+                    <p>Menu has 3 modes, static, overlay and horizontal. Layout wrapper element in template.xhtml is used to define which mode to use by adding specific classes. List
+                    below indicates the style classes for each mode.</p>
+                    <ul>
+                        <li>Static: "layout-wrapper menu-layout-static"</li>
+                        <li>Overlay: "layout-wrapper menu-layout-overlay"</li>
+                        <li>Horizontal: "layout-wrapper menu-layout-static menu-layout-horizontal"</li>
+                    </ul>
+                    
+                    <p>For example to create a horizontal menu, the div element should be in following form;</p>
+<pre>
+&lt;div class="layout-wrapper menu-layout-static menu-layout-horizontal"&gt;
+    &lt;ui:include src="./topbar.xhtml" /&gt;
+    &lt;ui:include src="./menu.xhtml" /&gt;
+    
+    &lt;div class="layout-main"&gt;
+        &lt;ui:insert name="content"/&gt;
+        
+        &lt;ui:include src="./footer.xhtml" /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>            
+
+                    <p>It is also possible to leave the choice to the user by keeping the preference at a bean and usign an EL expression to bind it so that user can switch between modes. Sample
+                    application has an example implementation of such use case.</p>          
+<pre>
+&lt;div class="layout-wrapper menu-layout-static"&gt;
+
+&lt;/div&gt;
+</pre>  
+                    
+                    <h1>Profile Modes</h1>
+                    <p>There are two possible locations for the user profile menu, first version is inline located inside the main menu and second option is the topbar menu. For inline mode,
+                    profile content should be placed above the &lt;pu:menu /&gt;component and for inline mode content goes in topbar-items list. The sample demo application provides examples for
+                    both cases and even takes it to the next step by making it dynamic with an EL expression.</p>
+                        
+                    <h1>Utilities</h1>
+                    <p>Ultima provides various helper features such as material iconset compatible with PrimeFaces components and helper classes. Visit <a href="/ultima/utils.xhtml">Utils</a> page for details.</p>
+                    
+                    <h1>Ripple Effect</h1>
+                    <p>Various elements display a ripple element on mousedown event, if you prefer to remove this effect, simply remove the ripple.js and ripple.css files from template.xhtml.</p>
+                                
+                    <h1>Grid CSS</h1>
+                    <p>Ultima uses new PrimeFaces Grid CSS (ui-g-*) throughout the samples, we strongly suggest using Grid CSS as your layout framework as it is well tested and supported by PrimeFaces. Grid CSS 
+                    is automatically included on newer versions however if your PrimeFaces version is older than 5.3.14, add the provided grid.css file under /ultima-layout/css/ folder to your template manually.</p>            
+                
+                </div>
+            </div>
+        </div>
+    
+    <div class="footer">
+        <div class="card clearfix">
+            <span class="footer-text-left">PrimeFaces ULTIMA</span>
+            <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>
+        </div>
+    </div>
+            </div>
+        </div><div id="j_idt63" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt63_start" style="display:none">
+               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt63_complete" style="display:none"></div></div><script id="j_idt63_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt63",{id:"j_idt63"});});</script></body>
+
+</html>

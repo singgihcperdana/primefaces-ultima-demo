@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="theme-color" content="#3F51B5" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-indigo" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/scrollpanel/scrollpanel.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/scrollpanel/scrollpanel.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/nanoscroller.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/animate.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/ripple.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/layout-indigo.css.xhtml?ln=ultima-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+        <title>PrimeFaces Ultima</title><script type="text/javascript" src="/ultima/javax.faces.resource/js/nanoscroller.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/layout.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/ripple.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/swipe.js.xhtml?ln=ultima-layout"></script>
+        <style type="text/css">
+            .nba-grid {
+                width: 100%;
+                table-layout: fixed;
+                word-wrap: break-word;
+            }
+            
+            .ui-scrollpanel-content p:first-child {
+                margin: 0;
+            }
+        </style></head><body class="main-body layout-compact">
+        
+        <div class="layout-wrapper menu-layout-static">
+
+    <div class="topbar clearfix">
+        <div class="topbar-left">            
+            <div class="logo"></div>
+        </div>
+        
+        <div class="topbar-right">
+            <a id="menu-button" href="#">
+                <i></i>
+            </a>
+            
+            <a id="topbar-menu-button" href="#">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="topbar-items fadeInDown animated">
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons"></i>
+                        <span class="topbar-item-name">Settings</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Change Theme</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Lock Screen</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Wallpaper</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons animated swing"></i>
+                        <span class="topbar-badge animated rubberBand">5</span>
+                        <span class="topbar-item-name">Messages</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt16" src="/ultima/javax.faces.resource/images/avatar1.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Give me a call</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt18" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Sales reports attached</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt20" src="/ultima/javax.faces.resource/images/avatar3.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>About your invoice</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt22" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Meeting today at 10pm</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt24" src="/ultima/javax.faces.resource/images/avatar4.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Out of office</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons"></i>
+                        <span class="topbar-badge animated rubberBand">4</span>
+                        <span class="topbar-item-name">Notifications</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Pending tasks</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Meeting today at 3pm</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Download documents</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Book flight</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="search-item"><span class="md-inputfield"><input id="j_idt27" name="j_idt27" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt27_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt27",{id:"j_idt27"});</script>
+                        <label>Search</label>
+                        <i class="topbar-icon material-icons"></i></span>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+<form id="menuform" name="menuform" method="post" action="/ultima/panel.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menuform" value="menuform" />
+ 
+        <div class="layout-menu ">
+            <div class="nano">
+                <div class="nano-content menu-scroll-content">
+                        <div class="profile">
+                            <div class="profile-image"></div>
+                            <a id="profile-options" href="#">
+                                <span class="profile-name">Jane Williams</span>
+                                <i class="material-icons"></i>
+                            </a>
+                        </div>
+                    
+                        <ul id="profile-menu" class="ultima-menu">
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">person</i>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">security</i>
+                                    <span>Privacy</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">settings_application</i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">power_settings_new</i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul><ul id="menuform:j_idt33" class="ultima-menu clearfix"><li id="menuform:um_dashboard" role="menuitem"><a href="/ultima/dashboard.xhtml"><i class="material-icons"></i><span>Dashboard</span></a></li><li id="menuform:themes" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">palette</i><span>Themes</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:theme1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme1':'menuform:theme1'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Indigo - Pink</span></a></li><li id="menuform:theme2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme2':'menuform:theme2'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Brown - Green</span></a></li><li id="menuform:theme3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme3':'menuform:theme3'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Blue - Amber</span></a></li><li id="menuform:theme4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme4':'menuform:theme4'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Blue Grey - Green</span></a></li><li id="menuform:theme5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme5':'menuform:theme5'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Dark - Blue</span></a></li><li id="menuform:theme6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme6':'menuform:theme6'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Dark - Green</span></a></li><li id="menuform:theme7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme7':'menuform:theme7'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Green - Yellow</span></a></li><li id="menuform:theme8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme8':'menuform:theme8'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Purple - Cyan</span></a></li><li id="menuform:theme9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme9':'menuform:theme9'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Purple - Amber</span></a></li><li id="menuform:theme10" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme10':'menuform:theme10'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Teal - Lime</span></a></li><li id="menuform:theme11" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme11':'menuform:theme11'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Cyan - Amber</span></a></li><li id="menuform:theme12" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme12':'menuform:theme12'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Grey - Deep Orange</span></a></li></ul></li><li id="menuform:um_customization" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">settings_application</i><span>Customization</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:custom1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom1':'menuform:custom1'}).submit('menuform');return false;"><i class="material-icons">fiber_manual_record</i><span>Compact Size</span></a></li><li id="menuform:custom2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom2':'menuform:custom2'}).submit('menuform');return false;"><i class="material-icons">fiber_smart_record</i><span>Material Size</span></a></li><li id="menuform:custom3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom3':'menuform:custom3'}).submit('menuform');return false;"><i class="material-icons">menu</i><span>Static Menu</span></a></li><li id="menuform:custom4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom4':'menuform:custom4'}).submit('menuform');return false;"><i class="material-icons">exit_to_app</i><span>Overlay Menu</span></a></li><li id="menuform:custom5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom5':'menuform:custom5'}).submit('menuform');return false;"><i class="material-icons">border_horizontal</i><span>Horizontal Menu</span></a></li><li id="menuform:custom6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom6':'menuform:custom6'}).submit('menuform');return false;"><i class="material-icons">label_outline</i><span>Light Menu</span></a></li><li id="menuform:custom7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom7':'menuform:custom7'}).submit('menuform');return false;"><i class="material-icons">label</i><span>Dark Menu</span></a></li><li id="menuform:custom8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom8':'menuform:custom8'}).submit('menuform');return false;"><i class="material-icons">contacts</i><span>Inline Profile</span></a></li><li id="menuform:custom9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom9':'menuform:custom9'}).submit('menuform');return false;"><i class="material-icons">person_pin</i><span>Top Profile</span></a></li></ul></li><li id="menuform:um_components" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">list</i><span>Components</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sample" role="menuitem"><a href="/ultima/sample.xhtml"><i class="material-icons">desktop_mac</i><span>Sample Page</span></a></li><li id="menuform:um_forms" role="menuitem"><a href="/ultima/forms.xhtml"><i class="material-icons">input</i><span>Forms</span></a></li><li id="menuform:um_data" role="menuitem"><a href="/ultima/data.xhtml"><i class="material-icons">grid_on</i><span>Data</span></a></li><li id="menuform:um_panels" role="menuitem"><a href="/ultima/panel.xhtml"><i class="material-icons">content_paste</i><span>Panels</span></a></li><li id="menuform:um_overlays" role="menuitem"><a href="/ultima/overlay.xhtml"><i class="material-icons">content_copy</i><span>Overlays</span></a></li><li id="menuform:um_menus" role="menuitem"><a href="/ultima/menu.xhtml"><i class="material-icons">menu</i><span>Menus</span></a></li><li id="menuform:um_messages" role="menuitem"><a href="/ultima/messages.xhtml"><i class="material-icons">message</i><span>Messages</span></a></li><li id="menuform:um_charts" role="menuitem"><a href="/ultima/charts.xhtml"><i class="material-icons">insert_chart</i><span>Charts</span></a></li><li id="menuform:um_file" role="menuitem"><a href="/ultima/file.xhtml"><i class="material-icons">attach_file</i><span>File</span></a></li><li id="menuform:um_misc" role="menuitem"><a href="/ultima/misc.xhtml"><i class="material-icons">toys</i><span>Misc</span></a></li></ul></li><li id="menuform:um_default" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">get_app</i><span>Template Pages</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_db_landing" role="menuitem"><a href="/ultima/landing.xhtml"><i class="material-icons">flight_land</i><span>Landing</span></a></li><li id="menuform:um_empty" role="menuitem"><a href="/ultima/empty.xhtml"><i class="material-icons">hourglass_empty</i><span>Empty Page</span></a></li><li id="menuform:um_login" role="menuitem"><a href="/ultima/login.xhtml"><i class="material-icons">verified_user</i><span>Login Page</span></a></li><li id="menuform:um_error" role="menuitem"><a href="/ultima/error.xhtml"><i class="material-icons">error</i><span>Error Page</span></a></li><li id="menuform:um_404" role="menuitem"><a href="/ultima/404.xhtml"><i class="material-icons">error_outline</i><span>404 Page</span></a></li><li id="menuform:um_access" role="menuitem"><a href="/ultima/access.xhtml"><i class="material-icons">security</i><span>Access Denied Page</span></a></li></ul></li><li id="menuform:um_hierarchy" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">menu</i><span>Menu Hierarchy</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm1" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm11" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk111" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.1</span></a></li><li id="menuform:um_lnk112" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.2</span></a></li><li id="menuform:um_lnk113" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.3</span></a></li></ul></li><li id="menuform:um_sm12" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk121" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.2.1</span></a></li></ul></li></ul></li><li id="menuform:um_sm2" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm21" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk211" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.1.1</span></a></li><li id="menuform:um_lnk212" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.1.2</span></a></li></ul></li><li id="menuform:um_sm22" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk221" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.2.1</span></a></li></ul></li></ul></li></ul></li><li id="menuform:um_utils" role="menuitem"><a href="/ultima/utils.xhtml"><i class="material-icons">build</i><span>Utils</span></a></li><li id="menuform:um_doc" role="menuitem"><a href="/ultima/docs.xhtml"><i class="material-icons">find_in_page</i><span>Documentation</span></a></li></ul><script id="menuform:j_idt33_s" type="text/javascript">PrimeFaces.cw("Ultima","me",{id:"menuform:j_idt33"});</script>
+                </div>
+            </div>
+        </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="7332406562846959136:-3495646252631759776" autocomplete="off" />
+</form>
+            
+            <div class="layout-main">
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>AccordionPanel</h1><div id="j_idt37" class="ui-accordion ui-widget ui-helper-reset ui-hidden-container" role="tablist" data-widget="widget_j_idt37"><h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span>Godfather Part I</h3><div id="j_idt37:j_idt38" class="ui-accordion-content ui-helper-reset ui-widget-content" role="tabpanel" aria-hidden="false">The story begins as Don Vito Corleone. Lorem ipsum dolor sit amet, consectetur adipiscing elit.                              Aenean blandit tortor a ipsum vehicula, in semper sapien auctor. Nulla tempor eget est non consequat. The story begins as Don Vito Corleone. Lorem ipsum dolor sit amet, consectetur adipiscing elit.                              Aenean blandit tortor a ipsum vehicula, in semper sapien auctor. Nulla tempor eget est non consequat.</div><h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="0"><span class="ui-icon ui-icon-triangle-1-e"></span>Godfather Part II</h3><div id="j_idt37:j_idt40" class="ui-accordion-content ui-helper-reset ui-widget-content ui-helper-hidden" role="tabpanel" aria-hidden="true">Francis Ford Coppola's legendary. Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The Godfather's depiction of the dark side of the American dream.                                       In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy,                                       killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.</div><h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="0"><span class="ui-icon ui-icon-triangle-1-e"></span>Godfather Part III</h3><div id="j_idt37:j_idt42" class="ui-accordion-content ui-helper-reset ui-widget-content ui-helper-hidden" role="tabpanel" aria-hidden="true">After a break of more than 15 years. Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The Godfather's depiction of the dark side of the American dream.                                       In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy,                                       killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.</div><input type="hidden" id="j_idt37_active" name="j_idt37_active" value="0" autocomplete="off" /></div><script id="j_idt37_s" type="text/javascript">PrimeFaces.cw("AccordionPanel","widget_j_idt37",{id:"j_idt37"});</script>
+                </div>
+            </div>
+            
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Panel</h1><div id="basic" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_basic"><div id="basic_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Basic Panel</span></div><div id="basic_content" class="ui-panel-content ui-widget-content">Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The Godfather's depiction of the dark side of the American dream.                         In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy,                         killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.</div><div id="basic_footer" class="ui-panel-footer ui-widget-content">Panel Footer</div></div><script id="basic_s" type="text/javascript">PrimeFaces.cw("Panel","widget_basic",{id:"basic"});</script>
+                </div>
+            </div>
+            
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>TabView</h1><div id="j_idt47" class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-hidden-container ui-tabs-top" data-widget="widget_j_idt47"><ul class="ui-tabs-nav ui-helper-reset ui-widget-header ui-corner-all" role="tablist"><li class="ui-state-default ui-tabs-selected ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true"><a href="#j_idt47:j_idt48" tabindex="-1">Godfather Part I</a></li><li class="ui-state-default ui-corner-top" role="tab" aria-expanded="false" aria-selected="false"><a href="#j_idt47:j_idt50" tabindex="-1">Godfather Part II</a><span class="ui-icon ui-icon-close"></span></li><li class="ui-state-default ui-corner-top" role="tab" aria-expanded="false" aria-selected="false"><a href="#j_idt47:j_idt52" tabindex="-1">Godfather Part III</a></li></ul><div class="ui-tabs-panels"><div id="j_idt47:j_idt48" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false">The story begins as Don Vito Corleone. Lorem ipsum dolor sit amet, consectetur adipiscing elit.                              Aenean blandit tortor a ipsum vehicula, in semper sapien auctor. Nulla tempor eget est non consequat. The story begins as Don Vito Corleone. Lorem ipsum dolor sit amet, consectetur adipiscing elit.                              Aenean blandit tortor a ipsum vehicula, in semper sapien auctor. Nulla tempor eget est non consequat.</div><div id="j_idt47:j_idt50" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-helper-hidden" role="tabpanel" aria-hidden="true">Francis Ford Coppola's legendary. Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The Godfather's depiction of the dark side of the American dream.                                       In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy,                                       killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.</div><div id="j_idt47:j_idt52" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-helper-hidden" role="tabpanel" aria-hidden="true">After a break of more than 15 years. Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The Godfather's depiction of the dark side of the American dream.                                       In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy,                                       killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.</div></div><input type="hidden" id="j_idt47_activeIndex" name="j_idt47_activeIndex" value="0" autocomplete="off" /></div><script id="j_idt47_s" type="text/javascript">PrimeFaces.cw("TabView","widget_j_idt47",{id:"j_idt47",effectDuration:"normal",scrollable:false});</script>
+                </div>
+            </div>
+            
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>PanelGrid Basic</h1><div id="j_idt55" class="ui-panelgrid ui-widget" style="margin-bottom:20px"><div id="j_idt55_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive"><div class="ui-grid-row"><div class="ui-panelgrid-cell ui-grid-col-6">Name</div><div class="ui-panelgrid-cell ui-grid-col-6">Kobe Bryant</div></div><div class="ui-grid-row"><div class="ui-panelgrid-cell ui-grid-col-6">Team</div><div class="ui-panelgrid-cell ui-grid-col-6">Los Angeles Lakers</div></div><div class="ui-grid-row"><div class="ui-panelgrid-cell ui-grid-col-6">Position</div><div class="ui-panelgrid-cell ui-grid-col-6">Shooting Guard</div></div><div class="ui-grid-row"><div class="ui-panelgrid-cell ui-grid-col-6">Number</div><div class="ui-panelgrid-cell ui-grid-col-6">24</div></div></div></div>
+                    
+                    <h1>PanelGrid Grouping</h1><table id="j_idt65" class="ui-panelgrid ui-widget nba-grid" role="grid"><thead class="ui-panelgrid-header"><tr class="ui-widget-header" role="row"><td role="columnheader" class="ui-panelgrid-cell ui-widget-header" colspan="7">1995-96 NBA Playoffs</td></tr><tr class="ui-widget-header" role="row"><td role="columnheader" class="ui-panelgrid-cell ui-widget-header" colspan="2">Conf. Semifinals</td><td role="columnheader" class="ui-panelgrid-cell ui-widget-header" colspan="2">Conf. Finals</td><td role="columnheader" class="ui-panelgrid-cell ui-widget-header" colspan="2">NBA Finals</td><td role="columnheader" class="ui-panelgrid-cell ui-widget-header">Champion</td></tr></thead><tfoot class="ui-panelgrid-footer"><tr class="ui-widget-header" role="row"><td role="columnheader" class="ui-panelgrid-cell ui-widget-header" style="text-align: right" colspan="4">
+                                    Finals MVP
+                                </td><td role="columnheader" class="ui-panelgrid-cell ui-widget-header" colspan="3" rowspan="3">
+                                    Michael Jordan (Chicago)
+                                </td></tr><tr class="ui-widget-header" role="row"><td role="columnheader" class="ui-panelgrid-cell ui-widget-header" style="text-align: right" colspan="4">
+                                    Season MVP
+                                </td></tr><tr class="ui-widget-header" role="row"><td role="columnheader" class="ui-panelgrid-cell ui-widget-header" style="text-align: right" colspan="4">
+                                    Top Scorer
+                                </td></tr></tfoot><tbody><tr class="ui-widget-content ui-panelgrid-even" role="row"><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;">Seattle</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;">4</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;" rowspan="2">Seattle</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;" rowspan="2">4</td><td role="gridcell" class="ui-panelgrid-cell" rowspan="5">Seattle</td><td role="gridcell" class="ui-panelgrid-cell" rowspan="5">2</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;" rowspan="11">Chicago</td></tr><tr class="ui-widget-content ui-panelgrid-odd" role="row"><td role="gridcell" class="ui-panelgrid-cell">Houston</td><td role="gridcell" class="ui-panelgrid-cell">0</td></tr><tr class="ui-widget-content ui-panelgrid-even" role="row"><td role="gridcell" class="ui-panelgrid-cell ui-widget-header" colspan="4"><img id="j_idt100" height="0" alt="" src="/ultima/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&amp;v=6.0" /></td></tr><tr class="ui-widget-content ui-panelgrid-odd" role="row"><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;">Utah</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;">4</td><td role="gridcell" class="ui-panelgrid-cell" rowspan="2">Utah</td><td role="gridcell" class="ui-panelgrid-cell" rowspan="2">3</td></tr><tr class="ui-widget-content ui-panelgrid-even" role="row"><td role="gridcell" class="ui-panelgrid-cell">San Antonio</td><td role="gridcell" class="ui-panelgrid-cell">2</td></tr><tr class="ui-widget-content ui-panelgrid-odd" role="row"><td role="gridcell" class="ui-panelgrid-cell ui-widget-header" colspan="6"><img id="j_idt117" height="0" alt="" src="/ultima/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&amp;v=6.0" /></td></tr><tr class="ui-widget-content ui-panelgrid-even" role="row"><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;">Chicago</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;">4</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;" rowspan="2">Chicago</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;" rowspan="2">4</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;" rowspan="5">Chicago</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;" rowspan="5">4</td></tr><tr class="ui-widget-content ui-panelgrid-odd" role="row"><td role="gridcell" class="ui-panelgrid-cell">New York</td><td role="gridcell" class="ui-panelgrid-cell">1</td></tr><tr class="ui-widget-content ui-panelgrid-even" role="row"><td role="gridcell" class="ui-panelgrid-cell ui-widget-header" colspan="4"><img id="j_idt138" height="0" alt="" src="/ultima/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&amp;v=6.0" /></td></tr><tr class="ui-widget-content ui-panelgrid-odd" role="row"><td role="gridcell" class="ui-panelgrid-cell">Atlanta</td><td role="gridcell" class="ui-panelgrid-cell">1</td><td role="gridcell" class="ui-panelgrid-cell" rowspan="2">Orlando</td><td role="gridcell" class="ui-panelgrid-cell" rowspan="2">0</td></tr><tr class="ui-widget-content ui-panelgrid-even" role="row"><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;">Orlando</td><td role="gridcell" class="ui-panelgrid-cell" style="font-weight: bold;">4</td></tr></tbody></table>
+                </div>
+            </div>
+            
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Custom Scrollbars</h1><div id="j_idt165" class="ui-scrollpanel ui-widget ui-widget-content" style="height:200px; min-width:200px; width:270px !important;">
+                        <div style="padding:10px">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit tortor a ipsum vehicula, in semper sapien auctor. Nulla tempor eget est non consequat. Nulla sit amet lorem justo. Cras non tellus eros. Sed ultricies orci ut quam interdum fringilla. Nam vitae massa ac mi elementum mattis vel vitae sem. Ut eros ipsum, scelerisque a erat a, eleifend luctus nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                            </p>
+                            <p>
+                                Vivamus ac ullamcorper magna. Aenean felis ante, elementum sit amet urna at, eleifend aliquet velit. Morbi a convallis magna. In nec leo vel dolor hendrerit pharetra. Cras in iaculis enim. Aenean porta sapien dignissim turpis dapibus, eu dictum velit elementum. Aliquam sollicitudin gravida luctus.
+                            </p>
+                            <p>
+                                Ut vel nulla sit amet erat laoreet eleifend nec sed lacus. Quisque placerat diam vitae justo eleifend, rutrum mollis mauris fringilla. Curabitur turpis odio, euismod id lorem a, ultricies suscipit ligula. Pellentesque ut erat a leo rhoncus porta ac sed velit. Nunc at erat ligula. Fusce vehicula posuere interdum. Curabitur tempus, tortor at sollicitudin dapibus, erat ante varius nisl, id dictum erat ipsum porttitor ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla id varius enim, sed rutrum orci.
+                            </p>
+                            <p>
+                                Sed tincidunt urna quis metus lacinia commodo. Praesent convallis eros vel quam scelerisque bibendum. Mauris eget dignissim libero. Pellentesque sagittis sem quis ipsum viverra, sed consequat mi consectetur. Donec facilisis dapibus ultrices. Donec luctus auctor lacus, at congue nisi aliquet eu. Praesent in justo at risus faucibus ultricies. Fusce et libero lectus. Donec elementum pharetra sapien, at placerat purus sodales et. Vivamus iaculis lacus sed placerat rhoncus. Mauris iaculis sit amet nunc at placerat. Donec consequat euismod lacinia. Etiam nec quam vehicula, cursus massa in, ullamcorper erat.
+                            </p>
+                            <p>
+                                Praesent volutpat scelerisque vestibulum. In eu massa non neque rutrum commodo. Nunc vel enim nisi. Aenean leo ipsum, molestie vel justo nec, pharetra luctus dui. Nunc rhoncus turpis id lorem luctus consequat. Nulla condimentum adipiscing turpis consequat semper. Etiam ullamcorper velit nec hendrerit malesuada. Praesent venenatis leo sit amet arcu commodo, sit amet porta tellus suscipit. Quisque mi tortor, vestibulum in arcu non, pretium auctor libero. In commodo luctus placerat.
+                            </p>
+                        </div></div><script id="j_idt165_s" type="text/javascript">PrimeFaces.cw("ScrollPanel","widget_j_idt165",{id:"j_idt165"});</script>
+                </div>
+            </div>
+            
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Toolbar</h1>
+<form id="j_idt168" name="j_idt168" method="post" action="/ultima/panel.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt168" value="j_idt168" />
+<div id="j_idt168:j_idt169" class="ui-toolbar ui-widget ui-widget-header ui-corner-all ui-helper-clearfix" role="toolbar"><div class="ui-toolbar-group-left"><button id="j_idt168:j_idt170" name="j_idt168:j_idt170" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-plus"></span><span class="ui-button-text ui-c">New</span></button><script id="j_idt168:j_idt170_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt168_j_idt170",{id:"j_idt168:j_idt170"});</script><button id="j_idt168:j_idt171" name="j_idt168:j_idt171" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-update"></span><span class="ui-button-text ui-c">Update</span></button><script id="j_idt168:j_idt171_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt168_j_idt171",{id:"j_idt168:j_idt171"});</script>
+
+                                <span class="ui-separator" style="padding-right: 5px;">
+                                    <span class="fa fa-ellipsis-v SoftGray"></span>
+                                </span><button id="j_idt168:j_idt173" name="j_idt168:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" title="Save" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-save"></span><span class="ui-button-text ui-c">Save</span></button><script id="j_idt168:j_idt173_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt168_j_idt173",{id:"j_idt168:j_idt173"});</script><button id="j_idt168:j_idt174" name="j_idt168:j_idt174" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" title="Delete" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-delete"></span><span class="ui-button-text ui-c">Delete</span></button><script id="j_idt168:j_idt174_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt168_j_idt174",{id:"j_idt168:j_idt174"});</script><button id="j_idt168:j_idt175" name="j_idt168:j_idt175" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" title="Print" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-print"></span><span class="ui-button-text ui-c">Print</span></button><script id="j_idt168:j_idt175_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt168_j_idt175",{id:"j_idt168:j_idt175"});</script></div><div class="ui-toolbar-group-right"><span id="j_idt168:j_idt176" class="ui-menubutton"><button id="j_idt168:j_idt176_button" name="j_idt168:j_idt176_button" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"><span class="ui-button-icon-left ui-icon ui-c ui-icon-triangle-1-s"></span><span class="ui-button-text ui-c">Options</span></button><div id="j_idt168:j_idt176_menu" class="ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow" role="menu"><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt168:j_idt177&quot;,f:&quot;j_idt168&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-check"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt168:j_idt178&quot;,f:&quot;j_idt168&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-update"></span><span class="ui-menuitem-text">Update</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt168:j_idt179&quot;,f:&quot;j_idt168&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-delete"></span><span class="ui-menuitem-text">Delete</span></a></li><li class="ui-separator ui-state-default"></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-home"></span><span class="ui-menuitem-text">Homepage</span></a></li></ul></div></span><script id="j_idt168:j_idt176_s" type="text/javascript">$(function(){PrimeFaces.cw("MenuButton","widget_j_idt168_j_idt176",{id:"j_idt168:j_idt176"});});</script></div></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:23" value="7332406562846959136:-3495646252631759776" autocomplete="off" />
+</form>
+                </div>
+            </div>
+            
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>FieldSet</h1><fieldset id="j_idt183" class="ui-fieldset ui-widget ui-widget-content ui-corner-all ui-hidden-container ui-fieldset-toggleable" data-widget="widget_j_idt183"><legend class="ui-fieldset-legend ui-corner-all ui-state-default" role="button" tabindex="0"><span class="ui-fieldset-toggler ui-icon ui-icon-minusthick"></span>Toggleable Fieldset</legend><div class="ui-fieldset-content">Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The Godfather's depiction of the dark side of the American dream.                                       In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy,                                       killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.</div><input type="hidden" id="j_idt183_collapsed" name="j_idt183_collapsed" value="false" /></fieldset><script id="j_idt183_s" type="text/javascript">PrimeFaces.cw("Fieldset","widget_j_idt183",{id:"j_idt183",toggleable:true,collapsed:false,toggleSpeed:500});</script>
+                </div>
+            </div>
+        </div>
+    
+    <div class="footer">
+        <div class="card clearfix">
+            <span class="footer-text-left">PrimeFaces ULTIMA</span>
+            <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>
+        </div>
+    </div>
+            </div>
+        </div><div id="j_idt188" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt188_start" style="display:none">
+               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt188_complete" style="display:none"></div></div><script id="j_idt188_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt188",{id:"j_idt188"});});</script></body>
+
+</html>

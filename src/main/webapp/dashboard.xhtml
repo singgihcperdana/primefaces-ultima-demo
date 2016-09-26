@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="theme-color" content="#3F51B5" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-indigo" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/charts/charts.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/charts/charts.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/schedule/schedule.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/moment/moment.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/schedule/schedule.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/nanoscroller.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/animate.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/ripple.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/layout-indigo.css.xhtml?ln=ultima-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+        <title>PrimeFaces Ultima</title><script type="text/javascript" src="/ultima/javax.faces.resource/js/nanoscroller.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/layout.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/ripple.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/swipe.js.xhtml?ln=ultima-layout"></script>
+           <script type="text/javascript">
+               //<![CDATA[
+               function skinChart() {
+                   this.cfg.shadow = false;
+                   this.cfg.title = '';
+                   this.cfg.seriesColors = ['#FFC107', '#03A9F4'];
+                   this.cfg.grid = {
+                       background: '#ffffff',
+                       borderColor: '#ffffff',
+                       gridLineColor: '#EEEEEE',
+                       shadow: false
+                   };
+                   this.cfg.axesDefaults = {
+                       rendererOptions: {
+                           textColor: '#212121'
+                       }
+                   };
+                   this.cfg.seriesDefaults = {
+                       shadow: false,
+                       lineWidth: 1,
+                       markerOptions: {
+                           shadow: false,
+                           size: 7,
+                           style: 'circle'
+                       }
+                   }
+               }
+               //]]>  
+           </script>
+           <style type="text/css">
+               .main-content {
+                   padding: 0;
+               }
+           </style></head><body class="main-body layout-compact">
+        
+        <div class="layout-wrapper menu-layout-static">
+
+    <div class="topbar clearfix">
+        <div class="topbar-left">            
+            <div class="logo"></div>
+        </div>
+        
+        <div class="topbar-right">
+            <a id="menu-button" href="#">
+                <i></i>
+            </a>
+            
+            <a id="topbar-menu-button" href="#">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="topbar-items fadeInDown animated">
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons"></i>
+                        <span class="topbar-item-name">Settings</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Change Theme</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Lock Screen</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Wallpaper</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons animated swing"></i>
+                        <span class="topbar-badge animated rubberBand">5</span>
+                        <span class="topbar-item-name">Messages</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt16" src="/ultima/javax.faces.resource/images/avatar1.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Give me a call</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt18" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Sales reports attached</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt20" src="/ultima/javax.faces.resource/images/avatar3.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>About your invoice</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt22" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Meeting today at 10pm</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt24" src="/ultima/javax.faces.resource/images/avatar4.png.xhtml?ln=ultima-layout" alt="" width="35" />
+                                <span>Out of office</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons"></i>
+                        <span class="topbar-badge animated rubberBand">4</span>
+                        <span class="topbar-item-name">Notifications</span>
+                    </a>
+                    <ul class="ultima-menu animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Pending tasks</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Meeting today at 3pm</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Download documents</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="material-icons"></i>
+                                <span>Book flight</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="search-item"><span class="md-inputfield"><input id="j_idt27" name="j_idt27" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt27_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt27",{id:"j_idt27"});</script>
+                        <label>Search</label>
+                        <i class="topbar-icon material-icons"></i></span>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+<form id="menuform" name="menuform" method="post" action="/ultima/dashboard.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menuform" value="menuform" />
+ 
+        <div class="layout-menu ">
+            <div class="nano">
+                <div class="nano-content menu-scroll-content">
+                        <div class="profile">
+                            <div class="profile-image"></div>
+                            <a id="profile-options" href="#">
+                                <span class="profile-name">Jane Williams</span>
+                                <i class="material-icons"></i>
+                            </a>
+                        </div>
+                    
+                        <ul id="profile-menu" class="ultima-menu">
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">person</i>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">security</i>
+                                    <span>Privacy</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">settings_application</i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">power_settings_new</i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul><ul id="menuform:j_idt33" class="ultima-menu clearfix"><li id="menuform:um_dashboard" role="menuitem"><a href="/ultima/dashboard.xhtml"><i class="material-icons"></i><span>Dashboard</span></a></li><li id="menuform:themes" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">palette</i><span>Themes</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:theme1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme1':'menuform:theme1'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Indigo - Pink</span></a></li><li id="menuform:theme2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme2':'menuform:theme2'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Brown - Green</span></a></li><li id="menuform:theme3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme3':'menuform:theme3'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Blue - Amber</span></a></li><li id="menuform:theme4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme4':'menuform:theme4'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Blue Grey - Green</span></a></li><li id="menuform:theme5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme5':'menuform:theme5'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Dark - Blue</span></a></li><li id="menuform:theme6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme6':'menuform:theme6'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Dark - Green</span></a></li><li id="menuform:theme7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme7':'menuform:theme7'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Green - Yellow</span></a></li><li id="menuform:theme8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme8':'menuform:theme8'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Purple - Cyan</span></a></li><li id="menuform:theme9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme9':'menuform:theme9'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Purple - Amber</span></a></li><li id="menuform:theme10" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme10':'menuform:theme10'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Teal - Lime</span></a></li><li id="menuform:theme11" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme11':'menuform:theme11'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Cyan - Amber</span></a></li><li id="menuform:theme12" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme12':'menuform:theme12'}).submit('menuform');return false;"><i class="material-icons">brush</i><span>Grey - Deep Orange</span></a></li></ul></li><li id="menuform:um_customization" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">settings_application</i><span>Customization</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:custom1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom1':'menuform:custom1'}).submit('menuform');return false;"><i class="material-icons">fiber_manual_record</i><span>Compact Size</span></a></li><li id="menuform:custom2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom2':'menuform:custom2'}).submit('menuform');return false;"><i class="material-icons">fiber_smart_record</i><span>Material Size</span></a></li><li id="menuform:custom3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom3':'menuform:custom3'}).submit('menuform');return false;"><i class="material-icons">menu</i><span>Static Menu</span></a></li><li id="menuform:custom4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom4':'menuform:custom4'}).submit('menuform');return false;"><i class="material-icons">exit_to_app</i><span>Overlay Menu</span></a></li><li id="menuform:custom5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom5':'menuform:custom5'}).submit('menuform');return false;"><i class="material-icons">border_horizontal</i><span>Horizontal Menu</span></a></li><li id="menuform:custom6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom6':'menuform:custom6'}).submit('menuform');return false;"><i class="material-icons">label_outline</i><span>Light Menu</span></a></li><li id="menuform:custom7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom7':'menuform:custom7'}).submit('menuform');return false;"><i class="material-icons">label</i><span>Dark Menu</span></a></li><li id="menuform:custom8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom8':'menuform:custom8'}).submit('menuform');return false;"><i class="material-icons">contacts</i><span>Inline Profile</span></a></li><li id="menuform:custom9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom9':'menuform:custom9'}).submit('menuform');return false;"><i class="material-icons">person_pin</i><span>Top Profile</span></a></li></ul></li><li id="menuform:um_components" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">list</i><span>Components</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sample" role="menuitem"><a href="/ultima/sample.xhtml"><i class="material-icons">desktop_mac</i><span>Sample Page</span></a></li><li id="menuform:um_forms" role="menuitem"><a href="/ultima/forms.xhtml"><i class="material-icons">input</i><span>Forms</span></a></li><li id="menuform:um_data" role="menuitem"><a href="/ultima/data.xhtml"><i class="material-icons">grid_on</i><span>Data</span></a></li><li id="menuform:um_panels" role="menuitem"><a href="/ultima/panel.xhtml"><i class="material-icons">content_paste</i><span>Panels</span></a></li><li id="menuform:um_overlays" role="menuitem"><a href="/ultima/overlay.xhtml"><i class="material-icons">content_copy</i><span>Overlays</span></a></li><li id="menuform:um_menus" role="menuitem"><a href="/ultima/menu.xhtml"><i class="material-icons">menu</i><span>Menus</span></a></li><li id="menuform:um_messages" role="menuitem"><a href="/ultima/messages.xhtml"><i class="material-icons">message</i><span>Messages</span></a></li><li id="menuform:um_charts" role="menuitem"><a href="/ultima/charts.xhtml"><i class="material-icons">insert_chart</i><span>Charts</span></a></li><li id="menuform:um_file" role="menuitem"><a href="/ultima/file.xhtml"><i class="material-icons">attach_file</i><span>File</span></a></li><li id="menuform:um_misc" role="menuitem"><a href="/ultima/misc.xhtml"><i class="material-icons">toys</i><span>Misc</span></a></li></ul></li><li id="menuform:um_default" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">get_app</i><span>Template Pages</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_db_landing" role="menuitem"><a href="/ultima/landing.xhtml"><i class="material-icons">flight_land</i><span>Landing</span></a></li><li id="menuform:um_empty" role="menuitem"><a href="/ultima/empty.xhtml"><i class="material-icons">hourglass_empty</i><span>Empty Page</span></a></li><li id="menuform:um_login" role="menuitem"><a href="/ultima/login.xhtml"><i class="material-icons">verified_user</i><span>Login Page</span></a></li><li id="menuform:um_error" role="menuitem"><a href="/ultima/error.xhtml"><i class="material-icons">error</i><span>Error Page</span></a></li><li id="menuform:um_404" role="menuitem"><a href="/ultima/404.xhtml"><i class="material-icons">error_outline</i><span>404 Page</span></a></li><li id="menuform:um_access" role="menuitem"><a href="/ultima/access.xhtml"><i class="material-icons">security</i><span>Access Denied Page</span></a></li></ul></li><li id="menuform:um_hierarchy" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">menu</i><span>Menu Hierarchy</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm1" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm11" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk111" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.1</span></a></li><li id="menuform:um_lnk112" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.2</span></a></li><li id="menuform:um_lnk113" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.1.3</span></a></li></ul></li><li id="menuform:um_sm12" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 1.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk121" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 1.2.1</span></a></li></ul></li></ul></li><li id="menuform:um_sm2" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm21" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk211" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.1.1</span></a></li><li id="menuform:um_lnk212" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.1.2</span></a></li></ul></li><li id="menuform:um_sm22" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">subject</i><span>Submenu 2.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk221" role="menuitem"><a href="#"><i class="material-icons">subject</i><span>Link 2.2.1</span></a></li></ul></li></ul></li></ul></li><li id="menuform:um_utils" role="menuitem"><a href="/ultima/utils.xhtml"><i class="material-icons">build</i><span>Utils</span></a></li><li id="menuform:um_doc" role="menuitem"><a href="/ultima/docs.xhtml"><i class="material-icons">find_in_page</i><span>Documentation</span></a></li></ul><script id="menuform:j_idt33_s" type="text/javascript">PrimeFaces.cw("Ultima","me",{id:"menuform:j_idt33"});</script>
+                </div>
+            </div>
+        </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="1848174760854093347:-2259668508663865868" autocomplete="off" />
+</form>
+            
+            <div class="layout-main">
+        <div class="ui-g dashboard">
+            <div class="ui-g-12 ui-md-4">
+                <div class="card overview">
+                    <div class="overview-content clearfix">
+                        <span class="overview-title">Sales</span>
+                        <span class="overview-badge">+%90</span>
+                        <span class="overview-detail">$22,650 / week</span>
+                    </div>
+                    <div class="overview-footer"><img id="j_idt58" src="/ultima/javax.faces.resource/images/dashboard/sales.svg.xhtml?ln=ultima-layout" alt="" style="width: 100%" />
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-md-4">
+                <div class="card overview">
+                    <div class="overview-content clearfix">
+                        <span class="overview-title">Views</span>
+                        <span class="overview-badge">+%60</span>
+                        <span class="overview-detail">6,520 / day</span>
+                    </div>
+                    <div class="overview-footer"><img id="j_idt60" src="/ultima/javax.faces.resource/images/dashboard/views.svg.xhtml?ln=ultima-layout" alt="" style="width: 100%" />
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-md-4">
+                <div class="card overview">
+                    <div class="overview-content clearfix">
+                        <span class="overview-title">Users</span>
+                        <span class="overview-badge">+%45</span>
+                        <span class="overview-detail">5,200 / day</span>
+                    </div>
+                    <div class="overview-footer"><img id="j_idt62" src="/ultima/javax.faces.resource/images/dashboard/progress.svg.xhtml?ln=ultima-layout" alt="" style="width: 100%" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ui-g-12 ui-md-6 ui-lg-3">
+                <div class="ui-g card colorbox colorbox-1">
+                    <div class="ui-g-4">
+                        <i class="material-icons">check_circle</i>
+                    </div>
+                    <div class="ui-g-8">
+                        <span class="colorbox-name">Tasks</span>
+                        <span class="colorbox-count">50</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-md-6 ui-lg-3">
+                <div class="ui-g card colorbox colorbox-2">
+                    <div class="ui-g-4">
+                        <i class="material-icons">shopping_card</i>
+                    </div>
+                    <div class="ui-g-8">
+                        <span class="colorbox-name">Purchases</span>
+                        <span class="colorbox-count">1200</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-md-6 ui-lg-3">
+                <div class="ui-g card colorbox colorbox-3">
+                    <div class="ui-g-4">
+                        <i class="material-icons">report</i>
+                    </div>
+                    <div class="ui-g-8">
+                        <span class="colorbox-name">Issues</span>
+                        <span class="colorbox-count">22</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-md-6 ui-lg-3">
+                <div class="ui-g card colorbox colorbox-4">
+                    <div class="ui-g-4">
+                        <i class="material-icons">email</i>
+                    </div>
+                    <div class="ui-g-8">
+                        <span class="colorbox-name">Messages</span>
+                        <span class="colorbox-count">10</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ui-g-12 ui-md-6 ui-lg-4 task-list"><div id="j_idt64" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt64"><div id="j_idt64_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Tasks</span></div><div id="j_idt64_content" class="ui-panel-content ui-widget-content">
+                    <ul>
+                        <li><div id="j_idt66" class="ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="j_idt66_input" name="j_idt66_input" type="checkbox" autocomplete="off" aria-checked="false" /></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><script id="j_idt66_s" type="text/javascript">PrimeFaces.cw("SelectBooleanCheckbox","widget_j_idt66",{id:"j_idt66"});</script>
+                            <span class="task-name">Sales Reports</span>
+                            <i class="material-icons"></i>
+                        </li>
+                        <li><div id="j_idt68" class="ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="j_idt68_input" name="j_idt68_input" type="checkbox" autocomplete="off" aria-checked="false" /></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><script id="j_idt68_s" type="text/javascript">PrimeFaces.cw("SelectBooleanCheckbox","widget_j_idt68",{id:"j_idt68"});</script>
+                            <span class="task-name">Pay Invoices</span>
+                            <i class="material-icons"></i>
+                        </li>
+                        <li><div id="j_idt70" class="ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="j_idt70_input" name="j_idt70_input" type="checkbox" autocomplete="off" aria-checked="false" /></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><script id="j_idt70_s" type="text/javascript">PrimeFaces.cw("SelectBooleanCheckbox","widget_j_idt70",{id:"j_idt70"});</script>
+                            <span class="task-name">Dinner with Tony</span>
+                            <i class="material-icons"></i>
+                        </li>
+                        <li><div id="j_idt72" class="ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="j_idt72_input" name="j_idt72_input" type="checkbox" autocomplete="off" aria-checked="false" /></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><script id="j_idt72_s" type="text/javascript">PrimeFaces.cw("SelectBooleanCheckbox","widget_j_idt72",{id:"j_idt72"});</script>
+                            <span class="task-name">Client Meeting</span>
+                            <i class="material-icons"></i>
+                        </li>
+                        <li><div id="j_idt74" class="ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="j_idt74_input" name="j_idt74_input" type="checkbox" autocomplete="off" aria-checked="false" /></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><script id="j_idt74_s" type="text/javascript">PrimeFaces.cw("SelectBooleanCheckbox","widget_j_idt74",{id:"j_idt74"});</script>
+                            <span class="task-name">New Theme</span>
+                            <i class="material-icons"></i>
+                        </li>
+                        <li><div id="j_idt76" class="ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="j_idt76_input" name="j_idt76_input" type="checkbox" autocomplete="off" aria-checked="false" /></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><script id="j_idt76_s" type="text/javascript">PrimeFaces.cw("SelectBooleanCheckbox","widget_j_idt76",{id:"j_idt76"});</script>
+                            <span class="task-name">Flight Ticket</span>
+                            <i class="material-icons"></i>
+                        </li>
+                    </ul></div></div><script id="j_idt64_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt64",{id:"j_idt64"});</script>
+            </div>
+            <div class="ui-g-12 ui-md-6 ui-lg-4 ui-fluid contact-form"><div id="j_idt79" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt79"><div id="j_idt79_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Contact Us</span></div><div id="j_idt79_content" class="ui-panel-content ui-widget-content">
+                    <div class="ui-g">
+                        <div class="ui-g-12"><div id="console" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"><div class="ui-helper-hidden-accessible"><input id="console_focus" name="console_focus" type="text" autocomplete="off" role="combobox" aria-haspopup="true" aria-expanded="false" /></div><div class="ui-helper-hidden-accessible"><select id="console_input" name="console_input" tabindex="-1"><option value="">Select One</option><option value="Xbox One">Xbox One</option><option value="PS4">PS4</option><option value="Wii U">Wii U</option></select></div><label id="console_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&amp;nbsp;</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div><div id="console_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><div class="ui-selectonemenu-items-wrapper" style="height:auto"><ul id="console_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox"><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Select One" tabindex="-1" role="option">Select One</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Xbox One" tabindex="-1" role="option">Xbox One</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PS4" tabindex="-1" role="option">PS4</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Wii U" tabindex="-1" role="option">Wii U</li></ul></div></div></div><script id="console_s" type="text/javascript">$(function(){PrimeFaces.cw("SelectOneMenu","widget_console",{id:"console",autoWidth:false});});</script>
+                        </div>
+                        <div class="ui-g-12"><span class="md-inputfield"><input id="j_idt87" name="j_idt87" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt87_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt87",{id:"j_idt87"});</script>
+                                <label>Name</label></span>
+                        </div>
+                        <div class="ui-g-12"><span class="md-inputfield"><input id="j_idt91" name="j_idt91" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt91_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt91",{id:"j_idt91"});</script>
+                                <label>Age</label></span>
+                        </div>
+                        <div class="ui-g-12"><span class="md-inputfield"><input id="j_idt95" name="j_idt95" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt95_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt95",{id:"j_idt95"});</script>
+                                <label>Message</label></span>
+                        </div>
+                    </div><button id="j_idt98" name="j_idt98" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-send"></span><span class="ui-button-text ui-c">Send</span></button><script id="j_idt98_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt98",{id:"j_idt98"});</script></div></div><script id="j_idt79_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt79",{id:"j_idt79"});</script>
+            </div>
+            <div class="ui-g-12 ui-lg-4 contacts"><div id="j_idt100" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt100"><div id="j_idt100_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Contacts</span></div><div id="j_idt100_content" class="ui-panel-content ui-widget-content">
+                    <ul>
+                        <li>
+                            <a href="#"><img id="j_idt102" src="/ultima/javax.faces.resource/images/avatar1.png.xhtml?ln=ultima-layout" alt="" width="45" />
+                                <span class="name">Joshua Williams</span>
+                                <span class="email">joshua@pf-ultima.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img id="j_idt104" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="45" />
+                                <span class="name">Emily Clark</span>
+                                <span class="email">emily@pf-ultima.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img id="j_idt106" src="/ultima/javax.faces.resource/images/avatar3.png.xhtml?ln=ultima-layout" alt="" width="45" />
+                                <span class="name">Susan Johnson</span>
+                                <span class="email">susan@pf-ultima.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img id="j_idt108" src="/ultima/javax.faces.resource/images/avatar4.png.xhtml?ln=ultima-layout" alt="" width="45" />
+                                <span class="name">Kelly Stark</span>
+                                <span class="email">kelly@pf-ultima.com</span>
+                            </a>
+                        </li>
+                    </ul></div></div><script id="j_idt100_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt100",{id:"j_idt100"});</script>
+            </div>
+            
+            <div class="ui-g-12 ui-md-4">
+                <div class="card timeline ui-fluid">
+                    <div class="ui-g">
+                        <div class="ui-g-3">
+                            <span class="event-time">just now</span>
+                            <i class="material-icons" style="color:#009688"></i>
+                        </div>
+                        <div class="ui-g-9">
+                            <span class="event-owner" style="color:#009688">Katherine May</span>
+                            <span class="event-text">Lorem ipsun dolor amet</span>
+                            <div class="event-content"><img id="j_idt111" src="/ultima/javax.faces.resource/images/dashboard/md.png.xhtml?ln=ultima-layout" alt="" />
+                            </div>
+                        </div>
+                        
+                        <div class="ui-g-3">
+                            <span class="event-time">12h ago</span>
+                            <i class="material-icons" style="color:#E91E63"></i>
+                        </div>
+                        <div class="ui-g-9">
+                            <span class="event-owner" style="color:#E91E63">Brandon Santos</span>
+                            <span class="event-text">Ab nobis, magnam sunt eum. Laudantium, repudiandae, similique!.</span>
+                        </div>
+                        
+                        <div class="ui-g-3">
+                            <span class="event-time">15h ago</span>
+                            <i class="material-icons" style="color:#9c27b0"></i>
+                        </div>
+                        <div class="ui-g-9">
+                            <span class="event-owner" style="color:#9c27b0">Stephan Ward</span>
+                            <span class="event-text">Omnis veniam quibusdam ratione est repellat qui nam quisquam ab mollitia dolores ullam voluptates, similique, dignissimos.</span>
+                        </div>
+                        
+                        <div class="ui-g-3">
+                            <span class="event-time">2d ago</span>
+                            <i class="material-icons" style="color:#ff9800"></i>
+                        </div>
+                        <div class="ui-g-9">
+                            <span class="event-owner" style="color:#ff9800">Jason Smith</span>
+                            <span class="event-text">Laudantium, repudiandae, similique!</span>
+                            <div class="event-content"><img id="j_idt113" src="/ultima/javax.faces.resource/images/dashboard/map.png.xhtml?ln=ultima-layout" alt="" />
+                            </div>
+                        </div>
+                        
+                        <div class="ui-g-3">
+                            <span class="event-time">1w ago</span>
+                            <i class="material-icons" style="color:#607d8b"></i>
+                        </div>
+                        <div class="ui-g-9">
+                            <span class="event-owner">Kevin Cox</span>
+                            <span class="event-text">Quibusdam ratione est repellat qui nam quisquam veniam quibusdam ratione.</span>
+                        </div>
+                        
+                        <div class="ui-g-3">
+                            <span class="event-time">2w ago</span>
+                            <i class="material-icons" style="color:#FFC107"></i>
+                        </div>
+                        <div class="ui-g-9">
+                            <span class="event-owner" style="color:#FFC107">Walter White</span>
+                            <span class="event-text">I am the one who knocks!</span>
+                        </div>
+                        
+                        <div class="ui-g-12"><button id="j_idt115" name="j_idt115" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-refresh"></span><span class="ui-button-text ui-c">Refresh</span></button><script id="j_idt115_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt115",{id:"j_idt115"});</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ui-g-12 ui-md-8">
+<form id="j_idt117" name="j_idt117" method="post" action="/ultima/dashboard.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt117" value="j_idt117" />
+
+                    <div class="card"><div id="j_idt117:j_idt119" class="ui-datatable ui-widget ui-datatable-reflow" style="margin-bottom:20px"><label id="j_idt117:j_idt119_reflowDD_label" for="j_idt117:j_idt119_reflowDD" class="ui-reflow-label">Sort</label><select id="j_idt117:j_idt119_reflowDD" name="j_idt117:j_idt119_reflowDD" class="ui-reflow-dropdown ui-state-default"><option value="0_0">Id Ascending</option><option value="0_1">Id Descending</option><option value="1_0">Year Ascending</option><option value="1_1">Year Descending</option><option value="2_0">Brand Ascending</option><option value="2_1">Brand Descending</option><option value="3_0">Color Ascending</option><option value="3_1">Color Descending</option></select><div class="ui-datatable-header ui-widget-header ui-corner-top">Recent Sales</div><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="j_idt117:j_idt119_head"><tr role="row"><th id="j_idt117:j_idt119:j_idt121" class="ui-state-default ui-sortable-column" role="columnheader" aria-label="Id"><span class="ui-column-title">Id</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="j_idt117:j_idt119:j_idt123" class="ui-state-default ui-sortable-column" role="columnheader" aria-label="Year"><span class="ui-column-title">Year</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="j_idt117:j_idt119:j_idt125" class="ui-state-default ui-sortable-column" role="columnheader" aria-label="Brand"><span class="ui-column-title">Brand</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="j_idt117:j_idt119:j_idt127" class="ui-state-default ui-sortable-column" role="columnheader" aria-label="Color"><span class="ui-column-title">Color</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th></tr></thead><tbody id="j_idt117:j_idt119_data" class="ui-datatable-data ui-widget-content" tabindex="0"><tr data-ri="0" data-rk="26e98a88" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">26e98a88</td><td role="gridcell">1999</td><td role="gridcell">Audi</td><td role="gridcell">Brown</td></tr><tr data-ri="1" data-rk="471f325a" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">471f325a</td><td role="gridcell">1966</td><td role="gridcell">Mercedes</td><td role="gridcell">Black</td></tr><tr data-ri="2" data-rk="cd950fe3" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">cd950fe3</td><td role="gridcell">2003</td><td role="gridcell">Volkswagen</td><td role="gridcell">Silver</td></tr><tr data-ri="3" data-rk="c1845fff" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">c1845fff</td><td role="gridcell">1960</td><td role="gridcell">Honda</td><td role="gridcell">Yellow</td></tr><tr data-ri="4" data-rk="d127c91e" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">d127c91e</td><td role="gridcell">1967</td><td role="gridcell">Renault</td><td role="gridcell">Brown</td></tr><tr data-ri="5" data-rk="983a8e19" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">983a8e19</td><td role="gridcell">1990</td><td role="gridcell">Jaguar</td><td role="gridcell">Black</td></tr><tr data-ri="6" data-rk="e108cb79" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">e108cb79</td><td role="gridcell">1977</td><td role="gridcell">Jaguar</td><td role="gridcell">Maroon</td></tr><tr data-ri="7" data-rk="a46020de" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">a46020de</td><td role="gridcell">1979</td><td role="gridcell">Jaguar</td><td role="gridcell">Black</td></tr><tr data-ri="8" data-rk="8cb693cd" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">8cb693cd</td><td role="gridcell">1997</td><td role="gridcell">Ford</td><td role="gridcell">Red</td></tr><tr data-ri="9" data-rk="f3c53f83" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">f3c53f83</td><td role="gridcell">1970</td><td role="gridcell">Volkswagen</td><td role="gridcell">Black</td></tr></tbody></table></div><input type="hidden" id="j_idt117:j_idt119_selection" name="j_idt117:j_idt119_selection" autocomplete="off" value="" /></div><script id="j_idt117:j_idt119_s" type="text/javascript">$(function(){PrimeFaces.cw("DataTable","widget_j_idt117_j_idt119",{id:"j_idt117:j_idt119",selectionMode:"single",reflow:true});});</script><div id="j_idt117:j_idt129" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt117_j_idt129"><div id="j_idt117:j_idt129_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Sales Graph</span></div><div id="j_idt117:j_idt129_content" class="ui-panel-content ui-widget-content"><div id="j_idt117:j_idt130"></div><script id="j_idt117:j_idt130_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_j_idt117_j_idt130',{id:'j_idt117:j_idt130',type:'line',responsive:true,data:[[[1,2],[2,1],[3,3],[4,6],[5,8]],[[1,6],[2,3],[3,2],[4,7],[5,9]]],title:"Linear Chart",legendPosition:"e",extender:skinChart,axes:{yaxis: {label:"",min:0,max:10,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}},xaxis: {label:"",renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},series:[{label:'Series 1',renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }},{label:'Series 2',renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }}],datatip:true},'charts');});</script></div></div><script id="j_idt117:j_idt129_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt117_j_idt129",{id:"j_idt117:j_idt129"});</script>
+                    </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:26" value="1848174760854093347:-2259668508663865868" autocomplete="off" />
+</form>
+            </div>
+            
+            <div class="ui-g-12 ui-md-8"><div id="j_idt133" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="height:100%" data-widget="widget_j_idt133"><div id="j_idt133_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Calendar</span></div><div id="j_idt133_content" class="ui-panel-content ui-widget-content"><div id="j_idt134"><div id="j_idt134_container"></div><input type="hidden" id="j_idt134_view" name="j_idt134_view" autocomplete="off" value="month" /></div><script id="j_idt134_s" type="text/javascript">$(function(){PrimeFaces.cw("Schedule","widget_j_idt134",{id:"j_idt134",defaultView:"month",locale:"en_US",lazyFetching:false,header:{left:'prev,next today',center:"title",right:"month,agendaWeek,agendaDay"}});});</script></div></div><script id="j_idt133_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt133",{id:"j_idt133"});</script>
+            </div>
+            <div class="ui-g-12 ui-md-4"><div id="j_idt136" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="height:100%" data-widget="widget_j_idt136"><div id="j_idt136_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Activity</span></div><div id="j_idt136_content" class="ui-panel-content ui-widget-content">
+                    <div class="activity-header">
+                        <div class="ui-g">
+                            <div class="ui-g-6">
+                                <span style="font-weight:bold">Last Activity</span>
+                                <p>Updated 1 minute ago</p>
+                            </div>
+                            <div class="ui-g-6" style="text-align:right"><button id="j_idt138" name="j_idt138" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-update"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="j_idt138_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt138",{id:"j_idt138"});</script>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="activity-list">
+                        <li>
+                            <div class="count">$900</div>
+                            <div class="ui-g">
+                                <div class="ui-g-6">Income</div>
+                                <div class="ui-g-6">95%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="count" style="background-color:#ffc107">$250</div>
+                            <div class="ui-g">
+                                <div class="ui-g-6">Tax</div>
+                                <div class="ui-g-6">24%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="count" style="background-color:#673AB7">$125</div>
+                            <div class="ui-g">
+                                <div class="ui-g-6">Invoices</div>
+                                <div class="ui-g-6">55%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="count" style="background-color:#00bcd4">$250</div>
+                            <div class="ui-g">
+                                <div class="ui-g-6">Expenses</div>
+                                <div class="ui-g-6">15%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="count" style="background-color:#607D8B">$350</div>
+                            <div class="ui-g">
+                                <div class="ui-g-6">Bonus</div>
+                                <div class="ui-g-6">5%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="count" style="background-color:#FF5722">$500</div>
+                            <div class="ui-g">
+                                <div class="ui-g-6">Revenue</div>
+                                <div class="ui-g-6">25%</div>
+                            </div>
+                        </li>
+                    </ul></div></div><script id="j_idt136_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt136",{id:"j_idt136"});</script>
+            </div>
+        </div>
+    
+    <div class="footer">
+        <div class="card clearfix">
+            <span class="footer-text-left">PrimeFaces ULTIMA</span>
+            <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>
+        </div>
+    </div>
+            </div>
+        </div><div id="j_idt143" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt143_start" style="display:none">
+               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt143_complete" style="display:none"></div></div><script id="j_idt143_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt143",{id:"j_idt143"});});</script></body>
+
+</html>
