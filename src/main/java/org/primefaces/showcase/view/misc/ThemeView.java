@@ -47,8 +47,8 @@ public class ThemeView implements Serializable {
         layoutMap.put("ultima-green", "css/layout-green.css");
         layoutMap.put("ultima-grey", "css/layout-grey.css");
         layoutMap.put("ultima-indigo", "css/layout-indigo.css");
-        layoutMap.put("ultima-purple-amber", "css/purple-amber.css");
-        layoutMap.put("ultima-purple-cyan", "css/purple-cyan.css");
+        layoutMap.put("ultima-purple-amber", "css/layout-purple-amber.css");
+        layoutMap.put("ultima-purple-cyan", "css/layout-purple-cyan.css");
         layoutMap.put("ultima-teal", "css/layout-teal.css");
 
         themeColorMap = new HashMap<>();

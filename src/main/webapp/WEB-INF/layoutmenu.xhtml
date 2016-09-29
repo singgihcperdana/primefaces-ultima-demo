@@ -4,7 +4,6 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:pu="http://primefaces.org/ultima">
-<!--
 <h:form id="menuform">
     <div class="layout-menu ">
         <div class="nano">
@@ -48,18 +47,18 @@
                     <p:menuitem id="um_dashboards" outcome="/dashboard.xhtml" icon="material-icons " value="Dashboard"/>
 
                     <p:submenu id="themes" label="Themes" icon="material-icons palette">
-                        <p:menuitem id="theme1" outcome="/sample.xhtml" icon="material-icons brush" value="Indigo - Pink"/>
-                        <p:menuitem id="theme2" outcome="/forms.xhtml" icon="material-icons brush" value="Brown - Green"/>
-                        <p:menuitem id="theme3" outcome="/data.xhtml" icon="material-icons brush" value="Blue - Amber"/>
-                        <p:menuitem id="theme4" outcome="/panel.xhtml" icon="material-icons brush" value="Blue Grey - Green"/>
-                        <p:menuitem id="theme5" outcome="/overlay.xhtml" icon="material-icons brush" value="Dark - Blue"/>
-                        <p:menuitem id="theme6" outcome="/menu.xhtml" icon="material-icons brush" value="Dark - Green"/>
-                        <p:menuitem id="theme7" outcome="/messages.xhtml" icon="material-icons brush" value="Green - Yellow"/>
-                        <p:menuitem id="theme8" outcome="/charts.xhtml" icon="material-icons brush" value="Purple - Cyan"/>
-                        <p:menuitem id="theme9" outcome="/file.xhtml" icon="material-icons brush" value="Purple - Amber"/>
-                        <p:menuitem id="theme10" outcome="/misc.xhtml" icon="material-icons brush" value="Teal - Lime"/>
-                        <p:menuitem id="theme11" outcome="/misc.xhtml" icon="material-icons brush" value="Cyan - Amber"/>
-                        <p:menuitem id="theme12" outcome="/misc.xhtml" icon="material-icons brush" value="Grey - Deep Orange"/>
+                        <p:menuitem id="theme1" icon="material-icons brush" value="Indigo - Pink" actionListener="#{themeView.setTheme('ultima-indigo')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme2" icon="material-icons brush" value="Brown - Green" actionListener="#{themeView.setTheme('ultima-brown')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme3" icon="material-icons brush" value="Blue - Amber" actionListener="#{themeView.setTheme('ultima-blue')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme4" icon="material-icons brush" value="Blue Grey - Green" actionListener="#{themeView.setTheme('ultima-blue-grey')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme5" icon="material-icons brush" value="Dark - Blue" actionListener="#{themeView.setTheme('ultima-dark-blue')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme6" icon="material-icons brush" value="Dark - Green" actionListener="#{themeView.setTheme('ultima-dark-green')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme7" icon="material-icons brush" value="Green - Yellow" actionListener="#{themeView.setTheme('ultima-green')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme8" icon="material-icons brush" value="Purple - Cyan" actionListener="#{themeView.setTheme('ultima-purple-cyan')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme9" icon="material-icons brush" value="Purple - Amber" actionListener="#{themeView.setTheme('ultima-purple-amber')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme10" icon="material-icons brush" value="Teal - Lime" actionListener="#{themeView.setTheme('ultima-teal')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme11" icon="material-icons brush" value="Cyan - Amber" actionListener="#{themeView.setTheme('ultima-cyan')}" immediate="true" ajax="false"/>
+                        <p:menuitem id="theme12" icon="material-icons brush" value="Grey - Deep Orange" actionListener="#{themeView.setTheme('ultima-grey')}" immediate="true" ajax="false"/>
                     </p:submenu>
 
                     <p:submenu id="um_customization" label="Customization" icon="material-icons settings_application">
@@ -125,8 +124,8 @@
         </div>
     </div>
 </h:form>
--->
 
+<!--
 <form id="menuform" name="menuform" method="post" action="/ultima/empty.xhtml" enctype="application/x-www-form-urlencoded">
 <input type="hidden" name="menuform" value="menuform" />
 
@@ -265,4 +264,5 @@
         </div>
 <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="5310455383053040438:1639061121552150659" autocomplete="off" />
 </form>
+-->
 </ui:composition>
