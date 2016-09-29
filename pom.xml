@@ -6,7 +6,7 @@
 
     <groupId>org.primefaces</groupId>
     <artifactId>primefaces-ultima-demo</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>primefaces-ultima-demo</name>
@@ -47,21 +47,18 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <!--<version>5.3</version>-->
             <version>6.0</version>
             <!--<version>6.1-SNAPSHOT</version>-->
         </dependency>
         <dependency>
             <groupId>org.primefaces.themes</groupId>
             <artifactId>primefaces-ultima</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
+            <version>1.0.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.omnifaces</groupId>
             <artifactId>omnifaces</artifactId>
-            <!--<version>1.13</version>-->
-            <version>2.4</version>
-            <!--<version>2.5-RC1</version>-->
+            <version>2.5.1</version>
         </dependency>
     </dependencies>
 

@@ -30,8 +30,10 @@ public class ThemeView implements Serializable {
     /** 默认主题：ultima-indigo(其它可选主题：ultima-blue/ultima-blue-grey/ultima-brown/ultima-cyan/ultima-dark-blue/ultima-dark-green/ultima-green/ultima-grey/ultima-indigo/ultima-purple-amber/ultima-purple-cyan/ultima-teal) */
     private String theme = "ultima-indigo";
     /** 布局的CSS样式文件(其它可选样式：layout-blue/layout-blue-grey/layout-brown/layout-cyan/layout-dark-blue/layout-dark-green/layout-green/layout-grey/layout-indigo/layout-purple-amber/layout-purple-cyan/layout-teal) */
-    private String layoutCss = "css/layout-indigo.css";
+    private String layoutCss;// = "css/layout-indigo.css";
+    private String themeColor;// = "#3F51B5";
     private Map<String, String> layoutMap;
+    private Map<String, String> themeColorMap;
 
     @PostConstruct
     public void init() {
@@ -48,6 +50,22 @@ public class ThemeView implements Serializable {
         layoutMap.put("ultima-purple-amber", "css/purple-amber.css");
         layoutMap.put("ultima-purple-cyan", "css/purple-cyan.css");
         layoutMap.put("ultima-teal", "css/layout-teal.css");
+
+        themeColorMap = new HashMap<>();
+        themeColorMap.put("ultima-blue", "#03A9F4");
+        themeColorMap.put("ultima-blue-grey", "#607D8B");
+        themeColorMap.put("ultima-brown", "#795548");
+        themeColorMap.put("ultima-cyan", "#00bcd4");
+        themeColorMap.put("ultima-dark-blue", "");
+        themeColorMap.put("ultima-dark-green", "");
+        themeColorMap.put("ultima-green", "#4CAF50");
+        themeColorMap.put("ultima-grey", "css/layout-grey.css");
+        themeColorMap.put("ultima-indigo", "#3F51B5");
+        themeColorMap.put("ultima-purple-amber", "#673AB7");
+        themeColorMap.put("ultima-purple-cyan", "#673AB7");
+        themeColorMap.put("ultima-teal", "#009688");
+
+        setTheme("ultima-indigo");
     }
 
     public String getTheme() {
@@ -58,9 +76,10 @@ public class ThemeView implements Serializable {
         this.theme = theme;
         // 根据主题的颜色变化，重置页面布局CSS
         layoutCss = layoutMap.get(theme);
-        if (layoutCss == null) {
-            layoutCss = "css/layout-indigo.css";
-        }
+        themeColor = themeColorMap.get(theme);
+//        if (layoutCss == null) {
+//            layoutCss = "css/layout-indigo.css";
+//        }
     }
 
     public String getLayoutCss() {
@@ -69,5 +88,13 @@ public class ThemeView implements Serializable {
 
     public void setLayoutCss(String layoutCss) {
         this.layoutCss = layoutCss;
+    }
+
+    public String getThemeColor() {
+        return themeColor;
+    }
+
+    public void setThemeColor(String themeColor) {
+        this.themeColor = themeColor;
     }
 }
