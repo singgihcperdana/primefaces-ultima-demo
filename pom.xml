@@ -6,7 +6,7 @@
 
     <groupId>org.primefaces</groupId>
     <artifactId>primefaces-ultima-demo</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>primefaces-ultima-demo</name>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>org.primefaces.themes</groupId>
             <artifactId>primefaces-ultima</artifactId>
-            <version>1.0.4-SNAPSHOT</version>
+            <version>1.0.5-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.omnifaces</groupId>
