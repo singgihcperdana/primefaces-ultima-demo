@@ -20,40 +20,31 @@
         <h:outputScript name="js/locales_zh.js"/>
         <ui:insert name="head"/>
     </h:head>
-    <h:body class="main-body layout-compact">
+    <h:body class="main-body #{themeView.size}">
         <h:outputStylesheet library="ultima-layout" name="css/nanoscroller.css"/>
         <h:outputStylesheet library="ultima-layout" name="css/animate.css"/>
         <h:outputStylesheet library="ultima-layout" name="css/ripple.css"/>
         <!--<h:outputStylesheet library="ultima-layout" name="css/layout-indigo.css"/>-->
         <h:outputStylesheet library="ultima-layout" name="#{themeView.layoutCss}"/>
 
-        <div class="layout-wrapper menu-layout-static">
-            <ui:insert name="topbar">
-                <ui:include src="topbar.xhtml"/>
-            </ui:insert>
-
-            <ui:insert name="layoutmenu">
-                <ui:include src="layoutmenu.xhtml"/>
-            </ui:insert>
+        <div class="#{themeView.menuModeClass}">
+            <ui:include src="./topbar.xhtml"/>
+            <ui:include src="./menu.xhtml"/>
 
             <div class="layout-main">
                 <ui:insert name="content"/>
 
-                <ui:insert name="footer">
-                    <ui:include src="footer.xhtml"/>
-                </ui:insert>
+                <ui:include src="./footer.xhtml"/>
             </div>
         </div>
 
-        <ui:insert name="widgets">
-            <p:ajaxStatus style="width:32px;height:32px;position:fixed;right:7px;bottom:7px">
-                <f:facet name="start">
-                    <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"/>
-                </f:facet>
-                <f:facet name="complete">
-                    <h:outputText value=""/>
-                </f:facet>
-            </p:ajaxStatus>
-        </ui:insert>
+        <p:ajaxStatus style="width:32px;height:32px;position:fixed;right:7px;bottom:7px">
+            <f:facet name="start">
+                <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"/>
+            </f:facet>
+            <f:facet name="complete">
+                <h:outputText value=""/>
+            </f:facet>
+        </p:ajaxStatus>
     </h:body>
 </html>

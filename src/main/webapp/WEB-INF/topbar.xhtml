@@ -17,6 +17,42 @@
                 <i class="material-icons">menu</i>
             </a>
             <ul class="topbar-items fadeInDown animated">
+                <h:panelGroup rendered="#{(themeView.menuMode eq 'horizontal') or (themeView.profile eq 'top')}">
+                    <li class="profile-item">
+                        <a href="#">
+                            <div class="profile-image"/>
+                            <span class="topbar-item-name">Jane Williams</span>
+                        </a>
+
+                        <ul class="ultima-menu animated">
+                            <li role="menuitem">
+                                <a href="#">
+                                    <i class="material-icons">person</i>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#">
+                                    <i class="material-icons">security</i>
+                                    <span>Privacy</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#">
+                                    <i class="material-icons">settings_applications</i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#">
+                                    <i class="material-icons">power_settings_new</i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </h:panelGroup>
+
                 <li>
                     <a href="#">
                         <!--<i class="topbar-icon material-icons"></i>-->
@@ -126,11 +162,11 @@
                 </li>
                 <li class="search-item">
                     <!--<span class="md-inputfield">-->
-                        <!--<p:inputText/>-->
-<!--                        <input id="j_idt26" name="j_idt26" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
-                        <script id="j_idt26_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt26",{id:"j_idt26"});</script>-->
-                        <!--<label>Search</label>-->
-                        <!--<i class="topbar-icon material-icons">search</i>-->
+                    <!--<p:inputText/>-->
+                    <!--                        <input id="j_idt26" name="j_idt26" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+                                            <script id="j_idt26_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt26",{id:"j_idt26"});</script>-->
+                    <!--<label>Search</label>-->
+                    <!--<i class="topbar-icon material-icons">search</i>-->
                     <!--</span>-->
                     <h:panelGroup styleClass="md-inputfield">
                         <p:inputText id="search"/>

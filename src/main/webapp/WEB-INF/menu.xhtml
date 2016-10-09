@@ -5,45 +5,47 @@
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:pu="http://primefaces.org/ultima">
     <h:form id="menuform">
-        <div class="layout-menu ">
+        <div class="layout-menu #{themeView.menuBg}">
             <div class="nano">
                 <div class="nano-content menu-scroll-content">
-                    <div class="profile">
-                        <div class="profile-image"/>
-                        <a id="profile-options" href="#">
-                            <span class="profile-name">Jane Williams</span>
-                            <!--<i class="material-icons"></i>-->
-                            <i class="material-icons">keyboard_arrow_down</i>
-                            <!--<i class="ui-icon ui-icon-keyboard-arrow-down"/>-->
-                        </a>
-                    </div>
+                    <h:panelGroup rendered="#{(themeView.menuMode ne 'horizontal') and (themeView.profile ne 'top')}">
+                        <div class="profile">
+                            <div class="profile-image"/>
+                            <a id="profile-options" href="#">
+                                <span class="profile-name">Jane Williams</span>
+                                <!--<i class="material-icons"></i>-->
+                                <i class="material-icons">keyboard_arrow_down</i>
+                                <!--<i class="ui-icon ui-icon-keyboard-arrow-down"/>-->
+                            </a>
+                        </div>
 
-                    <ul id="profile-menu" class="ultima-menu">
-                        <li role="menuitem">
-                            <a href="#" class="ripplelink">
-                                <i class="material-icons">person</i>
-                                <span>Profile</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="ripplelink">
-                                <i class="material-icons">security</i>
-                                <span>Privacy</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="ripplelink">
-                                <i class="material-icons">settings_application</i>
-                                <span>Settings</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="ripplelink">
-                                <i class="material-icons">power_settings_new</i>
-                                <span>Logout</span>
-                            </a>
-                        </li>
-                    </ul>
+                        <ul id="profile-menu" class="ultima-menu">
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">person</i>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">security</i>
+                                    <span>Privacy</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">settings_applications</i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#" class="ripplelink">
+                                    <i class="material-icons">power_settings_new</i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </h:panelGroup>
 
                     <pu:menu widgetVar="me">
                         <p:menuitem id="um_dashboards" outcome="/dashboard.xhtml" icon="material-icons " value="Dashboard"/>
@@ -63,16 +65,16 @@
                             <p:menuitem id="theme12" icon="material-icons brush" value="Grey - Deep Orange" actionListener="#{themeView.setTheme('ultima-grey')}" immediate="true" ajax="false"/>
                         </p:submenu>
 
-                        <p:submenu id="um_customization" label="Customization" icon="material-icons settings_application">
-                            <p:menuitem id="custom1" outcome="/sample.xhtml" icon="material-icons fiber_manual_record" value="Compact Size"/>
-                            <p:menuitem id="custom2" outcome="/forms.xhtml" icon="material-icons fiber_smart_record" value="Material Size"/>
-                            <p:menuitem id="custom3" outcome="/data.xhtml" icon="material-icons menu" value="Static Menu"/>
-                            <p:menuitem id="custom4" outcome="/panel.xhtml" icon="material-icons exit_to_app" value="Overlay Menu"/>
-                            <p:menuitem id="custom5" outcome="/overlay.xhtml" icon="material-icons border_horizontal" value="Horizontal Menu"/>
-                            <p:menuitem id="custom6" outcome="/menu.xhtml" icon="material-icons label_outline" value="Light Menu"/>
-                            <p:menuitem id="custom7" outcome="/messages.xhtml" icon="material-icons label" value="Dark Menu"/>
-                            <p:menuitem id="custom8" outcome="/charts.xhtml" icon="material-icons contacts" value="Inline Profile"/>
-                            <p:menuitem id="custom9" outcome="/file.xhtml" icon="material-icons person_pin" value="Top Profile"/>
+                        <p:submenu id="um_customization" label="Customization" icon="material-icons settings">
+                            <p:menuitem id="custom1" icon="material-icons fiber_manual_record" value="Compact Size" actionListener="#{themeView.setSize('layout-compact')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom2" icon="material-icons fiber_smart_record" value="Material Size" actionListener="#{themeView.setSize('')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom3" icon="material-icons menu" value="Static Menu" actionListener="#{themeView.setMenuMode('static')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom4" icon="material-icons exit_to_app" value="Overlay Menu" actionListener="#{themeView.setMenuMode('overlay')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom5" icon="material-icons border_horizontal" value="Horizontal Menu" actionListener="#{themeView.setMenuMode('horizontal')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom6" icon="material-icons label_outline" value="Light Menu" actionListener="#{themeView.setMenuBg('')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom7" icon="material-icons label" value="Dark Menu" actionListener="#{themeView.setMenuBg('layout-menu-dark')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom8" icon="material-icons contacts" value="Inline Profile" actionListener="#{themeView.setProfile('inline')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom9" icon="material-icons person_pin" value="Top Profile" actionListener="#{themeView.setProfile('top')}" immediate="true" ajax="false"/>
                         </p:submenu>
 
                         <p:submenu id="um_components" label="Components" icon="material-icons list">
