@@ -1,509 +1,341 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-            <meta name="apple-mobile-web-app-capable" content="yes" />
-            <meta name="theme-color" content="#3F51B5" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-indigo" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/charts/charts.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/charts/charts.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/nanoscroller.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/animate.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/ripple.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/layout-indigo.css.xhtml?ln=ultima-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
-        <title>PrimeFaces Ultima</title><script type="text/javascript" src="/ultima/javax.faces.resource/js/nanoscroller.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/layout.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/ripple.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/swipe.js.xhtml?ln=ultima-layout"></script>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="head">
         <script type="text/javascript">
-        function skinChart() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#03A9F4', '#E91E63', '#4CAF50', '#FFC107'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                borderWidth: 0.1,
-                borderColor: 'bdbdbd',
-                rendererOptions: {
-                    textColor: '#666F77'
-                }
-            };
-            this.cfg.seriesDefaults = {
-                shadow: false,
-                lineWidth: 1,
-                markerOptions: {
+            function skinChart() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#03A9F4', '#E91E63', '#4CAF50', '#FFC107'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    borderWidth: 0.1,
+                    borderColor: 'bdbdbd',
+                    rendererOptions: {
+                        textColor: '#666F77'
+                    }
+                };
+                this.cfg.seriesDefaults = {
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 1,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
 
-        function skinBar() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#4CAF50', '#FFC107'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                borderWidth: 0.1,
-                borderColor: 'bdbdbd',
-                rendererOptions: {
-                    textColor: '#666F77'
-                }
-            };
-            this.cfg.seriesDefaults = {
-                shadow: false,
-                lineWidth: 1,
-                renderer: $.jqplot.BarRenderer,
-                markerOptions: {
+            function skinBar() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#4CAF50', '#FFC107'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    borderWidth: 0.1,
+                    borderColor: 'bdbdbd',
+                    rendererOptions: {
+                        textColor: '#666F77'
+                    }
+                };
+                this.cfg.seriesDefaults = {
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 1,
+                    renderer: $.jqplot.BarRenderer,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
 
-        function skinArea() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#FFC107', '#4CAF50'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                borderWidth: 0.1,
-                borderColor: 'bdbdbd',
-                rendererOptions: {
-                    textColor: '#666F77'
-                }
-            };
-            this.cfg.seriesDefaults = {
-                shadow: false,
-                lineWidth: 1,
-                markerOptions: {
+            function skinArea() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#FFC107', '#4CAF50'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    borderWidth: 0.1,
+                    borderColor: 'bdbdbd',
+                    rendererOptions: {
+                        textColor: '#666F77'
+                    }
+                };
+                this.cfg.seriesDefaults = {
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 1,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
 
-        function skinBubble() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#4CAF50', '#FFC107'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                rendererOptions: {
-                    textColor: '#666F77'
-                }
-            };
-            this.cfg.seriesDefaults = {
-                shadow: false,
-                lineWidth: 1,
-                renderer: $.jqplot.BubbleRenderer,
-                markerOptions: {
+            function skinBubble() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#4CAF50', '#FFC107'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    rendererOptions: {
+                        textColor: '#666F77'
+                    }
+                };
+                this.cfg.seriesDefaults = {
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 1,
+                    renderer: $.jqplot.BubbleRenderer,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
 
-        function skinZoom() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#4CAF50', '#FFC107'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                rendererOptions: {
-                    textColor: '#666F77'
-                }
-            };
-            this.cfg.seriesDefaults = {
-                shadow: false,
-                lineWidth: 1,
-                markerOptions: {
+            function skinZoom() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#4CAF50', '#FFC107'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    rendererOptions: {
+                        textColor: '#666F77'
+                    }
+                };
+                this.cfg.seriesDefaults = {
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 1,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
 
-        function skinPie() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#03A9F4', '#E91E63', '#4CAF50', '#FFC107'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                rendererOptions: {
-                    textColor: '#666F77',
-                }
-            };
-            this.cfg.seriesDefaults = {
-                renderer: $.jqplot.PieRenderer,
-                shadow: false,
-                lineWidth: 1,
-                markerOptions: {
+            function skinPie() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#03A9F4', '#E91E63', '#4CAF50', '#FFC107'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    rendererOptions: {
+                        textColor: '#666F77',
+                    }
+                };
+                this.cfg.seriesDefaults = {
+                    renderer: $.jqplot.PieRenderer,
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 1,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
 
-        function skinDonut() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#03A9F4', '#E91E63', '#4CAF50', '#FFC107'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                rendererOptions: {
-                    textColor: '#666F77',
-                }
-            };
-            this.cfg.seriesDefaults = {
-                renderer: $.jqplot.DonutRenderer,
-                shadow: false,
-                lineWidth: 1,
-                markerOptions: {
+            function skinDonut() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#03A9F4', '#E91E63', '#4CAF50', '#FFC107'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    rendererOptions: {
+                        textColor: '#666F77',
+                    }
+                };
+                this.cfg.seriesDefaults = {
+                    renderer: $.jqplot.DonutRenderer,
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 1,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
 
-        function skinBarAndLine() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#03A9F4', '#FFC107'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                borderWidth: 0.1,
-                borderColor: 'bdbdbd',
-                rendererOptions: {
-                    textColor: '#666F77'
-                }
-            };
-            this.cfg.seriesDefaults = {
-                shadow: false,
-                lineWidth: 5,
-                renderer: $.jqplot.BarRenderer,
-                markerOptions: {
+            function skinBarAndLine() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#03A9F4', '#FFC107'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    borderWidth: 0.1,
+                    borderColor: 'bdbdbd',
+                    rendererOptions: {
+                        textColor: '#666F77'
+                    }
+                };
+                this.cfg.seriesDefaults = {
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 5,
+                    renderer: $.jqplot.BarRenderer,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
 
-        function skinMeterGauge() {
-            this.cfg.title = '';
-            this.cfg.seriesDefaults = {
-                shadow: false,
-                lineWidth: 5,
-                renderer: $.jqplot.MeterGaugeRenderer,
-                rendererOptions: {
+            function skinMeterGauge() {
+                this.cfg.title = '';
+                this.cfg.seriesDefaults = {
                     shadow: false,
-                    min: 100,
-                    max: 800,
-                    intervals: [200, 300, 400, 500, 600, 700, 800],
-                    intervalColors: ['#03A9F4', '#E91E63', '#4CAF50', '#FFC107', '#03A9F4', '#E91E63', '#4CAF50']
+                    lineWidth: 5,
+                    renderer: $.jqplot.MeterGaugeRenderer,
+                    rendererOptions: {
+                        shadow: false,
+                        min: 100,
+                        max: 800,
+                        intervals: [200, 300, 400, 500, 600, 700, 800],
+                        intervalColors: ['#03A9F4', '#E91E63', '#4CAF50', '#FFC107', '#03A9F4', '#E91E63', '#4CAF50']
+                    }
                 }
             }
-        }
 
-        function skinMultiAxis() {
-            this.cfg.shadow = false;
-            this.cfg.title = '';
-            this.cfg.seriesColors = ['#4CAF50', '#FFC107'];
-            this.cfg.grid = {
-                background: '#ffffff',
-                borderColor: '#ffffff',
-                gridLineColor: '#F5F5F5',
-                shadow: false
-            };
-            this.cfg.axesDefaults = {
-                borderWidth: 0.1,
-                borderColor: 'bdbdbd',
-                rendererOptions: {
-                    textColor: '#666F77'
-                }
-            };
-            this.cfg.seriesDefaults = {
-                shadow: false,
-                lineWidth:1,
-                renderer: $.jqplot.BarRenderer,
-                markerOptions: {
+            function skinMultiAxis() {
+                this.cfg.shadow = false;
+                this.cfg.title = '';
+                this.cfg.seriesColors = ['#4CAF50', '#FFC107'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#F5F5F5',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    borderWidth: 0.1,
+                    borderColor: 'bdbdbd',
+                    rendererOptions: {
+                        textColor: '#666F77'
+                    }
+                };
+                this.cfg.seriesDefaults = {
                     shadow: false,
-                    size: 7,
-                    style: 'circle'
+                    lineWidth: 1,
+                    renderer: $.jqplot.BarRenderer,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
                 }
             }
-        }
         </script>
         <style type="text/css">
             .jqplot-xaxis-label, .jqplot-yaxis-label, .jqplot-y2axis-label, .jqplot-x2axis-label {
-                color: #757575; 
+                color: #757575;
             }
-            
+
             table.jqplot-table-legend {
                 background-color: #ffffff;
                 color: #757575;
                 border-color: #bdbdbd;
             }
-        </style></head><body class="main-body layout-compact">
-        
-        <div class="layout-wrapper menu-layout-static">
+        </style>
+    </ui:define>
 
-    <div class="topbar clearfix">
-        <div class="topbar-left">            
-            <div class="logo"></div>
-        </div>
-        
-        <div class="topbar-right">
-            <a id="menu-button" href="#">
-                <i></i>
-            </a>
-            
-            <a id="topbar-menu-button" href="#">
-                <i class="material-icons"></i>
-            </a>
-            <ul class="topbar-items fadeInDown animated">
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons"></i>
-                        <span class="topbar-item-name">Settings</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Change Theme</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Favorites</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Lock Screen</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Wallpaper</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons animated swing"></i>
-                        <span class="topbar-badge animated rubberBand">5</span>
-                        <span class="topbar-item-name">Messages</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt16" src="/ultima/javax.faces.resource/images/avatar1.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Give me a call</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt18" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Sales reports attached</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt20" src="/ultima/javax.faces.resource/images/avatar3.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>About your invoice</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt22" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Meeting today at 10pm</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt24" src="/ultima/javax.faces.resource/images/avatar4.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Out of office</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons"></i>
-                        <span class="topbar-badge animated rubberBand">4</span>
-                        <span class="topbar-item-name">Notifications</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Pending tasks</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Meeting today at 3pm</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Download documents</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Book flight</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="search-item"><span class="md-inputfield"><input id="j_idt27" name="j_idt27" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt27_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt27",{id:"j_idt27"});</script>
-                        <label>Search</label>
-                        <i class="topbar-icon material-icons"></i></span>
-                    
-                </li>
-            </ul>
-        </div>
-    </div>
-<form id="menuform" name="menuform" method="post" action="/ultima/charts.xhtml" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="menuform" value="menuform" />
- 
-        <div class="layout-menu ">
-            <div class="nano">
-                <div class="nano-content menu-scroll-content">
-                        <div class="profile">
-                            <div class="profile-image"></div>
-                            <a id="profile-options" href="#">
-                                <span class="profile-name">Jane Williams</span>
-                                <i class="material-icons"></i>
-                            </a>
-                        </div>
-                    
-                        <ul id="profile-menu" class="ultima-menu">
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Profile</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Privacy</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Settings</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Logout</span>
-                                </a>
-                            </li>
-                        </ul><ul id="menuform:j_idt33" class="ultima-menu clearfix"><li id="menuform:um_dashboard" role="menuitem"><a href="/ultima/dashboard.xhtml"><i class="material-icons"></i><span>Dashboard</span></a></li><li id="menuform:themes" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Themes</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:theme1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme1':'menuform:theme1'}).submit('menuform');return false;"><i class="material-icons"></i><span>Indigo - Pink</span></a></li><li id="menuform:theme2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme2':'menuform:theme2'}).submit('menuform');return false;"><i class="material-icons"></i><span>Brown - Green</span></a></li><li id="menuform:theme3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme3':'menuform:theme3'}).submit('menuform');return false;"><i class="material-icons"></i><span>Blue - Amber</span></a></li><li id="menuform:theme4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme4':'menuform:theme4'}).submit('menuform');return false;"><i class="material-icons"></i><span>Blue Grey - Green</span></a></li><li id="menuform:theme5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme5':'menuform:theme5'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark - Blue</span></a></li><li id="menuform:theme6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme6':'menuform:theme6'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark - Green</span></a></li><li id="menuform:theme7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme7':'menuform:theme7'}).submit('menuform');return false;"><i class="material-icons"></i><span>Green - Yellow</span></a></li><li id="menuform:theme8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme8':'menuform:theme8'}).submit('menuform');return false;"><i class="material-icons"></i><span>Purple - Cyan</span></a></li><li id="menuform:theme9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme9':'menuform:theme9'}).submit('menuform');return false;"><i class="material-icons"></i><span>Purple - Amber</span></a></li><li id="menuform:theme10" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme10':'menuform:theme10'}).submit('menuform');return false;"><i class="material-icons"></i><span>Teal - Lime</span></a></li><li id="menuform:theme11" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme11':'menuform:theme11'}).submit('menuform');return false;"><i class="material-icons"></i><span>Cyan - Amber</span></a></li><li id="menuform:theme12" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme12':'menuform:theme12'}).submit('menuform');return false;"><i class="material-icons"></i><span>Grey - Deep Orange</span></a></li></ul></li><li id="menuform:um_customization" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Customization</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:custom1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom1':'menuform:custom1'}).submit('menuform');return false;"><i class="material-icons"></i><span>Compact Size</span></a></li><li id="menuform:custom2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom2':'menuform:custom2'}).submit('menuform');return false;"><i class="material-icons"></i><span>Material Size</span></a></li><li id="menuform:custom3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom3':'menuform:custom3'}).submit('menuform');return false;"><i class="material-icons"></i><span>Static Menu</span></a></li><li id="menuform:custom4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom4':'menuform:custom4'}).submit('menuform');return false;"><i class="material-icons"></i><span>Overlay Menu</span></a></li><li id="menuform:custom5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom5':'menuform:custom5'}).submit('menuform');return false;"><i class="material-icons"></i><span>Horizontal Menu</span></a></li><li id="menuform:custom6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom6':'menuform:custom6'}).submit('menuform');return false;"><i class="material-icons"></i><span>Light Menu</span></a></li><li id="menuform:custom7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom7':'menuform:custom7'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark Menu</span></a></li><li id="menuform:custom8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom8':'menuform:custom8'}).submit('menuform');return false;"><i class="material-icons"></i><span>Inline Profile</span></a></li><li id="menuform:custom9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom9':'menuform:custom9'}).submit('menuform');return false;"><i class="material-icons"></i><span>Top Profile</span></a></li></ul></li><li id="menuform:um_components" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Components</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sample" role="menuitem"><a href="/ultima/sample.xhtml"><i class="material-icons"></i><span>Sample Page</span></a></li><li id="menuform:um_forms" role="menuitem"><a href="/ultima/forms.xhtml"><i class="material-icons"></i><span>Forms</span></a></li><li id="menuform:um_data" role="menuitem"><a href="/ultima/data.xhtml"><i class="material-icons"></i><span>Data</span></a></li><li id="menuform:um_panels" role="menuitem"><a href="/ultima/panel.xhtml"><i class="material-icons"></i><span>Panels</span></a></li><li id="menuform:um_overlays" role="menuitem"><a href="/ultima/overlay.xhtml"><i class="material-icons"></i><span>Overlays</span></a></li><li id="menuform:um_menus" role="menuitem"><a href="/ultima/menu.xhtml"><i class="material-icons"></i><span>Menus</span></a></li><li id="menuform:um_messages" role="menuitem"><a href="/ultima/messages.xhtml"><i class="material-icons"></i><span>Messages</span></a></li><li id="menuform:um_charts" role="menuitem"><a href="/ultima/charts.xhtml"><i class="material-icons"></i><span>Charts</span></a></li><li id="menuform:um_file" role="menuitem"><a href="/ultima/file.xhtml"><i class="material-icons"></i><span>File</span></a></li><li id="menuform:um_misc" role="menuitem"><a href="/ultima/misc.xhtml"><i class="material-icons"></i><span>Misc</span></a></li></ul></li><li id="menuform:um_default" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Template Pages</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_db_landing" role="menuitem"><a href="/ultima/landing.xhtml"><i class="material-icons"></i><span>Landing</span></a></li><li id="menuform:um_empty" role="menuitem"><a href="/ultima/empty.xhtml"><i class="material-icons"></i><span>Empty Page</span></a></li><li id="menuform:um_login" role="menuitem"><a href="/ultima/login.xhtml"><i class="material-icons"></i><span>Login Page</span></a></li><li id="menuform:um_error" role="menuitem"><a href="/ultima/error.xhtml"><i class="material-icons"></i><span>Error Page</span></a></li><li id="menuform:um_404" role="menuitem"><a href="/ultima/404.xhtml"><i class="material-icons"></i><span>404 Page</span></a></li><li id="menuform:um_access" role="menuitem"><a href="/ultima/access.xhtml"><i class="material-icons"></i><span>Access Denied Page</span></a></li></ul></li><li id="menuform:um_hierarchy" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Menu Hierarchy</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm1" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm11" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk111" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.1</span></a></li><li id="menuform:um_lnk112" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.2</span></a></li><li id="menuform:um_lnk113" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.3</span></a></li></ul></li><li id="menuform:um_sm12" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk121" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.2.1</span></a></li></ul></li></ul></li><li id="menuform:um_sm2" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm21" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk211" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.1.1</span></a></li><li id="menuform:um_lnk212" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.1.2</span></a></li></ul></li><li id="menuform:um_sm22" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk221" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.2.1</span></a></li></ul></li></ul></li></ul></li><li id="menuform:um_utils" role="menuitem"><a href="/ultima/utils.xhtml"><i class="material-icons"></i><span>Utils</span></a></li><li id="menuform:um_doc" role="menuitem"><a href="/ultima/docs.xhtml"><i class="material-icons"></i><span>Documentation</span></a></li></ul><script id="menuform:j_idt33_s" type="text/javascript">PrimeFaces.cw("Ultima","me",{id:"menuform:j_idt33"});</script>
-                </div>
-            </div>
-        </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-7593651203980063044:7807407215211047117" autocomplete="off" />
-</form>
-            
-            <div class="layout-main">
-    
+
+    <ui:define name="content">
         <div class="ui-g ui-fluid">
             <div class="ui-g-12 ui-lg-6">
                 <div class="card">
-                    <h1 class="centerText">Linear Chart</h1><div id="line"></div><script id="line_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_line',{id:'line',type:'line',responsive:true,data:[[[1,2],[2,1],[3,3],[4,6],[5,8]],[[1,6],[2,3],[3,2],[4,7],[5,9]]],title:"Linear Chart",legendPosition:"e",extender:skinChart,axes:{xaxis: {label:"",renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"",min:0,max:10,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},series:[{label:'Series 1',renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }},{label:'Series 2',renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }}],datatip:true},'charts');});</script>
+                    <h1 class="centerText">Linear Chart</h1>
+                    <p:chart id="line" type="line" model="#{chartView.lineModel}" responsive="true"/>
                 </div>
-                
+
                 <div class="card">
-                    <h1 class="centerText">Bar Chart</h1><div id="bar"></div><script id="bar_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_bar',{id:'bar',type:'bar',responsive:true,data:[[120,100,44,150,25],[52,60,110,135,120]],title:"Bar Chart",legendPosition:"ne",extender:skinBar,axes:{xaxis: {label:"Gender",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"Births",min:0,max:200,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},series:[{label:'Boys'},{label:'Girls'}],ticks:["2004","2005","2006","2007","2008"],orientation:"vertical",datatip:true},'charts');});</script>
+                    <h1 class="centerText">Bar Chart</h1>
+                    <p:chart id="bar" type="bar" model="#{chartView.barModel}" responsive="true"/>
                 </div>
-                
+
                 <div class="card">
-                    <h1 class="centerText">Area Chart</h1><div id="area"></div><script id="area_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_area',{id:'area',type:'line',responsive:true,data:[[["2004",120],["2005",100],["2006",44],["2007",150],["2008",25]],[["2004",52],["2005",60],["2006",110],["2007",90],["2008",120]]],title:"Area Chart",legendPosition:"ne",extender:skinArea,axes:{xaxis: {label:"Years",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"Fails",min:0,max:300,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},series:[{label:'Boys',renderer: $.jqplot.LineRenderer,fill:true,fillAlpha:1.0,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }},{label:'Girls',renderer: $.jqplot.LineRenderer,fill:true,fillAlpha:1.0,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }}],stackSeries:true,showPointLabels:true,datatip:true},'charts');});</script>
+                    <h1 class="centerText">Area Chart</h1>
+                    <p:chart id="area" type="line" model="#{chartView.areaModel}" responsive="true" />
                 </div>
-                
+
                 <div class="card">
-                    <h1 class="centerText">Bubble Chart</h1><div id="bubble"></div><script id="bubble_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_bubble',{id:'bubble',type:'bubble',responsive:true,data:[[[70,183,55,"Acura"],[45,92,36,"Alfa Romeo"],[24,104,40,"AM General"],[50,123,60,"Bugatti"],[15,89,25,"BMW"],[40,180,80,"Audi"],[70,70,48,"Aston Martin"]]],title:"Bubble Chart",extender:skinBubble,axes:{xaxis: {label:"Price",renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"Labels",min:0,max:250,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},showLabels:true,bubbleGradients:false,bubbleAlpha:1.0,datatip:true},'charts');});</script>
+                    <h1 class="centerText">Bubble Chart</h1>
+                    <p:chart id="bubble" type="bubble" model="#{chartView.bubbleModel}" responsive="true"/>
                 </div>
-                
+
                 <div class="card">
-                    <h1 class="centerText">Zoom Chart</h1><div id="date"></div><script id="date_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_date',{id:'date',type:'line',responsive:true,data:[[["2014-01-01",51],["2014-01-06",22],["2014-01-12",65],["2014-01-18",74],["2014-01-24",24],["2014-01-30",51]],[["2014-01-01",32],["2014-01-06",73],["2014-01-12",24],["2014-01-18",12],["2014-01-24",74],["2014-01-30",62]]],title:"Zoom for Details",extender:skinZoom,axes:{xaxis: {label:"Dates",max:"2014-02-01",renderer:$.jqplot.DateAxisRenderer,tickOptions:{angle:-50,formatString:"%b %#d, %y"}},yaxis: {label:"Values",renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},series:[{label:'Series 1',renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }},{label:'Series 2',renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }}],zoom:true,datatip:true},'charts');});</script>
+                    <h1 class="centerText">Zoom Chart</h1>
+                    <p:chart id="date" type="line" model="#{chartView.zoomModel}" responsive="true"/>
                 </div>
             </div>
             <div class="ui-g-12 ui-lg-6">
                 <div class="card">
-                    <h1 class="centerText">Pie Chart</h1><div id="pie"></div><script id="pie_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_pie',{id:'pie',type:'pie',responsive:true,data:[[["Brand 1",540],["Brand 2",325],["Brand 3",702],["Brand 4",421]]],title:"Simple Pie",legendPosition:"w",extender:skinPie,datatip:true,datatipFormat:"%s - %d"},'charts');});</script>
+                    <h1 class="centerText">Pie Chart</h1>
+                    <p:chart id="pie" type="pie" model="#{chartView.pieModel}" responsive="true" />
                 </div>
-                
-                <div class="card">
-                    <h1 class="centerText">Donut Chart</h1><div id="donut"></div><script id="donut_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_donut',{id:'donut',type:'donut',responsive:true,data:[[["Brand 1",150],["Brand 2",400],["Brand 3",200],["Brand 4",10]],[["Brand 1",540],["Brand 2",125],["Brand 3",702],["Brand 4",421]],[["Brand 1",40],["Brand 2",325],["Brand 3",402],["Brand 4",421]]],title:"Donut Chart",legendPosition:"w",extender:skinDonut,datatip:true,datatipFormat:"%s - %d"},'charts');});</script>
-                </div>
-                
-                <div class="card">
-                    <h1 class="centerText">Bar And Line Chart</h1><div id="combined"></div><script id="combined_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_combined',{id:'combined',type:'bar',responsive:true,data:[[120,100,44,150,25],[52,60,110,135,120]],title:"Bar and Line",legendPosition:"ne",highlightMouseOver:false,extender:skinBarAndLine,axes:{xaxis: {label:"",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"",min:0,max:200,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},series:[{label:'Boys',renderer: $.jqplot.BarRenderer},{label:'Girls',renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }}],ticks:["2004","2005","2006","2007","2008"],orientation:"vertical",showPointLabels:true},'charts');});</script>
-                </div>
-                
-                <div class="card">
-                    <h1 class="centerText">Multi Axis Chart</h1><div id="multiAxis"></div><script id="multiAxis_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_multiAxis',{id:'multiAxis',type:'line',responsive:true,data:[[["2004",120],["2005",100],["2006",44],["2007",150],["2008",25]],[["A",52],["B",60],["C",110],["D",135],["E",120]]],title:"Multi Axis Chart",highlightMouseOver:false,extender:skinMultiAxis,axes:{y2axis: {label:"Number",min:0,max:200,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}},xaxis: {label:"Years",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},x2axis: {label:"Period",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"Birth",min:0,max:200,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},series:[{label:'Boys',renderer: $.jqplot.BarRenderer},{label:'Girls',renderer: $.jqplot.LineRenderer,xaxis:"x2axis",yaxis:"y2axis",showLine:true,markerOptions:{show:true, style:'filledCircle'},rendererOptions:{smooth: true }}],datatip:true},'charts');});</script>
-                </div>
-            </div>
-        </div>
-    
-    <div class="footer">
-        <div class="card clearfix">
-            <span class="footer-text-left">PrimeFaces ULTIMA</span>
-            <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>
-        </div>
-    </div>
-            </div>
-        </div><div id="j_idt48" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt48_start" style="display:none">
-               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt48_complete" style="display:none"></div></div><script id="j_idt48_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt48",{id:"j_idt48"});});</script></body>
 
-</html>
+                <div class="card">
+                    <h1 class="centerText">Donut Chart</h1>
+                    <p:chart id="donut" type="donut" model="#{chartView.donutModel}" responsive="true" />
+                </div>
+
+                <div class="card">
+                    <h1 class="centerText">Bar And Line Chart</h1>
+                    <p:chart id="combined" type="bar" model="#{chartView.combinedModel}" responsive="true" />
+                </div>
+
+                <div class="card">
+                    <h1 class="centerText">Multi Axis Chart</h1>
+                    <p:chart id="multiAxis" type="line" model="#{chartView.multiAxisModel}" responsive="true"/>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
