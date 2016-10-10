@@ -34,7 +34,7 @@ public class ThemeView implements Serializable {
     /** 默认菜单位置样式：static */
     public static final String DEFAULT_MENU_MODE = "static";
     /** 默认菜单背景样式：menu-layout-static */
-    public static final String DEFAULT_MENU_BG = "";
+    public static final String DEFAULT_MENU_COLOR = "";
     /** 默认简介位置：inline */
     public static final String DEFAULT_PROFILE = "inline";
     /** 布局的主题(其它可选主题：ultima-blue/ultima-blue-grey/ultima-brown/ultima-cyan/ultima-dark-blue/ultima-dark-green/ultima-green/ultima-grey/ultima-indigo/ultima-purple-amber/ultima-purple-cyan/ultima-teal) */
@@ -49,9 +49,9 @@ public class ThemeView implements Serializable {
     /** 菜单位置样式：layout-wrapper menu-layout-static/layout-wrapper menu-layout-overlay/layout-wrapper menu-layout-static menu-layout-horizontal */
     private String menuModeClass;
     /** 菜单背景样式：""/layout-menu-dark */
-    private String menuBg; // = "";
+    private String menuColor; // = "";
     /** 简介位置(inline/top) */
-    private String profile; // = "inline";
+    private String profileLocation; // = "inline";
     private Map<String, String> layoutMap;
     private Map<String, String> themeColorMap;
     private Map<String, String> menuModeClassMap;
@@ -94,8 +94,8 @@ public class ThemeView implements Serializable {
         setTheme(DEFAULT_THEME);
         setSize(DEFAULT_SIZE);
         setMenuMode(DEFAULT_MENU_MODE);
-        setMenuBg(DEFAULT_MENU_BG);
-        setProfile(DEFAULT_PROFILE);
+        setMenuColor(DEFAULT_MENU_COLOR);
+        setProfileLocation(DEFAULT_PROFILE);
     }
 
     public String getTheme() {
@@ -158,19 +158,19 @@ public class ThemeView implements Serializable {
         this.menuModeClass = menuModeClass;
     }
 
-    public String getMenuBg() {
-        return menuBg;
+    public String getMenuColor() {
+        return menuColor;
     }
 
-    public void setMenuBg(String menuBg) {
-        this.menuBg = menuBg;
+    public void setMenuColor(String menuColor) {
+        this.menuColor = menuColor;
     }
 
-    public String getProfile() {
-        return profile;
+    public String getProfileLocation() {
+        return profileLocation;
     }
 
-    public void setProfile(String profile) {
-        this.profile = profile;
+    public void setProfileLocation(String profileLocation) {
+        this.profileLocation = profileLocation;
     }
 }

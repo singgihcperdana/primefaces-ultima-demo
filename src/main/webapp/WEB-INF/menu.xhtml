@@ -5,10 +5,10 @@
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:pu="http://primefaces.org/ultima">
     <h:form id="menuform">
-        <div class="layout-menu #{themeView.menuBg}">
+        <div class="layout-menu #{themeView.menuColor}">
             <div class="nano">
                 <div class="nano-content menu-scroll-content">
-                    <h:panelGroup rendered="#{(themeView.menuMode ne 'horizontal') and (themeView.profile ne 'top')}">
+                    <h:panelGroup rendered="#{(themeView.menuMode ne 'horizontal') and (themeView.profileLocation ne 'top')}">
                         <div class="profile">
                             <div class="profile-image"/>
                             <a id="profile-options" href="#">
@@ -71,10 +71,10 @@
                             <p:menuitem id="custom3" icon="material-icons menu" value="Static Menu" actionListener="#{themeView.setMenuMode('static')}" immediate="true" ajax="false"/>
                             <p:menuitem id="custom4" icon="material-icons exit_to_app" value="Overlay Menu" actionListener="#{themeView.setMenuMode('overlay')}" immediate="true" ajax="false"/>
                             <p:menuitem id="custom5" icon="material-icons border_horizontal" value="Horizontal Menu" actionListener="#{themeView.setMenuMode('horizontal')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom6" icon="material-icons label_outline" value="Light Menu" actionListener="#{themeView.setMenuBg('')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom7" icon="material-icons label" value="Dark Menu" actionListener="#{themeView.setMenuBg('layout-menu-dark')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom8" icon="material-icons contacts" value="Inline Profile" actionListener="#{themeView.setProfile('inline')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom9" icon="material-icons person_pin" value="Top Profile" actionListener="#{themeView.setProfile('top')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom6" icon="material-icons label_outline" value="Light Menu" actionListener="#{themeView.setMenuColor('')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom7" icon="material-icons label" value="Dark Menu" actionListener="#{themeView.setMenuColor('layout-menu-dark')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom8" icon="material-icons contacts" value="Inline Profile" actionListener="#{themeView.setProfileLocation('inline')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom9" icon="material-icons person_pin" value="Top Profile" actionListener="#{themeView.setProfileLocation('top')}" immediate="true" ajax="false"/>
                         </p:submenu>
 
                         <p:submenu id="um_components" label="Components" icon="material-icons list">
