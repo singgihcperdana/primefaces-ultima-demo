@@ -1,85 +1,36 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <f:facet name="first">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-            <meta name="apple-mobile-web-app-capable" content="yes" />
-        </f:facet>
-        <title><ui:insert name="title">PrimeFaces Ultima</ui:insert></title>
-        <h:outputScript library="ultima-layout" name="js/ripple.js"/>
-        <h:outputScript library="ultima-layout" name="js/layout.js"/>
-        <h:outputScript name="js/locales_zh.js"/>
-        <ui:insert name="head"/>
-    </h:head>
-    <h:body class="login-body">
-        <h:outputStylesheet library="ultima-layout" name="css/ripple.css"/>
-        <!--<h:outputStylesheet library="ultima-layout" name="css/layout-indigo.css"/>-->
-        <h:outputStylesheet library="ultima-layout" name="#{themeView.layoutCss}"/>
-        <!--<!DOCTYPE html>
-        <html xmlns="http://www.w3.org/1999/xhtml">
-            <head id="j_idt2">
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-                    <meta name="apple-mobile-web-app-capable" content="yes" />
-                    <link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-indigo" />
-                    <link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" />
-                    <link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.0" />
-                    <script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.0"></script>
-                    <script type="text/javascript" src="/ultima/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.0"></script>
-                    <script type="text/javascript" src="/ultima/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.0"></script>
-                    <script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.0"></script>
-                    <link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/ripple.css.xhtml?ln=ultima-layout" />
-                    <link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/layout-indigo.css.xhtml?ln=ultima-layout" />
-                    <script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
-                <title>PrimeFaces Ultima</title>
-                <script type="text/javascript" src="/ultima/javax.faces.resource/js/ripple.js.xhtml?ln=ultima-layout"></script>
-                <script type="text/javascript" src="/ultima/javax.faces.resource/js/layout.js.xhtml?ln=ultima-layout"></script>
-            </head>
-            <body class="login-body">-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template2.xhtml">
+    <ui:param name="bodyClass" value="login-body"/>
+
+    <ui:define name="content">
         <div class="card login-panel ui-fluid">
             <div class="ui-g">
                 <div class="ui-g-12">
-                    <!--<img id="j_idt9" src="/ultima/javax.faces.resource/images/logo-ultima.svg.xhtml?ln=ultima-layout" alt="" />-->
                     <p:graphicImage value="#{resource['ultima-layout:images/logo-ultima.svg']}"/>
                 </div>
                 <div class="ui-g-12">
                     <span class="md-inputfield">
-                        <!--                        <input id="j_idt12" name="j_idt12" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
-                                                <script id="j_idt12_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt12",{id:"j_idt12"});</script>-->
                         <p:inputText/>
                         <label>Username</label>
                     </span>
                 </div>
                 <div class="ui-g-12">
                     <span class="md-inputfield">
-                        <!--                        <input id="j_idt16" name="j_idt16" type="password" class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all" />
-                                                <script id="j_idt16_s" type="text/javascript">$(function(){PrimeFaces.cw("Password","widget_j_idt16",{id:"j_idt16"});});</script>-->
                         <p:password/>
                         <label>Password</label>
                     </span>
                 </div>
                 <div class="ui-g-12">
-                    <!--                    <button id="j_idt19" name="j_idt19" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"
-                                        onclick="window.open('/ultima/dashboard.xhtml','_self')"><span class="ui-button-icon-left ui-icon ui-c ui-icon-person"></span>
-                                            <span class="ui-button-text ui-c">Sign In</span></button>
-                                            <script id="j_idt19_s" type="text/javascript">PrimeFaces.cw("Button","widget_j_idt19",{id:"j_idt19"});</script>-->
                     <p:button value="Sign In" outcome="/dashboard.xhtml" icon="ui-icon-person"/>
-                    <!--                        <button id="j_idt20" name="j_idt20" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left secondary"
-                                            onclick="window.open('/ultima/dashboard.xhtml','_self')"><span class="ui-button-icon-left ui-icon ui-c ui-icon-help"></span>
-                                                <span class="ui-button-text ui-c">Forgot Password</span></button>
-                                                <script id="j_idt20_s" type="text/javascript">PrimeFaces.cw("Button","widget_j_idt20",{id:"j_idt20"});</script>-->
                     <p:button value="Forgot Password" outcome="/dashboard.xhtml" icon="ui-icon-help" styleClass="secondary"/>
                 </div>
             </div>
         </div>
 
         <div class="login-footer">PrimeFaces Ultima</div>
-    </h:body>
-</html>
+    </ui:define>
+</ui:composition>
