@@ -29,22 +29,18 @@ import org.primefaces.event.SelectEvent;
 import org.primefaces.event.TransferEvent;
 import org.primefaces.event.UnselectEvent;
 import org.primefaces.model.DualListModel;
-//import org.primefaces.showcase.domain.Theme;
 
 @Named
 @RequestScoped
 public class PickListView {
 
-//    @ManagedProperty("#{themeService}")
-//    private ThemeService service;
     private DualListModel<String> cities;
-//    private DualListModel<Theme> themes;
 
     @PostConstruct
     public void init() {
         //Cities
-        List<String> citiesSource = new ArrayList<String>();
-        List<String> citiesTarget = new ArrayList<String>();
+        List<String> citiesSource = new ArrayList<>();
+        List<String> citiesTarget = new ArrayList<>();
 
         citiesSource.add("San Francisco");
         citiesSource.add("London");
@@ -54,13 +50,7 @@ public class PickListView {
         citiesSource.add("Barcelona");
         citiesSource.add("Rome");
 
-        cities = new DualListModel<String>(citiesSource, citiesTarget);
-
-//        //Themes
-//        List<Theme> themesSource = service.getThemes().subList(0, 6);
-//        List<Theme> themesTarget = new ArrayList<Theme>();
-//
-//        themes = new DualListModel<Theme>(themesSource, themesTarget);
+        cities = new DualListModel<>(citiesSource, citiesTarget);
     }
 
     public DualListModel<String> getCities() {
@@ -71,25 +61,9 @@ public class PickListView {
         this.cities = cities;
     }
 
-//    public ThemeService getService() {
-//        return service;
-//    }
-//
-//    public void setService(ThemeService service) {
-//        this.service = service;
-//    }
-//
-//    public DualListModel<Theme> getThemes() {
-//        return themes;
-//    }
-//
-//    public void setThemes(DualListModel<Theme> themes) {
-//        this.themes = themes;
-//    }
     public void onTransfer(TransferEvent event) {
         StringBuilder builder = new StringBuilder();
         for (Object item : event.getItems()) {
-//            builder.append(((Theme) item).getName()).append("<br />");
             builder.append((String) item).append("<br />");
         }
 

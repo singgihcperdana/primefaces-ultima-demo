@@ -1,421 +1,451 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-            <meta name="apple-mobile-web-app-capable" content="yes" />
-            <meta name="theme-color" content="#3F51B5" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-indigo" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/touch/touchswipe.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/schedule/schedule.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/moment/moment.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/schedule/schedule.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/nanoscroller.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/animate.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/ripple.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/layout-indigo.css.xhtml?ln=ultima-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
-        <title>PrimeFaces Ultima</title><script type="text/javascript" src="/ultima/javax.faces.resource/js/nanoscroller.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/layout.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/ripple.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/swipe.js.xhtml?ln=ultima-layout"></script>
-    <style type="text/css">
-        .cars-datalist .text-column p:last-child{
-            color:#757575;
-        }
-        
-        .cars-datalist .car-item i, .cars-datalist .car-item .car-details {
-            display: inline-block;
-            vertical-align: middle;
-        }
-        
-        .cars-datalist .car-item button {
-            float: right;
-        }
-        
-        .cars-datalist ul {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .ui-car-display td:last-child {
-            font-weight: 700;
-        }
-    
-    @media (max-width:640px) {
-        .cars-datalist .text-column {
-            text-align: center;
-        }
-    }
-    </style></head><body class="main-body layout-compact">
-        
-        <div class="layout-wrapper menu-layout-static">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
 
-    <div class="topbar clearfix">
-        <div class="topbar-left">            
-            <div class="logo"></div>
-        </div>
-        
-        <div class="topbar-right">
-            <a id="menu-button" href="#">
-                <i></i>
-            </a>
-            
-            <a id="topbar-menu-button" href="#">
-                <i class="material-icons"></i>
-            </a>
-            <ul class="topbar-items fadeInDown animated">
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons"></i>
-                        <span class="topbar-item-name">Settings</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Change Theme</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Favorites</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Lock Screen</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Wallpaper</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons animated swing"></i>
-                        <span class="topbar-badge animated rubberBand">5</span>
-                        <span class="topbar-item-name">Messages</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt16" src="/ultima/javax.faces.resource/images/avatar1.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Give me a call</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt18" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Sales reports attached</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt20" src="/ultima/javax.faces.resource/images/avatar3.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>About your invoice</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt22" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Meeting today at 10pm</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt24" src="/ultima/javax.faces.resource/images/avatar4.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Out of office</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons"></i>
-                        <span class="topbar-badge animated rubberBand">4</span>
-                        <span class="topbar-item-name">Notifications</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Pending tasks</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Meeting today at 3pm</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Download documents</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Book flight</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="search-item"><span class="md-inputfield"><input id="j_idt27" name="j_idt27" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt27_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt27",{id:"j_idt27"});</script>
-                        <label>Search</label>
-                        <i class="topbar-icon material-icons"></i></span>
-                    
-                </li>
-            </ul>
-        </div>
-    </div>
-<form id="menuform" name="menuform" method="post" action="/ultima/data.xhtml" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="menuform" value="menuform" />
- 
-        <div class="layout-menu ">
-            <div class="nano">
-                <div class="nano-content menu-scroll-content">
-                        <div class="profile">
-                            <div class="profile-image"></div>
-                            <a id="profile-options" href="#">
-                                <span class="profile-name">Jane Williams</span>
-                                <i class="material-icons"></i>
-                            </a>
-                        </div>
-                    
-                        <ul id="profile-menu" class="ultima-menu">
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Profile</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Privacy</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Settings</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Logout</span>
-                                </a>
-                            </li>
-                        </ul><ul id="menuform:j_idt33" class="ultima-menu clearfix"><li id="menuform:um_dashboard" role="menuitem"><a href="/ultima/dashboard.xhtml"><i class="material-icons"></i><span>Dashboard</span></a></li><li id="menuform:themes" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Themes</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:theme1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme1':'menuform:theme1'}).submit('menuform');return false;"><i class="material-icons"></i><span>Indigo - Pink</span></a></li><li id="menuform:theme2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme2':'menuform:theme2'}).submit('menuform');return false;"><i class="material-icons"></i><span>Brown - Green</span></a></li><li id="menuform:theme3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme3':'menuform:theme3'}).submit('menuform');return false;"><i class="material-icons"></i><span>Blue - Amber</span></a></li><li id="menuform:theme4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme4':'menuform:theme4'}).submit('menuform');return false;"><i class="material-icons"></i><span>Blue Grey - Green</span></a></li><li id="menuform:theme5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme5':'menuform:theme5'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark - Blue</span></a></li><li id="menuform:theme6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme6':'menuform:theme6'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark - Green</span></a></li><li id="menuform:theme7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme7':'menuform:theme7'}).submit('menuform');return false;"><i class="material-icons"></i><span>Green - Yellow</span></a></li><li id="menuform:theme8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme8':'menuform:theme8'}).submit('menuform');return false;"><i class="material-icons"></i><span>Purple - Cyan</span></a></li><li id="menuform:theme9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme9':'menuform:theme9'}).submit('menuform');return false;"><i class="material-icons"></i><span>Purple - Amber</span></a></li><li id="menuform:theme10" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme10':'menuform:theme10'}).submit('menuform');return false;"><i class="material-icons"></i><span>Teal - Lime</span></a></li><li id="menuform:theme11" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme11':'menuform:theme11'}).submit('menuform');return false;"><i class="material-icons"></i><span>Cyan - Amber</span></a></li><li id="menuform:theme12" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme12':'menuform:theme12'}).submit('menuform');return false;"><i class="material-icons"></i><span>Grey - Deep Orange</span></a></li></ul></li><li id="menuform:um_customization" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Customization</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:custom1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom1':'menuform:custom1'}).submit('menuform');return false;"><i class="material-icons"></i><span>Compact Size</span></a></li><li id="menuform:custom2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom2':'menuform:custom2'}).submit('menuform');return false;"><i class="material-icons"></i><span>Material Size</span></a></li><li id="menuform:custom3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom3':'menuform:custom3'}).submit('menuform');return false;"><i class="material-icons"></i><span>Static Menu</span></a></li><li id="menuform:custom4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom4':'menuform:custom4'}).submit('menuform');return false;"><i class="material-icons"></i><span>Overlay Menu</span></a></li><li id="menuform:custom5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom5':'menuform:custom5'}).submit('menuform');return false;"><i class="material-icons"></i><span>Horizontal Menu</span></a></li><li id="menuform:custom6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom6':'menuform:custom6'}).submit('menuform');return false;"><i class="material-icons"></i><span>Light Menu</span></a></li><li id="menuform:custom7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom7':'menuform:custom7'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark Menu</span></a></li><li id="menuform:custom8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom8':'menuform:custom8'}).submit('menuform');return false;"><i class="material-icons"></i><span>Inline Profile</span></a></li><li id="menuform:custom9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom9':'menuform:custom9'}).submit('menuform');return false;"><i class="material-icons"></i><span>Top Profile</span></a></li></ul></li><li id="menuform:um_components" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Components</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sample" role="menuitem"><a href="/ultima/sample.xhtml"><i class="material-icons"></i><span>Sample Page</span></a></li><li id="menuform:um_forms" role="menuitem"><a href="/ultima/forms.xhtml"><i class="material-icons"></i><span>Forms</span></a></li><li id="menuform:um_data" role="menuitem"><a href="/ultima/data.xhtml"><i class="material-icons"></i><span>Data</span></a></li><li id="menuform:um_panels" role="menuitem"><a href="/ultima/panel.xhtml"><i class="material-icons"></i><span>Panels</span></a></li><li id="menuform:um_overlays" role="menuitem"><a href="/ultima/overlay.xhtml"><i class="material-icons"></i><span>Overlays</span></a></li><li id="menuform:um_menus" role="menuitem"><a href="/ultima/menu.xhtml"><i class="material-icons"></i><span>Menus</span></a></li><li id="menuform:um_messages" role="menuitem"><a href="/ultima/messages.xhtml"><i class="material-icons"></i><span>Messages</span></a></li><li id="menuform:um_charts" role="menuitem"><a href="/ultima/charts.xhtml"><i class="material-icons"></i><span>Charts</span></a></li><li id="menuform:um_file" role="menuitem"><a href="/ultima/file.xhtml"><i class="material-icons"></i><span>File</span></a></li><li id="menuform:um_misc" role="menuitem"><a href="/ultima/misc.xhtml"><i class="material-icons"></i><span>Misc</span></a></li></ul></li><li id="menuform:um_default" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Template Pages</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_db_landing" role="menuitem"><a href="/ultima/landing.xhtml"><i class="material-icons"></i><span>Landing</span></a></li><li id="menuform:um_empty" role="menuitem"><a href="/ultima/empty.xhtml"><i class="material-icons"></i><span>Empty Page</span></a></li><li id="menuform:um_login" role="menuitem"><a href="/ultima/login.xhtml"><i class="material-icons"></i><span>Login Page</span></a></li><li id="menuform:um_error" role="menuitem"><a href="/ultima/error.xhtml"><i class="material-icons"></i><span>Error Page</span></a></li><li id="menuform:um_404" role="menuitem"><a href="/ultima/404.xhtml"><i class="material-icons"></i><span>404 Page</span></a></li><li id="menuform:um_access" role="menuitem"><a href="/ultima/access.xhtml"><i class="material-icons"></i><span>Access Denied Page</span></a></li></ul></li><li id="menuform:um_hierarchy" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Menu Hierarchy</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm1" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm11" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk111" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.1</span></a></li><li id="menuform:um_lnk112" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.2</span></a></li><li id="menuform:um_lnk113" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.3</span></a></li></ul></li><li id="menuform:um_sm12" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk121" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.2.1</span></a></li></ul></li></ul></li><li id="menuform:um_sm2" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm21" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk211" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.1.1</span></a></li><li id="menuform:um_lnk212" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.1.2</span></a></li></ul></li><li id="menuform:um_sm22" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk221" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.2.1</span></a></li></ul></li></ul></li></ul></li><li id="menuform:um_utils" role="menuitem"><a href="/ultima/utils.xhtml"><i class="material-icons"></i><span>Utils</span></a></li><li id="menuform:um_doc" role="menuitem"><a href="/ultima/docs.xhtml"><i class="material-icons"></i><span>Documentation</span></a></li></ul><script id="menuform:j_idt33_s" type="text/javascript">PrimeFaces.cw("Ultima","me",{id:"menuform:j_idt33"});</script>
-                </div>
-            </div>
-        </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-1903922490639507235:5001725164370561779" autocomplete="off" />
-</form>
-            
-            <div class="layout-main">
-<form id="form" name="form" method="post" action="/ultima/data.xhtml" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="form" value="form" />
+    <ui:define name="head">
+        <style type="text/css">
+            .cars-datalist .text-column p:last-child{
+                color:#757575;
+            }
+
+            .cars-datalist .car-item i, .cars-datalist .car-item .car-details {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .cars-datalist .car-item button {
+                float: right;
+            }
+
+            .cars-datalist ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .ui-car-display td:last-child {
+                font-weight: 700;
+            }
+
+            @media (max-width:640px) {
+                .cars-datalist .text-column {
+                    text-align: center;
+                }
+            }
+        </style>
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form id="form">
+            <p:growl id="msgs" showDetail="true" />
 
             <div class="ui-g">
                 <div class="ui-g-12">
                     <div class="card card-w-title">
-                        <h1>DataTable</h1><div id="form:j_idt37" class="ui-datatable ui-widget ui-datatable-reflow"><label id="form:j_idt37_reflowDD_label" for="form:j_idt37_reflowDD" class="ui-reflow-label">Sort</label><select id="form:j_idt37_reflowDD" name="form:j_idt37_reflowDD" class="ui-reflow-dropdown ui-state-default"><option value="0_0">Id Ascending</option><option value="0_1">Id Descending</option><option value="1_0">Year Ascending</option><option value="1_1">Year Descending</option><option value="2_0">Brand Ascending</option><option value="2_1">Brand Descending</option><option value="3_0">Color Ascending</option><option value="3_1">Color Descending</option></select><div class="ui-datatable-header ui-widget-header ui-corner-top">
+                        <h1>DataTable</h1>
+                        <p:dataTable var="car"
+                                     value="#{dtSelectionView.cars1}"
+                                     paginator="true"
+                                     paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                                     currentPageReportTemplate="({currentPage} of {totalPages})"
+                                     reflow="true"
+                                     rows="10"
+                                     selectionMode="single"
+                                     selection="#{dtSelectionView.selectedCar}"
+                                     rowKey="#{car.id}">
+                            <f:facet name="header">
                                 Single with Row Click
-                            </div><div id="form:j_idt37_paginator_top" class="ui-paginator ui-paginator-top ui-widget-header" role="navigation" aria-label="Pagination"><a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page"><span class="ui-icon ui-icon-seek-first">p</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page"><span class="ui-icon ui-icon-seek-prev">p</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-state-active ui-corner-all" tabindex="0" href="#">1</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">2</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">3</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">4</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">5</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">p</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all" aria-label="Last Page" tabindex="0"><span class="ui-icon ui-icon-seek-end">p</span></a></div><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="form:j_idt37_head"><tr role="row"><th id="form:j_idt37:j_idt39" class="ui-state-default ui-sortable-column" role="columnheader" aria-label="Id"><span class="ui-column-title">Id</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="form:j_idt37:j_idt41" class="ui-state-default ui-sortable-column" role="columnheader" aria-label="Year"><span class="ui-column-title">Year</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="form:j_idt37:j_idt43" class="ui-state-default ui-sortable-column" role="columnheader" aria-label="Brand"><span class="ui-column-title">Brand</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="form:j_idt37:j_idt45" class="ui-state-default ui-sortable-column" role="columnheader" aria-label="Color"><span class="ui-column-title">Color</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th></tr></thead><tbody id="form:j_idt37_data" class="ui-datatable-data ui-widget-content" tabindex="0"><tr data-ri="0" data-rk="3beeccf4" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">3beeccf4</td><td role="gridcell">1960</td><td role="gridcell">BMW</td><td role="gridcell">Brown</td></tr><tr data-ri="1" data-rk="9b35477d" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">9b35477d</td><td role="gridcell">1988</td><td role="gridcell">Renault</td><td role="gridcell">Silver</td></tr><tr data-ri="2" data-rk="313b3d8f" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">313b3d8f</td><td role="gridcell">1962</td><td role="gridcell">Honda</td><td role="gridcell">Blue</td></tr><tr data-ri="3" data-rk="00d94360" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">00d94360</td><td role="gridcell">1963</td><td role="gridcell">Volkswagen</td><td role="gridcell">Blue</td></tr><tr data-ri="4" data-rk="a4fa42ad" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">a4fa42ad</td><td role="gridcell">1993</td><td role="gridcell">Volvo</td><td role="gridcell">White</td></tr><tr data-ri="5" data-rk="b0b30ad8" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">b0b30ad8</td><td role="gridcell">2003</td><td role="gridcell">Renault</td><td role="gridcell">Maroon</td></tr><tr data-ri="6" data-rk="86f0669b" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">86f0669b</td><td role="gridcell">1999</td><td role="gridcell">Fiat</td><td role="gridcell">Maroon</td></tr><tr data-ri="7" data-rk="0338464f" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">0338464f</td><td role="gridcell">1986</td><td role="gridcell">Jaguar</td><td role="gridcell">White</td></tr><tr data-ri="8" data-rk="b1847514" class="ui-widget-content ui-datatable-even ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">b1847514</td><td role="gridcell">1984</td><td role="gridcell">Renault</td><td role="gridcell">Green</td></tr><tr data-ri="9" data-rk="e963ff15" class="ui-widget-content ui-datatable-odd ui-datatable-selectable" role="row" aria-selected="false"><td role="gridcell">e963ff15</td><td role="gridcell">1989</td><td role="gridcell">Fiat</td><td role="gridcell">White</td></tr></tbody></table></div><div id="form:j_idt37_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom" role="navigation" aria-label="Pagination"><a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page"><span class="ui-icon ui-icon-seek-first">p</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page"><span class="ui-icon ui-icon-seek-prev">p</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-state-active ui-corner-all" tabindex="0" href="#">1</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">2</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">3</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">4</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">5</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">p</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all" aria-label="Last Page" tabindex="0"><span class="ui-icon ui-icon-seek-end">p</span></a></div><input type="hidden" id="form:j_idt37_selection" name="form:j_idt37_selection" autocomplete="off" value="" /></div><script id="form:j_idt37_s" type="text/javascript">$(function(){PrimeFaces.cw("DataTable","widget_form_j_idt37",{id:"form:j_idt37",paginator:{id:['form:j_idt37_paginator_top','form:j_idt37_paginator_bottom'],rows:10,rowCount:50,page:0,currentPageTemplate:'({currentPage} of {totalPages})'},selectionMode:"single",reflow:true});});</script>
+                            </f:facet>
+
+                            <p:ajax event="rowSelect" listener="#{dtSelectionView.onRowSelect}" update=":form:selectedCarDetail_0 :form:msgs" oncomplete="PF('carDialog_0').show()" />
+                            <p:ajax event="rowUnselect" listener="#{dtSelectionView.onRowUnselect}" update=":form:msgs" />
+
+                            <p:column headerText="Id" sortBy="#{car.id}">
+                                <h:outputText value="#{car.id}" />
+                            </p:column>
+
+                            <p:column headerText="Year" sortBy="#{car.year}">
+                                <h:outputText value="#{car.year}" />
+                            </p:column>
+
+                            <p:column headerText="Brand" sortBy="#{car.brand}">
+                                <h:outputText value="#{car.brand}" />
+                            </p:column>
+
+                            <p:column headerText="Color" sortBy="#{car.color}">
+                                <h:outputText value="#{car.color}" />
+                            </p:column>
+                        </p:dataTable>
+
+                        <p:dialog header="Car Info"
+                                  widgetVar="carDialog_0"
+                                  modal="true"
+                                  showEffect="fade"
+                                  hideEffect="fade"
+                                  resizable="false"
+                                  responsive="true">
+                            <p:outputPanel id="selectedCarDetail_0" style="text-align:center;">
+                                <p:panelGrid columns="2"
+                                             columnClasses="label,value"
+                                             rendered="#{not empty dtSelectionView.selectedCar}">
+                                    <f:facet name="header">
+                                        <p:graphicImage name="demo/images/car/#{dtSelectionView.selectedCar.brand}-big.gif"/>
+                                    </f:facet>
+
+                                    <h:outputText value="Id:" />
+                                    <h:outputText value="#{dtSelectionView.selectedCar.id}" />
+
+                                    <h:outputText value="Year:" />
+                                    <h:outputText value="#{dtSelectionView.selectedCar.year}" />
+
+                                    <h:outputText value="Color:" />
+                                    <h:outputText value="#{dtSelectionView.selectedCar.color}" style="color:#{dtSelectionView.selectedCar.color}"/>
+
+                                    <h:outputText value="Price:" />
+                                    <h:outputText value="\$#{dtSelectionView.selectedCar.price}" />
+                                </p:panelGrid>
+                            </p:outputPanel>
+                        </p:dialog>
                     </div>
                 </div>
                 <div class="ui-g-12">
                     <!-- Left Side -->
                     <div class="card card-w-title">
-                        <h1>DataGrid</h1><div id="form:cars" class="ui-datagrid ui-widget"><div class="ui-datagrid-header ui-widget-header ui-corner-top">
+                        <h1>DataGrid</h1>
+                        <p:dataGrid id="cars"
+                                    value="#{dataGridView.cars}"
+                                    var="car"
+                                    columns="3"
+                                    layout="grid"
+                                    rows="6"
+                                    paginator="true"
+                                    paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                    currentPageReportTemplate="({currentPage} of {totalPages})"
+                                    rowsPerPageTemplate="6,12,16">
+                            <f:facet name="header">
                                 Cars For Sale
-                            </div><div id="form:cars_paginator_top" class="ui-paginator ui-paginator-top ui-widget-header" role="navigation" aria-label="Pagination"><span class="ui-paginator-current">(1 of 8)</span> <a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page"><span class="ui-icon ui-icon-seek-first">p</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page"><span class="ui-icon ui-icon-seek-prev">p</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-state-active ui-corner-all" tabindex="0" href="#">1</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">2</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">3</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">4</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">5</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">6</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">7</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">8</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">p</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all" aria-label="Last Page" tabindex="0"><span class="ui-icon ui-icon-seek-end">p</span></a><label id="form:cars_rppLabel" for="form:cars:j_id2" class="ui-paginator-rpp-label ui-helper-hidden">Rows Per Page</label><select id="form:cars:j_id2" name="form:cars_rppDD" aria-labelledby="form:cars_rppLabel" class="ui-paginator-rpp-options ui-widget ui-state-default ui-corner-left" value="6" autocomplete="off"><option value="3">3</option><option value="6" selected="selected">6</option><option value="9">9</option><option value="12">12</option><option value="16">16</option></select></div><div id="form:cars_content" class="ui-datagrid-content ui-widget-content ui-grid ui-grid-responsive"><div class="ui-grid-row"><div class="ui-datagrid-column ui-grid-col-4"><div id="form:cars:0:j_idt49" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="text-align:center" data-widget="widget_form_cars_0_j_idt49"><div id="form:cars:0:j_idt49_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Renault</span></div><div id="form:cars:0:j_idt49_content" class="ui-panel-content ui-widget-content"><table style="width:100%">
-<tbody>
-<tr>
-<td><span class="Fs14 FontDosisMedium">Black</span></td>
-</tr>
-<tr>
-<td>1968</td>
-</tr>
-<tr>
-<td><button id="form:cars:0:j_idt53" name="form:cars:0:j_idt53" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only AquaButton" onclick="PrimeFaces.ab({s:&quot;form:cars:0:j_idt53&quot;,u:&quot;form:selectedCarDetail&quot;,onco:function(xhr,status,args){PF('carDialog').show();}});return false;" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="form:cars:0:j_idt53_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_cars_0_j_idt53",{id:"form:cars:0:j_idt53"});</script></td>
-</tr>
-</tbody>
-</table>
-</div></div><script id="form:cars:0:j_idt49_s" type="text/javascript">PrimeFaces.cw("Panel","widget_form_cars_0_j_idt49",{id:"form:cars:0:j_idt49"});</script></div><div class="ui-datagrid-column ui-grid-col-4"><div id="form:cars:1:j_idt49" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="text-align:center" data-widget="widget_form_cars_1_j_idt49"><div id="form:cars:1:j_idt49_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Ford</span></div><div id="form:cars:1:j_idt49_content" class="ui-panel-content ui-widget-content"><table style="width:100%">
-<tbody>
-<tr>
-<td><span class="Fs14 FontDosisMedium">Orange</span></td>
-</tr>
-<tr>
-<td>1961</td>
-</tr>
-<tr>
-<td><button id="form:cars:1:j_idt53" name="form:cars:1:j_idt53" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only AquaButton" onclick="PrimeFaces.ab({s:&quot;form:cars:1:j_idt53&quot;,u:&quot;form:selectedCarDetail&quot;,onco:function(xhr,status,args){PF('carDialog').show();}});return false;" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="form:cars:1:j_idt53_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_cars_1_j_idt53",{id:"form:cars:1:j_idt53"});</script></td>
-</tr>
-</tbody>
-</table>
-</div></div><script id="form:cars:1:j_idt49_s" type="text/javascript">PrimeFaces.cw("Panel","widget_form_cars_1_j_idt49",{id:"form:cars:1:j_idt49"});</script></div><div class="ui-datagrid-column ui-grid-col-4"><div id="form:cars:2:j_idt49" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="text-align:center" data-widget="widget_form_cars_2_j_idt49"><div id="form:cars:2:j_idt49_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Volkswagen</span></div><div id="form:cars:2:j_idt49_content" class="ui-panel-content ui-widget-content"><table style="width:100%">
-<tbody>
-<tr>
-<td><span class="Fs14 FontDosisMedium">Brown</span></td>
-</tr>
-<tr>
-<td>1984</td>
-</tr>
-<tr>
-<td><button id="form:cars:2:j_idt53" name="form:cars:2:j_idt53" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only AquaButton" onclick="PrimeFaces.ab({s:&quot;form:cars:2:j_idt53&quot;,u:&quot;form:selectedCarDetail&quot;,onco:function(xhr,status,args){PF('carDialog').show();}});return false;" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="form:cars:2:j_idt53_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_cars_2_j_idt53",{id:"form:cars:2:j_idt53"});</script></td>
-</tr>
-</tbody>
-</table>
-</div></div><script id="form:cars:2:j_idt49_s" type="text/javascript">PrimeFaces.cw("Panel","widget_form_cars_2_j_idt49",{id:"form:cars:2:j_idt49"});</script></div></div><div class="ui-grid-row"><div class="ui-datagrid-column ui-grid-col-4"><div id="form:cars:3:j_idt49" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="text-align:center" data-widget="widget_form_cars_3_j_idt49"><div id="form:cars:3:j_idt49_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Jaguar</span></div><div id="form:cars:3:j_idt49_content" class="ui-panel-content ui-widget-content"><table style="width:100%">
-<tbody>
-<tr>
-<td><span class="Fs14 FontDosisMedium">Blue</span></td>
-</tr>
-<tr>
-<td>1973</td>
-</tr>
-<tr>
-<td><button id="form:cars:3:j_idt53" name="form:cars:3:j_idt53" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only AquaButton" onclick="PrimeFaces.ab({s:&quot;form:cars:3:j_idt53&quot;,u:&quot;form:selectedCarDetail&quot;,onco:function(xhr,status,args){PF('carDialog').show();}});return false;" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="form:cars:3:j_idt53_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_cars_3_j_idt53",{id:"form:cars:3:j_idt53"});</script></td>
-</tr>
-</tbody>
-</table>
-</div></div><script id="form:cars:3:j_idt49_s" type="text/javascript">PrimeFaces.cw("Panel","widget_form_cars_3_j_idt49",{id:"form:cars:3:j_idt49"});</script></div><div class="ui-datagrid-column ui-grid-col-4"><div id="form:cars:4:j_idt49" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="text-align:center" data-widget="widget_form_cars_4_j_idt49"><div id="form:cars:4:j_idt49_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Volkswagen</span></div><div id="form:cars:4:j_idt49_content" class="ui-panel-content ui-widget-content"><table style="width:100%">
-<tbody>
-<tr>
-<td><span class="Fs14 FontDosisMedium">Blue</span></td>
-</tr>
-<tr>
-<td>1972</td>
-</tr>
-<tr>
-<td><button id="form:cars:4:j_idt53" name="form:cars:4:j_idt53" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only AquaButton" onclick="PrimeFaces.ab({s:&quot;form:cars:4:j_idt53&quot;,u:&quot;form:selectedCarDetail&quot;,onco:function(xhr,status,args){PF('carDialog').show();}});return false;" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="form:cars:4:j_idt53_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_cars_4_j_idt53",{id:"form:cars:4:j_idt53"});</script></td>
-</tr>
-</tbody>
-</table>
-</div></div><script id="form:cars:4:j_idt49_s" type="text/javascript">PrimeFaces.cw("Panel","widget_form_cars_4_j_idt49",{id:"form:cars:4:j_idt49"});</script></div><div class="ui-datagrid-column ui-grid-col-4"><div id="form:cars:5:j_idt49" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="text-align:center" data-widget="widget_form_cars_5_j_idt49"><div id="form:cars:5:j_idt49_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Ford</span></div><div id="form:cars:5:j_idt49_content" class="ui-panel-content ui-widget-content"><table style="width:100%">
-<tbody>
-<tr>
-<td><span class="Fs14 FontDosisMedium">Blue</span></td>
-</tr>
-<tr>
-<td>2005</td>
-</tr>
-<tr>
-<td><button id="form:cars:5:j_idt53" name="form:cars:5:j_idt53" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only AquaButton" onclick="PrimeFaces.ab({s:&quot;form:cars:5:j_idt53&quot;,u:&quot;form:selectedCarDetail&quot;,onco:function(xhr,status,args){PF('carDialog').show();}});return false;" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="form:cars:5:j_idt53_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_cars_5_j_idt53",{id:"form:cars:5:j_idt53"});</script></td>
-</tr>
-</tbody>
-</table>
-</div></div><script id="form:cars:5:j_idt49_s" type="text/javascript">PrimeFaces.cw("Panel","widget_form_cars_5_j_idt49",{id:"form:cars:5:j_idt49"});</script></div></div></div><div id="form:cars_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom" role="navigation" aria-label="Pagination"><span class="ui-paginator-current">(1 of 8)</span> <a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page"><span class="ui-icon ui-icon-seek-first">p</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page"><span class="ui-icon ui-icon-seek-prev">p</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-state-active ui-corner-all" tabindex="0" href="#">1</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">2</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">3</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">4</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">5</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">6</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">7</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">8</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">p</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all" aria-label="Last Page" tabindex="0"><span class="ui-icon ui-icon-seek-end">p</span></a><label id="form:cars_rppLabel" for="form:cars:j_id3" class="ui-paginator-rpp-label ui-helper-hidden">Rows Per Page</label><select id="form:cars:j_id3" name="form:cars_rppDD" aria-labelledby="form:cars_rppLabel" class="ui-paginator-rpp-options ui-widget ui-state-default ui-corner-left" value="6" autocomplete="off"><option value="3">3</option><option value="6" selected="selected">6</option><option value="9">9</option><option value="12">12</option><option value="16">16</option></select></div></div><script id="form:cars_s" type="text/javascript">PrimeFaces.cw("DataGrid","widget_form_cars",{id:"form:cars",paginator:{id:['form:cars_paginator_top','form:cars_paginator_bottom'],rows:6,rowCount:45,page:0,currentPageTemplate:'({currentPage} of {totalPages})'}});</script><div id="form:j_idt54" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="form:j_idt54_title" class="ui-dialog-title">Car Info</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><div id="form:selectedCarDetail" class="ui-outputpanel ui-widget" style="text-align:center;"></div></div></div><script id="form:j_idt54_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","carDialog",{id:"form:j_idt54",resizable:false,modal:true,showEffect:"fade",hideEffect:"fade",responsive:true});});</script>
+                            </f:facet>
+
+                            <p:panel header="#{car.brand}" style="text-align:center">
+                                <h:panelGrid columns="1" style="width:100%">
+                                    <h:outputText value="#{car.color}"/>
+
+                                    <h:outputText value="#{car.year}"/>
+
+                                    <p:commandButton update=":form:selectedCarDetail" oncomplete="PF('carDialog').show()" title="View Detail" icon="ui-icon-search">
+                                        <f:setPropertyActionListener value="#{car}" target="#{dataGridView.selectedCar}" />
+                                    </p:commandButton>
+                                </h:panelGrid>
+                            </p:panel>
+                        </p:dataGrid>
+
+                        <p:dialog header="Car Info"
+                                  widgetVar="carDialog"
+                                  modal="true"
+                                  showEffect="fade"
+                                  hideEffect="fade"
+                                  resizable="false"
+                                  responsive="true">
+                            <p:outputPanel id="selectedCarDetail" style="text-align:center;">
+                                <p:panelGrid columns="2"
+                                             columnClasses="label,value">
+                                            <!--<rendered="#{not empty dataGridView.selectedCar}">-->
+                                    <f:facet name="header">
+                                        <p:graphicImage name="demo/images/car/#{dataGridView.selectedCar.brand}-big.gif"/>
+                                    </f:facet>
+
+                                    <h:outputText value="Id:" />
+                                    <h:outputText value="#{dataGridView.selectedCar.id}" />
+
+                                    <h:outputText value="Year:" />
+                                    <h:outputText value="#{dataGridView.selectedCar.year}" />
+
+                                    <h:outputText value="Color:" />
+                                    <h:outputText value="#{dataGridView.selectedCar.color}" style="color:#{dataGridView.selectedCar.color}"/>
+
+                                    <h:outputText value="Price:" />
+                                    <h:outputText value="\$#{dataGridView.selectedCar.price}" />
+                                </p:panelGrid>
+                            </p:outputPanel>
+                        </p:dialog>
                     </div>
                 </div>
-                
+
                 <div class="ui-g-12 ui-md-8">
                     <div class="card card-w-title">
-                        <h1>PickList</h1><div id="form:pickList" class="ui-picklist ui-widget ui-helper-clearfix ui-picklist-responsive"><div class="ui-picklist-source-controls ui-picklist-buttons"><div class="ui-picklist-buttons-cell"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-move-up" title="Move Up"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-n"></span><span class="ui-button-text ui-c">Move Up</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-move-top" title="Move Top"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-n"></span><span class="ui-button-text ui-c">Move Top</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-move-down" title="Move Down"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-s"></span><span class="ui-button-text ui-c">Move Down</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-move-bottom" title="Move Bottom"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-s"></span><span class="ui-button-text ui-c">Move Bottom</span></button></div></div><div class="ui-picklist-list-wrapper"><div class="ui-picklist-filter-container"><input id="form:pickList_source_filter" name="form:pickList_source_filter" type="text" class="ui-picklist-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><span class="ui-icon ui-icon-search"></span></div><div class="ui-picklist-caption ui-widget-header ui-corner-tl ui-corner-tr">From</div><ul class="ui-widget-content ui-picklist-list ui-picklist-source ui-corner-bottom" tabindex="0" role="menu"><li class="ui-picklist-item ui-corner-all" data-item-value="San Francisco" data-item-label="San Francisco" role="menuitem">San Francisco</li><li class="ui-picklist-item ui-corner-all" data-item-value="London" data-item-label="London" role="menuitem">London</li><li class="ui-picklist-item ui-corner-all" data-item-value="Paris" data-item-label="Paris" role="menuitem">Paris</li><li class="ui-picklist-item ui-corner-all" data-item-value="Istanbul" data-item-label="Istanbul" role="menuitem">Istanbul</li><li class="ui-picklist-item ui-corner-all" data-item-value="Berlin" data-item-label="Berlin" role="menuitem">Berlin</li><li class="ui-picklist-item ui-corner-all" data-item-value="Barcelona" data-item-label="Barcelona" role="menuitem">Barcelona</li><li class="ui-picklist-item ui-corner-all" data-item-value="Rome" data-item-label="Rome" role="menuitem">Rome</li></ul><select id="form:pickList_source" name="form:pickList_source" multiple="true" class="ui-helper-hidden"></select></div><div class="ui-picklist-buttons"><div class="ui-picklist-buttons-cell"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-add" title="Add"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-e"></span><span class="ui-button-text ui-c">Add</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-add-all" title="Add All"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-e"></span><span class="ui-button-text ui-c">Add All</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-remove" title="Remove"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-w"></span><span class="ui-button-text ui-c">Remove</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-remove-all" title="Remove All"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-w"></span><span class="ui-button-text ui-c">Remove All</span></button></div></div><div class="ui-picklist-list-wrapper"><div class="ui-picklist-filter-container"><input id="form:pickList_target_filter" name="form:pickList_target_filter" type="text" class="ui-picklist-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><span class="ui-icon ui-icon-search"></span></div><div class="ui-picklist-caption ui-widget-header ui-corner-tl ui-corner-tr">To</div><ul class="ui-widget-content ui-picklist-list ui-picklist-target ui-corner-bottom" tabindex="0" role="menu"></ul><select id="form:pickList_target" name="form:pickList_target" multiple="true" class="ui-helper-hidden"></select></div><div class="ui-picklist-target-controls ui-picklist-buttons"><div class="ui-picklist-buttons-cell"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-move-up" title="Move Up"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-n"></span><span class="ui-button-text ui-c">Move Up</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-move-top" title="Move Top"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-n"></span><span class="ui-button-text ui-c">Move Top</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-move-down" title="Move Down"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-s"></span><span class="ui-button-text ui-c">Move Down</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-move-bottom" title="Move Bottom"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-s"></span><span class="ui-button-text ui-c">Move Bottom</span></button></div></div><div id="form:pickList_ariaRegion" class="ui-helper-hidden-accessible" role="region" aria-live="polite" aria-atomic="true"></div></div><script id="form:pickList_s" type="text/javascript">$(function(){PrimeFaces.cw("PickList","widget_form_pickList",{id:"form:pickList",effect:"fade",effectSpeed:"fast",showSourceControls:true,showTargetControls:true});});</script>
+                        <h1>PickList</h1>
+                        <p:pickList id="pickList"
+                                    value="#{pickListView.cities}"
+                                    var="cities"
+                                    itemLabel="#{cities}"
+                                    itemValue="#{cities}"
+                                    effect="fade"
+                                    showSourceControls="true"
+                                    showTargetControls="true"
+                                    showSourceFilter="true"
+                                    showTargetFilter="true"
+                                    filterMatchMode="contains"
+                                    responsive="true"
+                                    moveUpLabel="Move Up"
+                                    moveTopLabel="Move Top"
+                                    moveDownLabel="Move Down"
+                                    moveBottomLabel="Move Bottom"
+                                    addLabel="Add"
+                                    addAllLabel="Add All"
+                                    removeLabel="Remove"
+                                    removeAllLabel="Remove All">
+                            <f:facet name="sourceCaption">From</f:facet>
+                            <f:facet name="targetCaption">To</f:facet>
+
+                            <p:ajax event="transfer" listener="#{pickListView.onTransfer}" update="msgs" />
+                            <p:ajax event="select" listener="#{pickListView.onSelect}" update="msgs" />
+                            <p:ajax event="unselect" listener="#{pickListView.onUnselect}" update="msgs" />
+                            <p:ajax event="reorder" listener="#{pickListView.onReorder}" update="msgs" />
+                        </p:pickList>
                     </div>
                 </div>
-                
+
                 <div class="ui-g-12 ui-md-4">
                     <div class="card card-w-title">
-                        <h1>OrderList</h1><div id="form:j_idt69" class="ui-orderlist ui-grid ui-widget ui-grid-responsive"><div class="ui-grid-row"><div class="ui-orderlist-controls ui-grid-col-2"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-orderlist-button-move-up" title="Move Up"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-n"></span><span class="ui-button-text ui-c">ui-button</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-orderlist-button-move-top" title="Move Top"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-n"></span><span class="ui-button-text ui-c">ui-button</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-orderlist-button-move-down" title="Move Down"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-s"></span><span class="ui-button-text ui-c">ui-button</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-orderlist-button-move-bottom" title="Move Bottom"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-s"></span><span class="ui-button-text ui-c">ui-button</span></button></div><div class="ui-grid-col-10"><div class="ui-orderlist-caption ui-widget-header ui-corner-top">Cities List</div><ul class="ui-widget-content ui-orderlist-list ui-corner-bottom"><li class="ui-orderlist-item ui-corner-all" data-item-value="San Francisco">San Francisco</li><li class="ui-orderlist-item ui-corner-all" data-item-value="London">London</li><li class="ui-orderlist-item ui-corner-all" data-item-value="Paris">Paris</li><li class="ui-orderlist-item ui-corner-all" data-item-value="Istanbul">Istanbul</li><li class="ui-orderlist-item ui-corner-all" data-item-value="Berlin">Berlin</li><li class="ui-orderlist-item ui-corner-all" data-item-value="Barcelona">Barcelona</li><li class="ui-orderlist-item ui-corner-all" data-item-value="Rome">Rome</li></ul><select id="form:j_idt69_values" name="form:j_idt69_values" multiple="true" class="ui-helper-hidden"></select></div></div></div><script id="form:j_idt69_s" type="text/javascript">PrimeFaces.cw("OrderList","widget_form_j_idt69",{id:"form:j_idt69"});</script>
-                    </div>
-                </div>
-                                        
-                <div class="ui-g-12">
-                    <div class="card card-w-title">
-                        <h1>TreeTable</h1><div id="form:j_idt72" class="ui-treetable ui-widget"><div class="ui-treetable-header ui-widget-header ui-corner-top">
-                                Checkbox
-                            </div><table role="treegrid"><thead id="form:j_idt72_head"><tr role="row"><th id="form:j_idt72:j_idt74" class="ui-state-default ui-sortable-column ui-resizable-column" role="columnheader"><span class="ui-column-title">Name</span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="form:j_idt72:j_idt76" class="ui-state-default ui-resizable-column" role="columnheader"><span class="ui-column-title">Size</span></th><th id="form:j_idt72:j_idt78" class="ui-state-default ui-resizable-column" role="columnheader"><span class="ui-column-title">Type</span></th></tr></thead><tfoot></tfoot><tbody id="form:j_idt72_data" class="ui-treetable-data ui-widget-content"><tr id="form:j_idt72_node_0" class="ui-widget-content ui-treetable-selectable-node default" role="row" aria-expanded="false" data-rk="0" data-prk="root" aria-selected="false"><td role="gridcell"><span class="ui-treetable-toggler ui-icon ui-icon-triangle-1-e ui-c"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div>Documents</td><td role="gridcell">-</td><td role="gridcell">Folder</td></tr><tr id="form:j_idt72_node_1" class="ui-widget-content ui-treetable-selectable-node default" role="row" aria-expanded="false" data-rk="1" data-prk="root" aria-selected="false"><td role="gridcell"><span class="ui-treetable-toggler ui-icon ui-icon-triangle-1-e ui-c"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div>Pictures</td><td role="gridcell">-</td><td role="gridcell">Folder</td></tr><tr id="form:j_idt72_node_2" class="ui-widget-content ui-treetable-selectable-node default" role="row" aria-expanded="false" data-rk="2" data-prk="root" aria-selected="false"><td role="gridcell"><span class="ui-treetable-toggler ui-icon ui-icon-triangle-1-e ui-c"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div>Movies</td><td role="gridcell">-</td><td role="gridcell">Folder</td></tr></tbody></table><input id="form:j_idt72_selection" name="form:j_idt72_selection" type="hidden" /></div><script id="form:j_idt72_s" type="text/javascript">$(function(){PrimeFaces.cw("TreeTable","widget_form_j_idt72",{id:"form:j_idt72",selectionMode:"checkbox"});});</script>
-                    </div>
-                </div>
-                
-                <div class="ui-g-12">
-                    <div class="card card-w-title">
-                        <h1>DataList - Paginator</h1><div id="form:j_idt81" class="ui-datalist ui-widget cars-datalist"><div class="ui-datalist-header ui-widget-header ui-corner-top">
-                                Cars For Sale
-                            </div><div id="form:j_idt81_paginator_top" class="ui-paginator ui-paginator-top ui-widget-header" role="navigation" aria-label="Pagination"><a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page"><span class="ui-icon ui-icon-seek-first">p</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page"><span class="ui-icon ui-icon-seek-prev">p</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-state-active ui-corner-all" tabindex="0" href="#">1</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">2</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">3</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">4</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">5</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">6</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">7</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">8</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">p</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all" aria-label="Last Page" tabindex="0"><span class="ui-icon ui-icon-seek-end">p</span></a></div><div id="form:j_idt81_content" class="ui-datalist-content ui-widget-content"><ul id="form:j_idt81_list" class="ui-datalist-data ui-datalist-nobullets" type="none"><li class="ui-datalist-item">
-                            <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
-                                <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
-                                <div class="car-details">
-                                    <p>BMW</p>
-                                    <p style="color:#757575">1984 - Yellow</p>
-                                </div><button id="form:j_idt81:0:j_idt84" name="form:j_idt81:0:j_idt84" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;form:j_idt81:0:j_idt84&quot;,u:&quot;form:carDetail&quot;,onco:function(xhr,status,args){PF('carDialog2').show();}});return false;" style="margin:24px 24px 0 0" title="View Detail" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View Detail</span></button><script id="form:j_idt81:0:j_idt84_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_j_idt81_0_j_idt84",{id:"form:j_idt81:0:j_idt84"});</script>
-                            </div></li><li class="ui-datalist-item">
-                            <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
-                                <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
-                                <div class="car-details">
-                                    <p>Fiat</p>
-                                    <p style="color:#757575">1972 - Blue</p>
-                                </div><button id="form:j_idt81:1:j_idt84" name="form:j_idt81:1:j_idt84" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;form:j_idt81:1:j_idt84&quot;,u:&quot;form:carDetail&quot;,onco:function(xhr,status,args){PF('carDialog2').show();}});return false;" style="margin:24px 24px 0 0" title="View Detail" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View Detail</span></button><script id="form:j_idt81:1:j_idt84_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_j_idt81_1_j_idt84",{id:"form:j_idt81:1:j_idt84"});</script>
-                            </div></li><li class="ui-datalist-item">
-                            <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
-                                <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
-                                <div class="car-details">
-                                    <p>Renault</p>
-                                    <p style="color:#757575">1998 - Red</p>
-                                </div><button id="form:j_idt81:2:j_idt84" name="form:j_idt81:2:j_idt84" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;form:j_idt81:2:j_idt84&quot;,u:&quot;form:carDetail&quot;,onco:function(xhr,status,args){PF('carDialog2').show();}});return false;" style="margin:24px 24px 0 0" title="View Detail" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View Detail</span></button><script id="form:j_idt81:2:j_idt84_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_j_idt81_2_j_idt84",{id:"form:j_idt81:2:j_idt84"});</script>
-                            </div></li><li class="ui-datalist-item">
-                            <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
-                                <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
-                                <div class="car-details">
-                                    <p>Renault</p>
-                                    <p style="color:#757575">1985 - Black</p>
-                                </div><button id="form:j_idt81:3:j_idt84" name="form:j_idt81:3:j_idt84" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;form:j_idt81:3:j_idt84&quot;,u:&quot;form:carDetail&quot;,onco:function(xhr,status,args){PF('carDialog2').show();}});return false;" style="margin:24px 24px 0 0" title="View Detail" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View Detail</span></button><script id="form:j_idt81:3:j_idt84_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_j_idt81_3_j_idt84",{id:"form:j_idt81:3:j_idt84"});</script>
-                            </div></li><li class="ui-datalist-item">
-                            <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
-                                <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
-                                <div class="car-details">
-                                    <p>Mercedes</p>
-                                    <p style="color:#757575">1972 - Brown</p>
-                                </div><button id="form:j_idt81:4:j_idt84" name="form:j_idt81:4:j_idt84" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;form:j_idt81:4:j_idt84&quot;,u:&quot;form:carDetail&quot;,onco:function(xhr,status,args){PF('carDialog2').show();}});return false;" style="margin:24px 24px 0 0" title="View Detail" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View Detail</span></button><script id="form:j_idt81:4:j_idt84_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_j_idt81_4_j_idt84",{id:"form:j_idt81:4:j_idt84"});</script>
-                            </div></li><li class="ui-datalist-item">
-                            <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
-                                <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
-                                <div class="car-details">
-                                    <p>Ford</p>
-                                    <p style="color:#757575">1994 - Green</p>
-                                </div><button id="form:j_idt81:5:j_idt84" name="form:j_idt81:5:j_idt84" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;form:j_idt81:5:j_idt84&quot;,u:&quot;form:carDetail&quot;,onco:function(xhr,status,args){PF('carDialog2').show();}});return false;" style="margin:24px 24px 0 0" title="View Detail" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View Detail</span></button><script id="form:j_idt81:5:j_idt84_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_j_idt81_5_j_idt84",{id:"form:j_idt81:5:j_idt84"});</script>
-                            </div></li><li class="ui-datalist-item">
-                            <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
-                                <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
-                                <div class="car-details">
-                                    <p>Ford</p>
-                                    <p style="color:#757575">1981 - Green</p>
-                                </div><button id="form:j_idt81:6:j_idt84" name="form:j_idt81:6:j_idt84" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;form:j_idt81:6:j_idt84&quot;,u:&quot;form:carDetail&quot;,onco:function(xhr,status,args){PF('carDialog2').show();}});return false;" style="margin:24px 24px 0 0" title="View Detail" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View Detail</span></button><script id="form:j_idt81:6:j_idt84_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_form_j_idt81_6_j_idt84",{id:"form:j_idt81:6:j_idt84"});</script>
-                            </div></li></ul></div><div id="form:j_idt81_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom" role="navigation" aria-label="Pagination"><a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page"><span class="ui-icon ui-icon-seek-first">p</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page"><span class="ui-icon ui-icon-seek-prev">p</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-state-active ui-corner-all" tabindex="0" href="#">1</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">2</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">3</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">4</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">5</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">6</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">7</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">8</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">p</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all" aria-label="Last Page" tabindex="0"><span class="ui-icon ui-icon-seek-end">p</span></a></div></div><script id="form:j_idt81_s" type="text/javascript">$(function(){PrimeFaces.cw("DataList","widget_form_j_idt81",{id:"form:j_idt81",paginator:{id:['form:j_idt81_paginator_top','form:j_idt81_paginator_bottom'],rows:7,rowCount:50,page:0,currentPageTemplate:'({currentPage} of {totalPages})'}});});</script><div id="form:j_idt86" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="form:j_idt86_title" class="ui-dialog-title">Car Info</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><div id="form:carDetail" class="ui-outputpanel ui-widget" style="text-align:center;"></div></div></div><script id="form:j_idt86_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","carDialog2",{id:"form:j_idt86",resizable:false,modal:true,showEffect:"blind",hideEffect:"explode",responsive:true});});</script>
-                    </div>
-                </div>
-                    
-                <div class="ui-g-12">
-                    <div class="card card-w-title">
-                        <h1>Carousel</h1><div id="form:j_idt98" class="ui-carousel ui-widget ui-widget-content ui-corner-all"><div class="ui-carousel-header ui-widget-header ui-corner-all"><div class="ui-carousel-header-title">Carousel</div><span class="ui-carousel-button ui-carousel-next-button ui-icon ui-icon-circle-triangle-e"></span><span class="ui-carousel-button ui-carousel-prev-button ui-icon ui-icon-circle-triangle-w"></span><div class="ui-carousel-page-links"><a href="#" class="ui-icon ui-carousel-page-link ui-icon-radio-off"></a><a href="#" class="ui-icon ui-carousel-page-link ui-icon-radio-off"></a><a href="#" class="ui-icon ui-carousel-page-link ui-icon-radio-off"></a></div><select name="form:j_idt98_mobiledropdown" class="ui-carousel-mobiledropdown ui-widget ui-state-default ui-corner-left"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div><div class="ui-carousel-viewport"><ul class="ui-carousel-items"><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:0:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">9fd1fa4b</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1986</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">Maroon</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$42997</td></tr></tbody></table></li><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:1:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">7f715447</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1996</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">White</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$48034</td></tr></tbody></table></li><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:2:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">722fef6e</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1962</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">Silver</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$88214</td></tr></tbody></table></li><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:3:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">f7fd9630</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1985</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">Maroon</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$75177</td></tr></tbody></table></li><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:4:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">c6ddace4</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1995</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">Green</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$66701</td></tr></tbody></table></li><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:5:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">449d1140</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1984</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">Yellow</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$13240</td></tr></tbody></table></li><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:6:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">cb61691e</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1985</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">Blue</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$49359</td></tr></tbody></table></li><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:7:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">80e80b49</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1972</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">Brown</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$12890</td></tr></tbody></table></li><li class="ui-carousel-item ui-widget-content ui-corner-all carItem" style="text-align:center"><table id="form:j_idt98:8:j_idt99" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-car-display" style="width:100%" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Id:</td><td role="gridcell" class="ui-panelgrid-cell">f8c9e18f</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Year</td><td role="gridcell" class="ui-panelgrid-cell">1967</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Color:</td><td role="gridcell" class="ui-panelgrid-cell">White</td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell">Price</td><td role="gridcell" class="ui-panelgrid-cell">$68199</td></tr></tbody></table></li></ul></div><div class="ui-carousel-footer ui-widget-header ui-corner-all">
-                                Carousel Footer
-                            </div><input id="form:j_idt98_page" name="form:j_idt98_page" type="hidden" autocomplete="off" value="0" /></div><script id="form:j_idt98_s" type="text/javascript">$(function(){PrimeFaces.cw("Carousel","widget_form_j_idt98",{id:"form:j_idt98",responsive:true,breakpoint:640});});</script>
-                    </div>
-                </div>
-                    
-                <div class="ui-g-12">
-                    <div class="card card-w-title">
-                        <h1>Tree Single</h1><div id="form:j_idt110" class="ui-tree ui-widget ui-widget-content ui-corner-all" role="tree" tabindex="0" aria-multiselectable="true"><ul class="ui-tree-container"><li id="form:j_idt110:0" data-rowkey="0" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Documents</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt110:0_0" data-rowkey="0_0" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Work</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt110:0_0_0" data-rowkey="0_0_0" data-nodetype="document" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-content-paste"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Expenses.doc</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt110:0_0_1" data-rowkey="0_0_1" data-nodetype="document" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-content-paste"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Resume.doc</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li><li id="form:j_idt110:0_1" data-rowkey="0_1" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">PrimeFaces</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt110:0_1_0" data-rowkey="0_1_0" data-nodetype="document" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-content-paste"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">RefDoc.pages</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li></ul></li><li id="form:j_idt110:1" data-rowkey="1" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Pictures</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt110:1_0" data-rowkey="1_0" data-nodetype="picture" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-image"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">barcelona.jpg</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt110:1_1" data-rowkey="1_1" data-nodetype="picture" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-image"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">logo.jpg</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt110:1_2" data-rowkey="1_2" data-nodetype="picture" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-image"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">optimusprime.png</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li><li id="form:j_idt110:2" data-rowkey="2" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Movies</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt110:2_0" data-rowkey="2_0" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Al Pacino</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt110:2_0_0" data-rowkey="2_0_0" data-nodetype="movie" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-movie"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Scarface</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt110:2_0_1" data-rowkey="2_0_1" data-nodetype="movie" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-movie"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Carlitos' Way</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li><li id="form:j_idt110:2_1" data-rowkey="2_1" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Robert De Niro</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt110:2_1_0" data-rowkey="2_1_0" data-nodetype="movie" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-movie"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Goodfellas</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt110:2_1_1" data-rowkey="2_1_1" data-nodetype="movie" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false"><span class="ui-treenode-leaf-icon"></span><span class="ui-treenode-icon ui-icon ui-icon-movie"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Untouchables</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li></ul></li></ul><input type="hidden" id="form:j_idt110_selection" name="form:j_idt110_selection" autocomplete="off" /></div><script id="form:j_idt110_s" type="text/javascript">$(function(){PrimeFaces.cw("VerticalTree","widget_form_j_idt110",{id:"form:j_idt110",dynamic:false,cache:false,selectionMode:"single",propagateUp:true,propagateDown:true,iconStates:{'default' : {expandedIcon:'ui-icon-folder-open',collapsedIcon:'ui-icon-folder-collapsed'}}});});</script>
-                    </div>
-                    
-                    <div class="card card-w-title">
-                        <h1>Tree Checkbox</h1><div id="form:j_idt120" class="ui-tree ui-widget ui-widget-content ui-corner-all" role="tree" tabindex="0" aria-multiselectable="false"><ul class="ui-tree-container"><li id="form:j_idt120:0" data-rowkey="0" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Documents</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt120:0_0" data-rowkey="0_0" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Work</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt120:0_0_0" data-rowkey="0_0_0" data-nodetype="document" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-content-paste"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Expenses.doc</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt120:0_0_1" data-rowkey="0_0_1" data-nodetype="document" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-content-paste"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Resume.doc</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li><li id="form:j_idt120:0_1" data-rowkey="0_1" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">PrimeFaces</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt120:0_1_0" data-rowkey="0_1_0" data-nodetype="document" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-content-paste"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">RefDoc.pages</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li></ul></li><li id="form:j_idt120:1" data-rowkey="1" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Pictures</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt120:1_0" data-rowkey="1_0" data-nodetype="picture" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-image"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">barcelona.jpg</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt120:1_1" data-rowkey="1_1" data-nodetype="picture" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-image"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">logo.jpg</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt120:1_2" data-rowkey="1_2" data-nodetype="picture" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-image"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">optimusprime.png</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li><li id="form:j_idt120:2" data-rowkey="2" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Movies</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt120:2_0" data-rowkey="2_0" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Al Pacino</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt120:2_0_0" data-rowkey="2_0_0" data-nodetype="movie" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-movie"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Scarface</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt120:2_0_1" data-rowkey="2_0_1" data-nodetype="movie" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-movie"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Carlitos' Way</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li><li id="form:j_idt120:2_1" data-rowkey="2_1" data-nodetype="default" class="ui-treenode ui-treenode-parent ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-tree-toggler ui-icon ui-icon-triangle-1-e"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Robert De Niro</span></span><ul class="ui-treenode-children" role="group" style="display:none"><li id="form:j_idt120:2_1_0" data-rowkey="2_1_0" data-nodetype="movie" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-movie"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Goodfellas</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li><li id="form:j_idt120:2_1_1" data-rowkey="2_1_1" data-nodetype="movie" class="ui-treenode ui-treenode-leaf ui-treenode-unselected"><span class="ui-treenode-content ui-tree-selectable" aria-expanded="false" aria-selected="false" aria-checked="false"><span class="ui-treenode-leaf-icon"></span><div class="ui-chkbox ui-widget ui-selection"><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div><span class="ui-treenode-icon ui-icon ui-icon-movie"></span><span class="ui-treenode-label ui-corner-all" tabindex="-1" role="treeitem">Untouchables</span></span><ul class="ui-treenode-children" role="group" style="display:none"></ul></li></ul></li></ul></li></ul><input type="hidden" id="form:j_idt120_selection" name="form:j_idt120_selection" autocomplete="off" /></div><script id="form:j_idt120_s" type="text/javascript">$(function(){PrimeFaces.cw("VerticalTree","widget_form_j_idt120",{id:"form:j_idt120",dynamic:false,cache:false,selectionMode:"checkbox",propagateUp:true,propagateDown:true,iconStates:{'default' : {expandedIcon:'ui-icon-folder-open',collapsedIcon:'ui-icon-folder-collapsed'}}});});</script>
-                    </div>
-                </div>
-                <div class="ui-g-12">
-                    <div class="card card-w-title">
-                        <h1>Horizontal Tree</h1><div id="form:j_idt130" class="ui-tree ui-tree-horizontal ui-widget ui-widget-content ui-corner-all" role="tree"><table><tbody><tr><td class="ui-treenode ui-treenode-parent ui-treenode-collapsed ui-treenode-unselected" data-nodetype="default" data-rowkey="root"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-tree-toggler ui-icon ui-icon-plus"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span>Files</div></td><td class="ui-treenode-children-container" style="display:none"><div class="ui-treenode-children"><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-parent ui-treenode-collapsed ui-treenode-unselected" data-nodetype="default" data-rowkey="0"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-tree-toggler ui-icon ui-icon-plus"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span>Documents</div></td><td class="ui-treenode-children-container" style="display:none"><div class="ui-treenode-children"><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-parent ui-treenode-collapsed ui-treenode-unselected" data-nodetype="default" data-rowkey="0_0"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-tree-toggler ui-icon ui-icon-plus"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span>Work</div></td><td class="ui-treenode-children-container" style="display:none"><div class="ui-treenode-children"><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="document" data-rowkey="0_0_0"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-document"></span>Expenses.doc</div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="document" data-rowkey="0_0_1"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-document"></span>Resume.doc</div></td></tr></tbody></table></div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-parent ui-treenode-collapsed ui-treenode-unselected" data-nodetype="default" data-rowkey="0_1"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-tree-toggler ui-icon ui-icon-plus"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span>PrimeFaces</div></td><td class="ui-treenode-children-container" style="display:none"><div class="ui-treenode-children"><table><tbody><tr><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="document" data-rowkey="0_1_0"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-document"></span>RefDoc.pages</div></td></tr></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-parent ui-treenode-collapsed ui-treenode-unselected" data-nodetype="default" data-rowkey="1"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-tree-toggler ui-icon ui-icon-plus"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span>Pictures</div></td><td class="ui-treenode-children-container" style="display:none"><div class="ui-treenode-children"><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="picture" data-rowkey="1_0"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-image"></span>barcelona.jpg</div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="picture" data-rowkey="1_1"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-image"></span>logo.jpg</div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="picture" data-rowkey="1_2"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-image"></span>optimusprime.png</div></td></tr></tbody></table></div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-parent ui-treenode-collapsed ui-treenode-unselected" data-nodetype="default" data-rowkey="2"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-tree-toggler ui-icon ui-icon-plus"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span>Movies</div></td><td class="ui-treenode-children-container" style="display:none"><div class="ui-treenode-children"><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-parent ui-treenode-collapsed ui-treenode-unselected" data-nodetype="default" data-rowkey="2_0"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-tree-toggler ui-icon ui-icon-plus"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span>Al Pacino</div></td><td class="ui-treenode-children-container" style="display:none"><div class="ui-treenode-children"><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="movie" data-rowkey="2_0_0"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-video"></span>Scarface</div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="movie" data-rowkey="2_0_1"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-video"></span>Carlitos' Way</div></td></tr></tbody></table></div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-parent ui-treenode-collapsed ui-treenode-unselected" data-nodetype="default" data-rowkey="2_1"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-tree-toggler ui-icon ui-icon-plus"></span><span class="ui-treenode-icon ui-icon ui-icon-folder-collapsed"></span>Robert De Niro</div></td><td class="ui-treenode-children-container" style="display:none"><div class="ui-treenode-children"><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td></td></tr><tr><td class="ui-treenode-connector-line"></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="movie" data-rowkey="2_1_0"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-video"></span>Goodfellas</div></td></tr></tbody></table><table><tbody><tr><td class="ui-treenode-connector"><table class="ui-treenode-connector-table"><tbody><tr><td class="ui-treenode-connector-line"></td></tr><tr><td></td></tr></tbody></table></td><td class="ui-treenode ui-treenode-leaf ui-treenode-unselected" data-nodetype="movie" data-rowkey="2_1_1"><div class="ui-treenode-content ui-tree-selectable ui-state-default ui-corner-all"><span class="ui-treenode-icon ui-icon ui-icon-video"></span>Untouchables</div></td></tr></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody></table></div><script id="form:j_idt130_s" type="text/javascript">$(function(){PrimeFaces.cw("HorizontalTree","widget_form_j_idt130",{id:"form:j_idt130",dynamic:false,cache:false,iconStates:{'default' : {expandedIcon:'ui-icon-folder-open',collapsedIcon:'ui-icon-folder-collapsed'}}});});</script>
-                    </div>
-                    <div class="card card-w-title">
-                        <h1>Schedule</h1><div id="form:schedule"><div id="form:schedule_container"></div><input type="hidden" id="form:schedule_view" name="form:schedule_view" autocomplete="off" value="month" /></div><script id="form:schedule_s" type="text/javascript">$(function(){PrimeFaces.cw("Schedule","widget_form_schedule",{id:"form:schedule",defaultView:"month",locale:"en_US",lazyFetching:false,header:{left:'prev,next today',center:"title",right:"month,agendaWeek,agendaDay"}});});</script>
-                    </div>
-                </div>
-            </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:90" value="-1903922490639507235:5001725164370561779" autocomplete="off" />
-</form>
-    
-    <div class="footer">
-        <div class="card clearfix">
-            <span class="footer-text-left">PrimeFaces ULTIMA</span>
-            <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>
-        </div>
-    </div>
-            </div>
-        </div><div id="j_idt143" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt143_start" style="display:none">
-               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt143_complete" style="display:none"></div></div><script id="j_idt143_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt143",{id:"j_idt143"});});</script></body>
+                        <h1>OrderList</h1>
+                        <p:orderList value="#{orderListView.cities}"
+                                     var="city"
+                                     itemLabel="#{city}"
+                                     itemValue="#{city}"
+                                     controlsLocation="left"
+                                     responsive="true"
+                                     moveUpLabel="Move Up"
+                                     moveTopLabel="Move Top"
+                                     moveDownLabel="Move Down"
+                                     moveBottomLabel="Move Bottom">
+                            <p:ajax event="select" listener="#{orderListView.onSelect}" update="msgs"/>
+                            <p:ajax event="unselect" listener="#{orderListView.onUnselect}" update="msgs"/>
+                            <p:ajax event="reorder" listener="#{orderListView.onReorder}" update="msgs"/>
 
-</html>
+                            <f:facet name="caption">Cities List</f:facet>
+                        </p:orderList>
+                    </div>
+                </div>
+
+                <div class="ui-g-12">
+                    <div class="card card-w-title">
+                        <h1>TreeTable</h1>
+                        <p:treeTable value="#{ttSelectionView.root3}"
+                                     var="document"
+                                     selectionMode="checkbox"
+                                     selection="#{ttSelectionView.selectedNodes2}">
+                            <f:facet name="header">
+                                Checkbox
+                            </f:facet>
+
+                            <p:column headerText="Name" sortBy="#{document.name}">
+                                <h:outputText value="#{document.name}" />
+                            </p:column>
+
+                            <p:column headerText="Size">
+                                <h:outputText value="#{document.size}" />
+                            </p:column>
+
+                            <p:column headerText="Type">
+                                <h:outputText value="#{document.type}" />
+                            </p:column>
+                        </p:treeTable>
+                    </div>
+                </div>
+
+                <div class="ui-g-12">
+                    <div class="card card-w-title">
+                        <h1>DataList - Paginator</h1>
+                        <p:dataList value="#{dataListView.cars2}"
+                                    var="car"
+                                    type="unordered"
+                                    itemType="none"
+                                    paginator="true"
+                                    rows="7"
+                                    styleClass="cars-datalist">
+                            <f:facet name="header">
+                                Cars For Sale
+                            </f:facet>
+                            <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
+                                <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
+                                <div class="car-details">
+                                    <p>#{car.brand}</p>
+                                    <p style="color:#757575">#{car.year} - #{car.color}</p>
+                                </div>
+                                <p:commandButton update=":form:carDetail" icon="ui-icon-search" oncomplete="PF('carDialog2').show()" title="View Detail" style="margin:24px 24px 0 0">
+                                    <f:setPropertyActionListener value="#{car}" target="#{dataListView.selectedCar}" />
+                                </p:commandButton>
+                            </div>
+                        </p:dataList>
+
+                        <p:dialog header="Car Info"
+                                  widgetVar="carDialog2"
+                                  modal="true"
+                                  showEffect="blind"
+                                  hideEffect="explode"
+                                  resizable="false"
+                                  responsive="true">
+                            <p:outputPanel id="carDetail" style="text-align:center;">
+                                <p:panelGrid columns="2"
+                                             columnClasses="label,value"
+                                             rendered="#{not empty dataListView.selectedCar}">
+                                    <f:facet name="header">
+                                        <p:graphicImage name="demo/images/car/#{dataListView.selectedCar.brand}-big.gif"/>
+                                    </f:facet>
+
+                                    <h:outputText value="Id:" />
+                                    <h:outputText value="#{dataListView.selectedCar.id}" />
+
+                                    <h:outputText value="Year:" />
+                                    <h:outputText value="#{dataListView.selectedCar.year}" />
+
+                                    <h:outputText value="Color:" />
+                                    <h:outputText value="#{dataListView.selectedCar.color}" style="color:#{dataListView.selectedCar.color}"/>
+
+                                    <h:outputText value="Price:" />
+                                    <h:outputText value="\$#{dataListView.selectedCar.price}" />
+                                </p:panelGrid>
+                            </p:outputPanel>
+                        </p:dialog>
+                    </div>
+                </div>
+
+                <div class="ui-g-12">
+                    <div class="card card-w-title">
+                        <h1>Carousel</h1>
+                        <p:carousel value="#{carouselView.cars}"
+                                    var="car"
+                                    headerText="Carousel"
+                                    itemStyleClass="carItem"
+                                    itemStyle="text-align:center"
+                                    responsive="true">
+                            <p:panelGrid columns="2" styleClass="ui-panelgrid-blank ui-car-display" style="width:100%" columnClasses="label,value">
+                                <h:outputText value="Id:" />
+                                <h:outputText value="#{car.id}" />
+
+                                <h:outputText value="Year" />
+                                <h:outputText value="#{car.year}" />
+
+                                <h:outputText value="Color:" />
+                                <h:outputText value="#{car.color}" style="color:#{car.color}"/>
+
+                                <h:outputText value="Price" />
+                                <h:outputText value="\$#{car.price}"/>
+                            </p:panelGrid>
+
+                            <f:facet name="footer">
+                                Carousel Footer
+                            </f:facet>
+                        </p:carousel>
+                    </div>
+                </div>
+
+                <div class="ui-g-12">
+                    <div class="card card-w-title">
+                        <h1>Tree Single</h1>
+                        <p:tree value="#{treeSelectionView.root1}"
+                                var="doc"
+                                selectionMode="single"
+                                selection="#{treeSelectionView.selectedNode}">
+                            <p:treeNode expandedIcon="ui-icon-folder-open" collapsedIcon="ui-icon-folder-collapsed">
+                                <h:outputText value="#{doc.name}"/>
+                            </p:treeNode>
+                            <p:treeNode type="document" icon="ui-icon-document">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                            <p:treeNode type="picture" icon="ui-icon-image">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                            <p:treeNode type="mp3" icon="ui-icon-movie">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                        </p:tree>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>Tree Checkbox</h1>
+                        <p:tree value="#{treeSelectionView.root3}"
+                                var="doc"
+                                selectionMode="checkbox"
+                                selection="#{treeSelectionView.selectedNodes2}">
+                            <p:treeNode expandedIcon="ui-icon-folder-open" collapsedIcon="ui-icon-folder-collapsed">
+                                <h:outputText value="#{doc.name}"/>
+                            </p:treeNode>
+                            <p:treeNode type="document" icon="ui-icon-document">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                            <p:treeNode type="picture" icon="ui-icon-image">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                            <p:treeNode type="mp3" icon="ui-icon-movie">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                        </p:tree>
+                    </div>
+                </div>
+
+                <div class="ui-g-12">
+                    <div class="card card-w-title">
+                        <h1>Horizontal Tree</h1>
+                        <p:tree value="#{treeSelectionView.root1}"
+                                var="doc"
+                                orientation="horizontal"
+                                selectionMode="single"
+                                selection="#{treeSelectionView.selectedNode}">
+                            <p:treeNode expandedIcon="ui-icon-folder-open" collapsedIcon="ui-icon-folder-collapsed">
+                                <h:outputText value="#{doc.name}"/>
+                            </p:treeNode>
+                            <p:treeNode type="document" icon="ui-icon-document">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                            <p:treeNode type="picture" icon="ui-icon-image">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                            <p:treeNode type="mp3" icon="ui-icon-video">
+                                <h:outputText value="#{doc.name}" />
+                            </p:treeNode>
+                        </p:tree>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>Schedule</h1>
+                        <p:schedule id="schedule"
+                                    value="#{scheduleView.eventModel}"
+                                    widgetVar="myschedule"
+                                    locale="zh"
+                                    timeZone="GMT+8">
+                            <p:ajax event="dateSelect" listener="#{scheduleView.onDateSelect}" update="eventDetails" oncomplete="PF('eventDialog').show();" />
+                            <p:ajax event="eventSelect" listener="#{scheduleView.onEventSelect}" update="eventDetails" oncomplete="PF('eventDialog').show();" />
+                            <p:ajax event="eventMove" listener="#{scheduleView.onEventMove}" update="msgs" />
+                            <p:ajax event="eventResize" listener="#{scheduleView.onEventResize}" update="msgs" />
+                        </p:schedule>
+
+                        <p:dialog widgetVar="eventDialog" header="Event Details" showEffect="clip" hideEffect="clip" responsive="true">
+                            <p:panelGrid id="eventDetails" columns="2" styleClass="ui-panelgrid-blank">
+                                <h:outputLabel for="title" value="Title:" />
+                                <p:inputText id="title" value="#{scheduleView.event.title}" required="true" />
+
+                                <h:outputLabel for="from" value="From:" />
+                                <p:calendar id="from" value="#{scheduleView.event.startDate}" timeZone="GMT+8" pattern="dd/MM/yyyy HH:mm"/>
+
+                                <h:outputLabel for="to" value="To:" />
+                                <p:calendar id="to" value="#{scheduleView.event.endDate}" timeZone="GMT+8" pattern="dd/MM/yyyy HH:mm"/>
+
+                                <h:outputLabel for="allDay" value="All Day:" />
+                                <h:selectBooleanCheckbox id="allDay" value="#{scheduleView.event.allDay}" />
+
+                                <p:commandButton type="reset" value="Reset" />
+                                <p:commandButton id="addButton"
+                                                 value="Save"
+                                                 actionListener="#{scheduleView.addEvent}"
+                                                 oncomplete="PF('myschedule').update();PF('eventDialog').hide();" />
+                            </p:panelGrid>
+                        </p:dialog>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
