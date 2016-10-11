@@ -1,261 +1,554 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-            <meta name="apple-mobile-web-app-capable" content="yes" />
-            <meta name="theme-color" content="#3F51B5" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-indigo" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/ultima/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.0"></script><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/nanoscroller.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/animate.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/ripple.css.xhtml?ln=ultima-layout" /><link type="text/css" rel="stylesheet" href="/ultima/javax.faces.resource/css/layout-indigo.css.xhtml?ln=ultima-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
-        <title>PrimeFaces Ultima</title><script type="text/javascript" src="/ultima/javax.faces.resource/js/nanoscroller.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/layout.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/ripple.js.xhtml?ln=ultima-layout"></script><script type="text/javascript" src="/ultima/javax.faces.resource/js/swipe.js.xhtml?ln=ultima-layout"></script>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+    <ui:define name="head">
         <style type="text/css">
             .ui-steps .ui-steps-item {
                 width: 25%;
             }
-        </style></head><body class="main-body layout-compact">
-        
-        <div class="layout-wrapper menu-layout-static">
+        </style>
+    </ui:define>
 
-    <div class="topbar clearfix">
-        <div class="topbar-left">            
-            <div class="logo"></div>
-        </div>
-        
-        <div class="topbar-right">
-            <a id="menu-button" href="#">
-                <i></i>
-            </a>
-            
-            <a id="topbar-menu-button" href="#">
-                <i class="material-icons"></i>
-            </a>
-            <ul class="topbar-items fadeInDown animated">
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons"></i>
-                        <span class="topbar-item-name">Settings</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Change Theme</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Favorites</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Lock Screen</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Wallpaper</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons animated swing"></i>
-                        <span class="topbar-badge animated rubberBand">5</span>
-                        <span class="topbar-item-name">Messages</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt16" src="/ultima/javax.faces.resource/images/avatar1.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Give me a call</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt18" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Sales reports attached</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt20" src="/ultima/javax.faces.resource/images/avatar3.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>About your invoice</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt22" src="/ultima/javax.faces.resource/images/avatar2.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Meeting today at 10pm</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#" class="topbar-message"><img id="j_idt24" src="/ultima/javax.faces.resource/images/avatar4.png.xhtml?ln=ultima-layout" alt="" width="35" />
-                                <span>Out of office</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="topbar-icon material-icons"></i>
-                        <span class="topbar-badge animated rubberBand">4</span>
-                        <span class="topbar-item-name">Notifications</span>
-                    </a>
-                    <ul class="ultima-menu animated">
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Pending tasks</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Meeting today at 3pm</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Download documents</span>
-                            </a>
-                        </li>
-                        <li role="menuitem">
-                            <a href="#">
-                                <i class="material-icons"></i>
-                                <span>Book flight</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="search-item"><span class="md-inputfield"><input id="j_idt27" name="j_idt27" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt27_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt27",{id:"j_idt27"});</script>
-                        <label>Search</label>
-                        <i class="topbar-icon material-icons"></i></span>
-                    
-                </li>
-            </ul>
-        </div>
-    </div>
-<form id="menuform" name="menuform" method="post" action="/ultima/menu.xhtml" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="menuform" value="menuform" />
- 
-        <div class="layout-menu ">
-            <div class="nano">
-                <div class="nano-content menu-scroll-content">
-                        <div class="profile">
-                            <div class="profile-image"></div>
-                            <a id="profile-options" href="#">
-                                <span class="profile-name">Jane Williams</span>
-                                <i class="material-icons"></i>
-                            </a>
-                        </div>
-                    
-                        <ul id="profile-menu" class="ultima-menu">
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Profile</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Privacy</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Settings</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" class="ripplelink">
-                                    <i class="material-icons"></i>
-                                    <span>Logout</span>
-                                </a>
-                            </li>
-                        </ul><ul id="menuform:j_idt33" class="ultima-menu clearfix"><li id="menuform:um_dashboard" role="menuitem"><a href="/ultima/dashboard.xhtml"><i class="material-icons"></i><span>Dashboard</span></a></li><li id="menuform:themes" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Themes</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:theme1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme1':'menuform:theme1'}).submit('menuform');return false;"><i class="material-icons"></i><span>Indigo - Pink</span></a></li><li id="menuform:theme2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme2':'menuform:theme2'}).submit('menuform');return false;"><i class="material-icons"></i><span>Brown - Green</span></a></li><li id="menuform:theme3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme3':'menuform:theme3'}).submit('menuform');return false;"><i class="material-icons"></i><span>Blue - Amber</span></a></li><li id="menuform:theme4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme4':'menuform:theme4'}).submit('menuform');return false;"><i class="material-icons"></i><span>Blue Grey - Green</span></a></li><li id="menuform:theme5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme5':'menuform:theme5'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark - Blue</span></a></li><li id="menuform:theme6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme6':'menuform:theme6'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark - Green</span></a></li><li id="menuform:theme7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme7':'menuform:theme7'}).submit('menuform');return false;"><i class="material-icons"></i><span>Green - Yellow</span></a></li><li id="menuform:theme8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme8':'menuform:theme8'}).submit('menuform');return false;"><i class="material-icons"></i><span>Purple - Cyan</span></a></li><li id="menuform:theme9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme9':'menuform:theme9'}).submit('menuform');return false;"><i class="material-icons"></i><span>Purple - Amber</span></a></li><li id="menuform:theme10" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme10':'menuform:theme10'}).submit('menuform');return false;"><i class="material-icons"></i><span>Teal - Lime</span></a></li><li id="menuform:theme11" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme11':'menuform:theme11'}).submit('menuform');return false;"><i class="material-icons"></i><span>Cyan - Amber</span></a></li><li id="menuform:theme12" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme12':'menuform:theme12'}).submit('menuform');return false;"><i class="material-icons"></i><span>Grey - Deep Orange</span></a></li></ul></li><li id="menuform:um_customization" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Customization</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:custom1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom1':'menuform:custom1'}).submit('menuform');return false;"><i class="material-icons"></i><span>Compact Size</span></a></li><li id="menuform:custom2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom2':'menuform:custom2'}).submit('menuform');return false;"><i class="material-icons"></i><span>Material Size</span></a></li><li id="menuform:custom3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom3':'menuform:custom3'}).submit('menuform');return false;"><i class="material-icons"></i><span>Static Menu</span></a></li><li id="menuform:custom4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom4':'menuform:custom4'}).submit('menuform');return false;"><i class="material-icons"></i><span>Overlay Menu</span></a></li><li id="menuform:custom5" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom5':'menuform:custom5'}).submit('menuform');return false;"><i class="material-icons"></i><span>Horizontal Menu</span></a></li><li id="menuform:custom6" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom6':'menuform:custom6'}).submit('menuform');return false;"><i class="material-icons"></i><span>Light Menu</span></a></li><li id="menuform:custom7" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom7':'menuform:custom7'}).submit('menuform');return false;"><i class="material-icons"></i><span>Dark Menu</span></a></li><li id="menuform:custom8" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom8':'menuform:custom8'}).submit('menuform');return false;"><i class="material-icons"></i><span>Inline Profile</span></a></li><li id="menuform:custom9" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom9':'menuform:custom9'}).submit('menuform');return false;"><i class="material-icons"></i><span>Top Profile</span></a></li></ul></li><li id="menuform:um_components" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Components</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sample" role="menuitem"><a href="/ultima/sample.xhtml"><i class="material-icons"></i><span>Sample Page</span></a></li><li id="menuform:um_forms" role="menuitem"><a href="/ultima/forms.xhtml"><i class="material-icons"></i><span>Forms</span></a></li><li id="menuform:um_data" role="menuitem"><a href="/ultima/data.xhtml"><i class="material-icons"></i><span>Data</span></a></li><li id="menuform:um_panels" role="menuitem"><a href="/ultima/panel.xhtml"><i class="material-icons"></i><span>Panels</span></a></li><li id="menuform:um_overlays" role="menuitem"><a href="/ultima/overlay.xhtml"><i class="material-icons"></i><span>Overlays</span></a></li><li id="menuform:um_menus" role="menuitem"><a href="/ultima/menu.xhtml"><i class="material-icons"></i><span>Menus</span></a></li><li id="menuform:um_messages" role="menuitem"><a href="/ultima/messages.xhtml"><i class="material-icons"></i><span>Messages</span></a></li><li id="menuform:um_charts" role="menuitem"><a href="/ultima/charts.xhtml"><i class="material-icons"></i><span>Charts</span></a></li><li id="menuform:um_file" role="menuitem"><a href="/ultima/file.xhtml"><i class="material-icons"></i><span>File</span></a></li><li id="menuform:um_misc" role="menuitem"><a href="/ultima/misc.xhtml"><i class="material-icons"></i><span>Misc</span></a></li></ul></li><li id="menuform:um_default" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Template Pages</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_db_landing" role="menuitem"><a href="/ultima/landing.xhtml"><i class="material-icons"></i><span>Landing</span></a></li><li id="menuform:um_empty" role="menuitem"><a href="/ultima/empty.xhtml"><i class="material-icons"></i><span>Empty Page</span></a></li><li id="menuform:um_login" role="menuitem"><a href="/ultima/login.xhtml"><i class="material-icons"></i><span>Login Page</span></a></li><li id="menuform:um_error" role="menuitem"><a href="/ultima/error.xhtml"><i class="material-icons"></i><span>Error Page</span></a></li><li id="menuform:um_404" role="menuitem"><a href="/ultima/404.xhtml"><i class="material-icons"></i><span>404 Page</span></a></li><li id="menuform:um_access" role="menuitem"><a href="/ultima/access.xhtml"><i class="material-icons"></i><span>Access Denied Page</span></a></li></ul></li><li id="menuform:um_hierarchy" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Menu Hierarchy</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm1" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm11" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk111" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.1</span></a></li><li id="menuform:um_lnk112" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.2</span></a></li><li id="menuform:um_lnk113" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.1.3</span></a></li></ul></li><li id="menuform:um_sm12" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 1.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk121" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 1.2.1</span></a></li></ul></li></ul></li><li id="menuform:um_sm2" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_sm21" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2.1</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk211" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.1.1</span></a></li><li id="menuform:um_lnk212" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.1.2</span></a></li></ul></li><li id="menuform:um_sm22" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Submenu 2.2</span><span class="ink animate"></span><i class="material-icons">&#xE313;</i></a><ul role="menu"><li id="menuform:um_lnk221" role="menuitem"><a href="#"><i class="material-icons"></i><span>Link 2.2.1</span></a></li></ul></li></ul></li></ul></li><li id="menuform:um_utils" role="menuitem"><a href="/ultima/utils.xhtml"><i class="material-icons"></i><span>Utils</span></a></li><li id="menuform:um_doc" role="menuitem"><a href="/ultima/docs.xhtml"><i class="material-icons"></i><span>Documentation</span></a></li></ul><script id="menuform:j_idt33_s" type="text/javascript">PrimeFaces.cw("Ultima","me",{id:"menuform:j_idt33"});</script>
-                </div>
-            </div>
-        </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="7882527574992359902:-5290101612560429035" autocomplete="off" />
-</form>
-            
-            <div class="layout-main">
-<form id="j_idt36" name="j_idt36" method="post" action="/ultima/menu.xhtml" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="j_idt36" value="j_idt36" />
+    <ui:define name="content">
+        <h:form>
+            <p:growl id="messages" autoUpdate="true"/>
 
             <div class="ui-g ui-fluid">
                 <div class="ui-g-12">
                     <div class="card">
-                        <h1>Breadcrumb</h1><div id="j_idt36:j_idt38" class="ui-breadcrumb ui-module ui-widget ui-widget-header ui-helper-clearfix ui-corner-all" role="menu"><ul><li role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all ui-icon ui-icon-home" href="#"><span class="ui-menuitem-text">Categories</span></a></li><li class="ui-breadcrumb-chevron ui-icon ui-icon-triangle-1-e"></li><li role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports</span></a></li><li class="ui-breadcrumb-chevron ui-icon ui-icon-triangle-1-e"></li><li role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Basketball</span></a></li><li class="ui-breadcrumb-chevron ui-icon ui-icon-triangle-1-e"></li><li role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">NBA</span></a></li><li class="ui-breadcrumb-chevron ui-icon ui-icon-triangle-1-e"></li><li role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Teams</span></a></li><li class="ui-breadcrumb-chevron ui-icon ui-icon-triangle-1-e"></li><li role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">L.A. Lakers</span></a></li><li class="ui-breadcrumb-chevron ui-icon ui-icon-triangle-1-e"></li><li role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Roster</span></a></li><li class="ui-breadcrumb-chevron ui-icon ui-icon-triangle-1-e"></li><li role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Kobe Bryant</span></a></li></ul></div>
+                        <h1>Breadcrumb</h1>
+                        <p:breadCrumb>
+                            <p:menuitem value="Categories" url="#" />
+                            <p:menuitem value="Sports" url="#" />
+                            <p:menuitem value="Basketball" url="#" />
+                            <p:menuitem value="NBA" url="#" />
+                            <p:menuitem value="Teams" url="#" />
+                            <p:menuitem value="L.A. Lakers" url="#" />
+                            <p:menuitem value="Roster" url="#" />
+                            <p:menuitem value="Kobe Bryant" url="#" />
+                        </p:breadCrumb>
                     </div>
-                    
+
                     <div class="card">
-                        <h1>Steps</h1><div id="j_idt36:j_idt48" class="ui-steps ui-steps-readonly ui-widget ui-helper-clearfix"><ul role="tablist"><li class="ui-steps-item ui-state-default ui-state-disabled ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="return false;"><span class="ui-steps-number">1</span><span class="ui-steps-title">Personal</span></a></li><li class="ui-steps-item ui-state-highlight ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="return false;"><span class="ui-steps-number">2</span><span class="ui-steps-title">Seat</span></a></li><li class="ui-steps-item ui-state-default ui-state-disabled ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="return false;"><span class="ui-steps-number">3</span><span class="ui-steps-title">Payment</span></a></li><li class="ui-steps-item ui-state-default ui-state-disabled ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="return false;"><span class="ui-steps-number">4</span><span class="ui-steps-title">Confirm</span></a></li></ul></div>
+                        <h1>Steps</h1>
+                        <p:steps activeIndex="1">
+                            <p:menuitem value="Personal" url="#"/>
+                            <p:menuitem value="Seat" url="#"/>
+                            <p:menuitem value="Payment" url="#"/>
+                            <p:menuitem value="Confirm" url="#"/>
+                        </p:steps>
                     </div>
-                    
+
                     <div class="card">
-                        <h1>MenuBar</h1><div id="j_idt36:j_idt54" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-insert-drive-file"></span><span class="ui-menuitem-text">File</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-add-box"></span><span class="ui-menuitem-text">New</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Project</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Other</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-open-in-browser"></span><span class="ui-menuitem-text">Open</span></a></li><li class="ui-separator ui-state-default"></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Quit</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-mode-edit"></span><span class="ui-menuitem-text">Edit</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-undo"></span><span class="ui-menuitem-text">Undo</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-redo"></span><span class="ui-menuitem-text">Redo</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-help"></span><span class="ui-menuitem-text">Help</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-inbox"></span><span class="ui-menuitem-text">Contents</span></a></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-search"></span><span class="ui-menuitem-text">Search</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-text-fields"></span><span class="ui-menuitem-text">Text</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-work"></span><span class="ui-menuitem-text">Workspace</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-attach-file"></span><span class="ui-menuitem-text">File</span></a></li></ul></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-settings-applications"></span><span class="ui-menuitem-text">Actions</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-refresh"></span><span class="ui-menuitem-text">Ajax</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt73&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-save"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt74&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-update"></span><span class="ui-menuitem-text">Update</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-compare-arrows"></span><span class="ui-menuitem-text">Non-Ajax</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt76&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Delete</span></a></li></ul></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Quit</span></a></li><li class="ui-menuitem ui-menubar-options ui-widget ui-corner-all" role="menuitem"><input id="j_idt36:j_idt78" name="j_idt36:j_idt78" type="text" placeholder="Search" style="margin-right:10px;vertical-align:middle;padding:2px" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="j_idt36:j_idt78_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt36_j_idt78",{id:"j_idt36:j_idt78"});</script></li></ul></div><script id="j_idt36:j_idt54_s" type="text/javascript">PrimeFaces.cw("Menubar","widget_j_idt36_j_idt54",{id:"j_idt36:j_idt54",autoDisplay:true});</script>
+                        <h1>MenuBar</h1>
+                        <p:menubar>
+                            <p:submenu label="File" icon="ui-icon-insert-drive-file">
+                                <p:submenu label="New" icon="ui-icon-add-box">
+                                    <p:menuitem value="Project" url="#" />
+                                    <p:menuitem value="Other" url="#" />
+                                </p:submenu>
+                                <p:menuitem value="Open" url="#" icon="ui-icon-open-in-browser"/>
+                                <p:separator />
+                                <p:menuitem value="Quit" url="#" icon="ui-icon-close"/>
+                            </p:submenu>
+
+                            <p:submenu label="Edit" icon="ui-icon-mode-edit">
+                                <p:menuitem value="Undo" url="#" icon="ui-icon-undo" />
+                                <p:menuitem value="Redo" url="#" icon="ui-icon-redo" />
+                            </p:submenu>
+
+                            <p:submenu label="Help" icon="ui-icon-help">
+                                <p:menuitem value="Contents" url="#" icon="ui-icon-inbox"/>
+                                <p:submenu label="Search" icon="ui-icon-search">
+                                    <p:submenu label="Text" icon="ui-icon-text-fields">
+                                        <p:menuitem value="Workspace" url="#" icon="ui-icon-work"/>
+                                    </p:submenu>
+                                    <p:menuitem value="File" url="#" icon="ui-icon-attach-file"/>
+                                </p:submenu>
+                            </p:submenu>
+
+                            <p:submenu label="Actions" icon="ui-icon-settings-applications">
+                                <p:submenu label="Ajax" icon="ui-icon-refresh">
+                                    <p:menuitem value="Save" actionListener="#{menuView.save}" icon="ui-icon-save" update="messages"/>
+                                    <p:menuitem value="Update" actionListener="#{menuView.update}" icon="ui-icon-update" update="messages"/>
+                                </p:submenu>
+                                <p:submenu label="Non-Ajax" icon="ui-icon-compare-arrows">
+                                    <p:menuitem value="Delete" actionListener="#{menuView.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
+                                </p:submenu>
+                            </p:submenu>
+
+                            <p:menuitem value="Quit" url="http://www.primefaces.org/" icon="ui-icon-close" />
+
+                            <f:facet name="options">
+                                <p:inputText placeholder="Search" style="margin-right:10px;vertical-align:middle;padding:2px"/>
+                            </f:facet>
+                        </p:menubar>
                     </div>
                 </div>
-                
+
                 <div class="ui-g-12 ui-lg-6">
                     <!-- Left Colum -->
                     <div class="card">
-                        <h1>Plain Menu</h1><div id="j_idt36:j_idt80" class="ui-menu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" style="margin-bottom:20px" role="menu"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget-header ui-corner-all"><h3>Ajax</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt82&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt83&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-text">Update</span></a></li><li class="ui-widget-header ui-corner-all"><h3>Non-Ajax</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt85&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-text">Delete</span></a></li><li class="ui-widget-header ui-corner-all"><h3>Navigations</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-text">External</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt88&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-text">Internal</span></a></li></ul></div><script id="j_idt36:j_idt80_s" type="text/javascript">$(function(){PrimeFaces.cw("PlainMenu","widget_j_idt36_j_idt80",{id:"j_idt36:j_idt80"});});</script><button id="j_idt36:dynaButton" name="j_idt36:dynaButton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" style="width:auto" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-open-in-new"></span><span class="ui-button-text ui-c">Overlay</span></button><script id="j_idt36:dynaButton_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt36_dynaButton",{id:"j_idt36:dynaButton"});</script><div id="j_idt36:j_idt89" class="ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow" role="menu"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget-header ui-corner-all"><h3>Ajax</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt91&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-save"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt92&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-refresh"></span><span class="ui-menuitem-text">Update</span></a></li><li class="ui-widget-header ui-corner-all"><h3>Non-Ajax</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt94&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Delete</span></a></li><li class="ui-widget-header ui-corner-all"><h3>Navigations</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-open-in-browser"></span><span class="ui-menuitem-text">External</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt97&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-home"></span><span class="ui-menuitem-text">Internal</span></a></li></ul></div><script id="j_idt36:j_idt89_s" type="text/javascript">$(function(){PrimeFaces.cw("PlainMenu","widget_j_idt36_j_idt89",{id:"j_idt36:j_idt89",overlay:true,my:"left top",at:"left bottom",trigger:"j_idt36:dynaButton",triggerEvent:"click"});});</script>
+                        <h1>Plain Menu</h1>
+                        <p:menu style="margin-bottom:20px">
+                            <p:submenu label="Ajax">
+                                <p:menuitem value="Save" actionListener="#{menuView.save}" update="messages"/>
+                                <p:menuitem value="Update" actionListener="#{menuView.update}" update="messages"/>
+                            </p:submenu>
+                            <p:submenu label="Non-Ajax">
+                                <p:menuitem value="Delete" actionListener="#{menuView.delete}" update="messages" ajax="false"/>
+                            </p:submenu>
+                            <p:submenu label="Navigations">
+                                <p:menuitem value="External" url="http://www.primefaces.org/"/>
+                                <p:menuitem value="Internal" url="#"/>
+                            </p:submenu>
+                        </p:menu>
+
+                        <p:commandButton id="dynaButton" value="Overlay" type="button" icon="ui-icon-open-in-new" style="width:auto"/>
+
+                        <p:menu overlay="true" trigger="dynaButton" my="left top" at="left bottom">
+                            <p:submenu label="Ajax">
+                                <p:menuitem value="Save" actionListener="#{menuView.save}" update="messages" icon="ui-icon-save"/>
+                                <p:menuitem value="Update" actionListener="#{menuView.update}" update="messages" icon="ui-icon-refresh"/>
+                            </p:submenu>
+                            <p:submenu label="Non-Ajax">
+                                <p:menuitem value="Delete" actionListener="#{menuView.delete}" update="messages" ajax="false" icon="ui-icon ui-icon-close"/>
+                            </p:submenu>
+                            <p:submenu label="Navigations">
+                                <p:menuitem value="External" url="http://www.primefaces.org/" icon="ui-icon-open-in-browser"/>
+                                <p:menuitem value="Internal" url="#" icon="ui-icon-home"/>
+                            </p:submenu>
+                        </p:menu>
                     </div>
-                    
+
                     <div class="card">
-                        <h1>Toggleable</h1><div id="j_idt36:j_idt99" class="ui-menu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-menu-toggleable" role="menu"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li id="j_idt36:j_idt100" class="ui-widget-header ui-corner-all"><h3><span class="ui-icon ui-icon-triangle-1-s"></span>Ajax</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt101&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-save"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt102&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-refresh"></span><span class="ui-menuitem-text">Update</span></a></li><li id="j_idt36:j_idt103" class="ui-widget-header ui-corner-all"><h3><span class="ui-icon ui-icon-triangle-1-s"></span>Non-Ajax</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt104&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Delete</span></a></li><li id="j_idt36:j_idt105" class="ui-widget-header ui-corner-all"><h3><span class="ui-icon ui-icon-triangle-1-s"></span>Navigations</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-open-in-browser"></span><span class="ui-menuitem-text">External</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt107&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-home"></span><span class="ui-menuitem-text">Internal</span></a></li></ul></div><script id="j_idt36:j_idt99_s" type="text/javascript">$(function(){PrimeFaces.cw("PlainMenu","widget_j_idt36_j_idt99",{id:"j_idt36:j_idt99",toggleable:true});});</script>
+                        <h1>Toggleable</h1>
+                        <p:menu toggleable="true">
+                            <p:submenu label="Ajax">
+                                <p:menuitem value="Save" actionListener="#{menuView.save}" update="messages" icon="ui-icon-save" />
+                                <p:menuitem value="Update" actionListener="#{menuView.update}" update="messages" icon="ui-icon-refresh"/>
+                            </p:submenu>
+                            <p:submenu label="Non-Ajax">
+                                <p:menuitem value="Delete" actionListener="#{menuView.delete}" update="messages" ajax="false" icon="ui-icon-close"/>
+                            </p:submenu>
+                            <p:submenu label="Navigations">
+                                <p:menuitem value="External" url="http://www.primefaces.org/" icon="ui-icon-open-in-browser"/>
+                                <p:menuitem value="Internal" url="#" icon="ui-icon-home"/>
+                            </p:submenu>
+                        </p:menu>
                     </div>
-                    
+
                     <div class="card">
-                        <h1>TieredMenu</h1><div id="j_idt36:j_idt109" class="ui-menu ui-tieredmenu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" style="width:250px;margin-bottom:20px" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-insert-drive-file"></span><span class="ui-menuitem-text">File</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-add-box"></span><span class="ui-menuitem-text">New</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Project</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Other</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-open-in-browser"></span><span class="ui-menuitem-text">Open</span></a></li><li class="ui-separator ui-state-default"></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Quit</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-mode-edit"></span><span class="ui-menuitem-text">Edit</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-undo"></span><span class="ui-menuitem-text">Undo</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-redo"></span><span class="ui-menuitem-text">Redo</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-help"></span><span class="ui-menuitem-text">Help</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-inbox"></span><span class="ui-menuitem-text">Contents</span></a></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-search"></span><span class="ui-menuitem-text">Search</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-text-fields"></span><span class="ui-menuitem-text">Text</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-work"></span><span class="ui-menuitem-text">Workspace</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-attach-file"></span><span class="ui-menuitem-text">File</span></a></li></ul></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-settings-applications"></span><span class="ui-menuitem-text">Actions</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-refresh"></span><span class="ui-menuitem-text">Ajax</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt128&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-save"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt129&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-update"></span><span class="ui-menuitem-text">Update</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-compare-arrows"></span><span class="ui-menuitem-text">Non-Ajax</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt131&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Delete</span></a></li></ul></li></ul></li></ul></div><script id="j_idt36:j_idt109_s" type="text/javascript">$(function(){PrimeFaces.cw("TieredMenu","widget_j_idt36_j_idt109",{id:"j_idt36:j_idt109",autoDisplay:true});});</script><button id="j_idt36:dynaButtonTiered" name="j_idt36:dynaButtonTiered" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" style="width:auto" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-open-in-new"></span><span class="ui-button-text ui-c">Overlay</span></button><script id="j_idt36:dynaButtonTiered_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt36_dynaButtonTiered",{id:"j_idt36:dynaButtonTiered"});</script><div id="j_idt36:j_idt132" class="ui-menu ui-tieredmenu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow" style="width:250px" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-insert-drive-file"></span><span class="ui-menuitem-text">File</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-add-box"></span><span class="ui-menuitem-text">New</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Project</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Other</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-open-in-browser"></span><span class="ui-menuitem-text">Open</span></a></li><li class="ui-separator ui-state-default"></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Quit</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-mode-edit"></span><span class="ui-menuitem-text">Edit</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-undo"></span><span class="ui-menuitem-text">Undo</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-redo"></span><span class="ui-menuitem-text">Redo</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-help"></span><span class="ui-menuitem-text">Help</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-inbox"></span><span class="ui-menuitem-text">Contents</span></a></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-search"></span><span class="ui-menuitem-text">Search</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-text-fields"></span><span class="ui-menuitem-text">Text</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-work"></span><span class="ui-menuitem-text">Workspace</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-attach-file"></span><span class="ui-menuitem-text">File</span></a></li></ul></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-settings-applications"></span><span class="ui-menuitem-text">Actions</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-refresh"></span><span class="ui-menuitem-text">Ajax</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt151&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-save"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt152&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-update"></span><span class="ui-menuitem-text">Update</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-compare-arrows"></span><span class="ui-menuitem-text">Non-Ajax</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt154&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Delete</span></a></li></ul></li></ul></li></ul></div><script id="j_idt36:j_idt132_s" type="text/javascript">$(function(){PrimeFaces.cw("TieredMenu","widget_j_idt36_j_idt132",{id:"j_idt36:j_idt132",autoDisplay:true,overlay:true,my:"left top",at:"left bottom",trigger:"j_idt36:dynaButtonTiered",triggerEvent:"click"});});</script>
+                        <h1>TieredMenu</h1>
+                        <p:tieredMenu style="width:250px;margin-bottom:20px">
+                            <p:submenu label="File" icon="ui-icon-insert-drive-file">
+                                <p:submenu label="New" icon="ui-icon-add-box">
+                                    <p:menuitem value="Project" url="#" />
+                                    <p:menuitem value="Other" url="#" />
+                                </p:submenu>
+                                <p:menuitem value="Open" url="#" icon="ui-icon-open-in-browser"/>
+                                <p:separator />
+                                <p:menuitem value="Quit" url="#" icon="ui-icon-close"/>
+                            </p:submenu>
+
+                            <p:submenu label="Edit" icon="ui-icon-mode-edit">
+                                <p:menuitem value="Undo" url="#" icon="ui-icon-undo" />
+                                <p:menuitem value="Redo" url="#" icon="ui-icon-redo" />
+                            </p:submenu>
+
+                            <p:submenu label="Help" icon="ui-icon-help">
+                                <p:menuitem value="Contents" url="#" icon="ui-icon-inbox"/>
+                                <p:submenu label="Search" icon="ui-icon-search">
+                                    <p:submenu label="Text" icon="ui-icon-text-fields">
+                                        <p:menuitem value="Workspace" url="#" icon="ui-icon-work"/>
+                                    </p:submenu>
+                                    <p:menuitem value="File" url="#" icon="ui-icon-attach-file"/>
+                                </p:submenu>
+                            </p:submenu>
+
+                            <p:submenu label="Actions" icon="ui-icon-settings-applications">
+                                <p:submenu label="Ajax" icon="ui-icon-refresh">
+                                    <p:menuitem value="Save" actionListener="#{menuView.save}" icon="ui-icon-save" update="messages"/>
+                                    <p:menuitem value="Update" actionListener="#{menuView.update}" icon="ui-icon-update" update="messages"/>
+                                </p:submenu>
+                                <p:submenu label="Non-Ajax" icon="ui-icon-compare-arrows">
+                                    <p:menuitem value="Delete" actionListener="#{menuView.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
+                                </p:submenu>
+                            </p:submenu>
+                        </p:tieredMenu>
+
+                        <p:commandButton id="dynaButtonTiered"
+                                         value="Overlay"
+                                         icon="ui-icon-open-in-new"
+                                         style="width:auto"
+                                         type="button"/>
+
+                        <p:tieredMenu overlay="true" trigger="dynaButtonTiered" my="left top" at="left bottom" style="width:250px">
+                            <p:submenu label="File" icon="ui-icon-insert-drive-file">
+                                <p:submenu label="New" icon="ui-icon-add-box">
+                                    <p:menuitem value="Project" url="#" />
+                                    <p:menuitem value="Other" url="#" />
+                                </p:submenu>
+                                <p:menuitem value="Open" url="#" icon="ui-icon-open-in-browser"/>
+                                <p:separator />
+                                <p:menuitem value="Quit" url="#" icon="ui-icon-close"/>
+                            </p:submenu>
+
+                            <p:submenu label="Edit" icon="ui-icon-mode-edit">
+                                <p:menuitem value="Undo" url="#" icon="ui-icon-undo" />
+                                <p:menuitem value="Redo" url="#" icon="ui-icon-redo" />
+                            </p:submenu>
+
+                            <p:submenu label="Help" icon="ui-icon-help">
+                                <p:menuitem value="Contents" url="#" icon="ui-icon-inbox"/>
+                                <p:submenu label="Search" icon="ui-icon-search">
+                                    <p:submenu label="Text" icon="ui-icon-text-fields">
+                                        <p:menuitem value="Workspace" url="#" icon="ui-icon-work"/>
+                                    </p:submenu>
+                                    <p:menuitem value="File" url="#" icon="ui-icon-attach-file"/>
+                                </p:submenu>
+                            </p:submenu>
+
+                            <p:submenu label="Actions" icon="ui-icon-settings-applications">
+                                <p:submenu label="Ajax" icon="ui-icon-refresh">
+                                    <p:menuitem value="Save" actionListener="#{menuView.save}" icon="ui-icon-save" update="messages"/>
+                                    <p:menuitem value="Update" actionListener="#{menuView.update}" icon="ui-icon-update" update="messages"/>
+                                </p:submenu>
+                                <p:submenu label="Non-Ajax" icon="ui-icon-compare-arrows">
+                                    <p:menuitem value="Delete" actionListener="#{menuView.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
+                                </p:submenu>
+                            </p:submenu>
+                        </p:tieredMenu>
                     </div>
                 </div>
                 <div class="ui-g-12 ui-lg-6">
                     <!-- Right Colum -->
                     <div class="card">
-                        <h1>MenuButton</h1><span id="j_idt36:j_idt156" class="ui-menubutton"><button id="j_idt36:j_idt156_button" name="j_idt36:j_idt156_button" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"><span class="ui-button-icon-left ui-icon ui-c ui-icon-triangle-1-s"></span><span class="ui-button-text ui-c">Options</span></button><div id="j_idt36:j_idt156_menu" class="ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow" role="menu"><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt157&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-check"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt158&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-update"></span><span class="ui-menuitem-text">Update</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt159&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-delete"></span><span class="ui-menuitem-text">Delete</span></a></li><li class="ui-separator ui-state-default"></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-home"></span><span class="ui-menuitem-text">Homepage</span></a></li></ul></div></span><script id="j_idt36:j_idt156_s" type="text/javascript">$(function(){PrimeFaces.cw("MenuButton","widget_j_idt36_j_idt156",{id:"j_idt36:j_idt156"});});</script>
-                        
+                        <h1>MenuButton</h1>
+                        <p:menuButton value="Options">
+                            <p:menuitem value="Save" actionListener="#{menuView.save}" update="messages" icon="ui-icon-check"/>
+                            <p:menuitem value="Update" actionListener="#{menuView.update}" update="messages" icon="ui-icon-update"/>
+                            <p:menuitem value="Delete" actionListener="#{menuView.delete}" ajax="false" icon="ui-icon-delete"/>
+                            <p:separator />
+                            <p:menuitem value="Homepage" url="http://www.primefaces.org/" icon="ui-icon-home"/>
+                        </p:menuButton>
+
                         <h1 style="margin-top:40px">ContextMenu</h1>
                         Right click!
-                        <div id="j_idt36:j_idt163" class="ui-menu ui-menu-dynamic ui-contextmenu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt164&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-save"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt165&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-refresh"></span><span class="ui-menuitem-text">Update</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt166&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Delete</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-home"></span><span class="ui-menuitem-text">Homepage</span></a></li></ul></div><script id="j_idt36:j_idt163_s" type="text/javascript">$(function(){PrimeFaces.cw("ContextMenu","widget_j_idt36_j_idt163",{id:"j_idt36:j_idt163"});});</script>
+                        <p:contextMenu>
+                            <p:menuitem value="Save" actionListener="#{menuView.save}" update="messages" icon="ui-icon-save"/>
+                            <p:menuitem value="Update" actionListener="#{menuView.update}" update="messages" icon="ui-icon-refresh"/>
+                            <p:menuitem value="Delete" actionListener="#{menuView.delete}" ajax="false" icon="ui-icon-close"/>
+                            <p:menuitem value="Homepage" url="http://www.primefaces.org/" icon="ui-icon-home"/>
+                        </p:contextMenu>
                     </div>
-                    
-                    <div class="card">
-                        <h1>SlideMenu</h1><div id="j_idt36:j_idt169" class="ui-menu ui-slidemenu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" style="width:260px" role="menu"><div class="ui-slidemenu-wrapper"><div class="ui-slidemenu-content"><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-refresh"></span><span class="ui-menuitem-text">Ajax Menuitems</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt171&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-save"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt172&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-update"></span><span class="ui-menuitem-text">Update</span></a></li></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-compare-arrows"></span><span class="ui-menuitem-text">Non-Ajax Menuitem</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt174&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-close"></span><span class="ui-menuitem-text">Delete</span></a></li></ul></li><li class="ui-separator ui-state-default"></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-open-in-new"></span><span class="ui-menuitem-text">Navigations</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-link"></span><span class="ui-menuitem-text">Prime Links</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.prime.com.tr/"><span class="ui-menuitem-text">Prime</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-text">PrimeFaces</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt180&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-phonelink-setup"></span><span class="ui-menuitem-text">Mobile</span></a></li></ul></li></ul></div><div class="ui-slidemenu-backward ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-icon ui-icon-triangle-1-w"></span>Back</div></div></div><script id="j_idt36:j_idt169_s" type="text/javascript">$(function(){PrimeFaces.cw("SlideMenu","widget_j_idt36_j_idt169",{id:"j_idt36:j_idt169"});});</script>
-                    </div>
-                    
-                    <div class="card">
-                        <h1>PanelMenu</h1><div id="j_idt36:j_idt182" class="ui-panelmenu ui-widget" role="menu"><div class="ui-panelmenu-panel"><h3 class="ui-widget ui-panelmenu-header ui-state-default ui-state-active ui-corner-all" role="tab" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span><a href="#" tabindex="-1">Ajax Menuitems</a></h3><div class="ui-panelmenu-content ui-widget-content" role="tabpanel" id="j_idt36:j_idt182_j_idt183" tabindex="0"><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt184&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-save"></span><span class="ui-menuitem-text">Save</span></a></li><li class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt185&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-refresh"></span><span class="ui-menuitem-text">Update</span></a></li></ul></div></div><div class="ui-panelmenu-panel"><h3 class="ui-widget ui-panelmenu-header ui-state-default ui-state-active ui-corner-all" role="tab" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span><a href="#" tabindex="-1">Non-Ajax Menuitem</a></h3><div class="ui-panelmenu-content ui-widget-content" role="tabpanel" id="j_idt36:j_idt182_j_idt186" tabindex="0"><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt187&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-delete"></span><span class="ui-menuitem-text">Delete</span></a></li></ul></div></div><div class="ui-panelmenu-panel"><h3 class="ui-widget ui-panelmenu-header ui-state-default ui-state-active ui-corner-all" role="tab" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span><a href="#" tabindex="-1">Navigations</a></h3><div class="ui-panelmenu-content ui-widget-content" role="tabpanel" id="j_idt36:j_idt182_j_idt189" tabindex="0"><ul class="ui-menu-list ui-helper-reset"><li id="j_idt36:j_idt190" class="ui-widget ui-menuitem ui-corner-all ui-menu-parent"><a class="ui-menuitem-link ui-corner-all"><span class="ui-panelmenu-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-menuitem-text">Links</span></a><ul class="ui-menu-list ui-helper-reset ui-helper-hidden"><li id="j_idt36:j_idt191" class="ui-widget ui-menuitem ui-corner-all ui-menu-parent"><a class="ui-menuitem-link ui-corner-all"><span class="ui-panelmenu-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-menuitem-text">PrimeFaces</span></a><ul class="ui-menu-list ui-helper-reset ui-helper-hidden"><li class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-home"></span><span class="ui-menuitem-text">Home</span></a></li><li class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/documentation"><span class="ui-menuitem-icon ui-icon ui-icon-find-in-page"></span><span class="ui-menuitem-text">Docs</span></a></li><li class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/downloads"><span class="ui-menuitem-icon ui-icon ui-icon-file-download"></span><span class="ui-menuitem-text">Download</span></a></li><li class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/support"><span class="ui-menuitem-icon ui-icon ui-icon-help"></span><span class="ui-menuitem-text">Support</span></a></li></ul></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;j_idt36:j_idt196&quot;,f:&quot;j_idt36&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-star"></span><span class="ui-menuitem-text">Star</span></a></li></ul></div></div></div><script id="j_idt36:j_idt182_s" type="text/javascript">$(function(){PrimeFaces.cw("PanelMenu","widget_j_idt36_j_idt182",{id:"j_idt36:j_idt182",stateful:true});});</script>
-                    </div>
-                </div>
-                
-                <div class="ui-g-12 ui-g-6">
-                    <div class="card">
-                        <h1>TabMenu</h1><div id="j_idt36:j_idt198" class="ui-tabmenu ui-widget ui-widget-content ui-corner-all"><ul class="ui-tabmenu-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist"><li class="ui-tabmenuitem ui-state-default ui-state-active ui-corner-top ui-tabmenuitem-hasicon" role="tab" aria-expanded="true" aria-selected="true"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="/ultima/menu.xhtml?i=0"><span class="ui-menuitem-icon ui-icon ui-icon-star"></span><span class="ui-menuitem-text">Overview</span></a></li><li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon" role="tab" aria-expanded="false" aria-selected="false"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="/ultima/menu.xhtml?i=1"><span class="ui-menuitem-icon ui-icon ui-icon-search"></span><span class="ui-menuitem-text">Demos</span></a></li><li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon" role="tab" aria-expanded="false" aria-selected="false"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="/ultima/menu.xhtml?i=2"><span class="ui-menuitem-icon ui-icon ui-icon-insert-drive-file"></span><span class="ui-menuitem-text">Documentation</span></a></li><li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon" role="tab" aria-expanded="false" aria-selected="false"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="/ultima/menu.xhtml?i=3"><span class="ui-menuitem-icon ui-icon ui-icon-help-outline"></span><span class="ui-menuitem-text">Support</span></a></li><li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon" role="tab" aria-expanded="false" aria-selected="false"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="/ultima/menu.xhtml?i=4"><span class="ui-menuitem-icon ui-icon ui-icon-person"></span><span class="ui-menuitem-text">Profile</span></a></li></ul></div><script id="j_idt36:j_idt198_s" type="text/javascript">PrimeFaces.cw("TabMenu","widget_j_idt36_j_idt198",{id:"j_idt36:j_idt198"});</script>
-                    </div>
-                </div>
-                
-                <div class="ui-g-12 ui-g-6">
-                    <div class="card">
-                        <h1>MegaMenu - Horizontal</h1><div id="j_idt36:j_idt210" class="ui-menu ui-menubar ui-megamenu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-tv"></span><span class="ui-menuitem-text">TV</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><table><tbody><tr><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>TV.1</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.1.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.1.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>TV.2</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.2.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.2.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.2.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>TV.4</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.4.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.4.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>TV.5</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.5.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.5.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.5.3</span></a></li></ul></td></tr></tbody></table></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-timer"></span><span class="ui-menuitem-text">Sports</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><table><tbody><tr><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.1</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.1.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.1.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.2</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.2.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.2.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.2.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.4</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.4.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.4.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.5</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.5.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.5.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.5.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.7</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.7.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.7.2</span></a></li></ul></td></tr></tbody></table></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-camera"></span><span class="ui-menuitem-text">Entertainment</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><table><tbody><tr><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Entertainment.1</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.1.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.1.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Entertainment.2</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.2.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.2.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.2.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Entertainment.4</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.4.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.4.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Entertainment.5</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.5.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.5.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.5.3</span></a></li></ul></td></tr></tbody></table></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-laptop"></span><span class="ui-menuitem-text">Tech</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><table><tbody><tr><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Tech.1</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.1.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.1.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Tech.2</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.2.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.2.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.2.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Tech.4</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.4.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.4.2</span></a></li></ul></td></tr></tbody></table></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-exit-to-app"></span><span class="ui-menuitem-text">Quit</span></a></li></ul></div><script id="j_idt36:j_idt210_s" type="text/javascript">PrimeFaces.cw("MegaMenu","widget_j_idt36_j_idt210",{id:"j_idt36:j_idt210",autoDisplay:true});</script>
-                        
-                        <h1>MegaMenu - Vertical</h1><div id="j_idt36:j_idt281" class="ui-menu ui-menubar ui-megamenu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-megamenu-vertical" style="width:200px" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-tv"></span><span class="ui-menuitem-text">TV</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><table><tbody><tr><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>TV.1</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.1.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.1.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>TV.2</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.2.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.2.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.2.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>TV.4</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.4.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.4.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>TV.5</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.5.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.5.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">TV.5.3</span></a></li></ul></td></tr></tbody></table></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-timer"></span><span class="ui-menuitem-text">Sports</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><table><tbody><tr><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.1</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.1.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.1.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.2</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.2.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.2.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.2.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.4</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.4.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.4.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.5</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.5.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.5.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.5.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Sports.7</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.7.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Sports.7.2</span></a></li></ul></td></tr></tbody></table></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-camera"></span><span class="ui-menuitem-text">Entertainment</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><table><tbody><tr><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Entertainment.1</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.1.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.1.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Entertainment.2</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.2.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.2.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.2.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Entertainment.4</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.4.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.4.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Entertainment.5</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.5.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.5.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Entertainment.5.3</span></a></li></ul></td></tr></tbody></table></ul></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-icon ui-icon ui-icon-laptop"></span><span class="ui-menuitem-text">Tech</span><span class="ui-icon ui-icon-triangle-1-e"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><table><tbody><tr><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Tech.1</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.1.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.1.2</span></a></li></ul><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Tech.2</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.2.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.2.2</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.2.3</span></a></li></ul></td><td><ul class="ui-menu-list ui-helper-reset" role="menu"><li class="ui-widget-header ui-corner-all"><h3>Tech.4</h3></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.4.1</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-text">Tech.4.2</span></a></li></ul></td></tr></tbody></table></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="http://www.primefaces.org/"><span class="ui-menuitem-icon ui-icon ui-icon-exit-to-app"></span><span class="ui-menuitem-text">Quit</span></a></li></ul></div><script id="j_idt36:j_idt281_s" type="text/javascript">PrimeFaces.cw("MegaMenu","widget_j_idt36_j_idt281",{id:"j_idt36:j_idt281",autoDisplay:true});</script>
-                    </div>
-                </div>
-            </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:74" value="7882527574992359902:-5290101612560429035" autocomplete="off" />
-</form>
-    
-    <div class="footer">
-        <div class="card clearfix">
-            <span class="footer-text-left">PrimeFaces ULTIMA</span>
-            <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>
-        </div>
-    </div>
-            </div>
-        </div><div id="j_idt354" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt354_start" style="display:none">
-               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt354_complete" style="display:none"></div></div><script id="j_idt354_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt354",{id:"j_idt354"});});</script></body>
 
-</html>
+                    <div class="card">
+                        <h1>SlideMenu</h1>
+                        <p:slideMenu backLabel="Back" style="width:260px">
+                            <p:submenu label="Ajax Menuitems" icon="ui-icon-refresh">
+                                <p:menuitem value="Save" actionListener="#{menuView.save}" update="messages" icon="ui-icon-save" />
+                                <p:menuitem value="Update" actionListener="#{menuView.update}" update="messages" icon="ui-icon-update" />
+                            </p:submenu>
+                            <p:submenu label="Non-Ajax Menuitem" icon="ui-icon-compare-arrows">
+                                <p:menuitem value="Delete" actionListener="#{menuView.delete}"  ajax="false" icon="ui-icon-close"/>
+                            </p:submenu>
+                            <p:separator />
+                            <p:submenu label="Navigations" icon="ui-icon-open-in-new">
+                                <p:submenu label="Prime Links" icon="ui-icon-link">
+                                    <p:menuitem value="Prime" url="http://www.prime.com.tr/" />
+                                    <p:menuitem value="PrimeFaces" url="http://www.primefaces.org/" />
+                                </p:submenu>
+                                <p:menuitem value="Mobile" url="#" icon="ui-icon-phonelink-setup"/>
+                            </p:submenu>
+                        </p:slideMenu>
+                    </div>
+
+                    <div class="card">
+                        <h1>PanelMenu</h1>
+                        <p:panelMenu>
+                            <p:submenu label="Ajax Menuitems">
+                                <p:menuitem value="Save" actionListener="#{menuView.save}" icon="ui-icon-save" />
+                                <p:menuitem value="Update" actionListener="#{menuView.update}"  icon="ui-icon-refresh" />
+                            </p:submenu>
+                            <p:submenu label="Non-Ajax Menuitem">
+                                <p:menuitem value="Delete" actionListener="#{menuView.delete}"  ajax="false" icon="ui-icon-delete"/>
+                            </p:submenu>
+                            <p:submenu label="Navigations">
+                                <p:submenu label="Links">
+                                    <p:submenu label="PrimeFaces">
+                                        <p:menuitem value="Home" url="http://www.primefaces.org/" icon="ui-icon-home" />
+                                        <p:menuitem value="Docs" url="http://www.primefaces.org/documentation" icon="ui-icon-find-in-page" />
+                                        <p:menuitem value="Download" url="http://www.primefaces.org/downloads" icon="ui-icon-file-download" />
+                                        <p:menuitem value="Support" url="http://www.primefaces.org/support" icon="ui-icon-help" />
+                                    </p:submenu>
+                                </p:submenu>
+                                <p:menuitem value="Star" url="#" icon="ui-icon-star" />
+                            </p:submenu>
+                        </p:panelMenu>
+                    </div>
+                </div>
+
+                <div class="ui-g-12 ui-g-6">
+                    <div class="card">
+                        <h1>TabMenu</h1>
+                        <p:tabMenu activeIndex="#{param.i}">
+                            <p:menuitem value="Overview" outcome="/menu.xhtml" icon="ui-icon-star">
+                                <f:param name="i" value="0" />
+                            </p:menuitem>
+                            <p:menuitem value="Demos" outcome="/menu.xhtml" icon="ui-icon-search">
+                                <f:param name="i" value="1" />
+                            </p:menuitem>
+                            <p:menuitem value="Documentation" outcome="/menu.xhtml" icon="ui-icon-insert-drive-file">
+                                <f:param name="i" value="2" />
+                            </p:menuitem>
+                            <p:menuitem value="Support" outcome="/menu.xhtml" icon="ui-icon-help-outline">
+                                <f:param name="i" value="3" />
+                            </p:menuitem>
+                            <p:menuitem value="Profile" outcome="/menu.xhtml" icon="ui-icon-person">
+                                <f:param name="i" value="4" />
+                            </p:menuitem>
+                        </p:tabMenu>
+                    </div>
+                </div>
+
+                <div class="ui-g-12 ui-g-6">
+                    <div class="card">
+                        <h1>MegaMenu - Horizontal</h1>
+                        <p:megaMenu orientation="horizontal">
+                            <p:submenu label="TV" icon="ui-icon-tv">
+                                <p:column>
+                                    <p:submenu label="TV.1">
+                                        <p:menuitem value="TV.1.1" url="#" />
+                                        <p:menuitem value="TV.1.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="TV.2">
+                                        <p:menuitem value="TV.2.1" url="#" />
+                                        <p:menuitem value="TV.2.2" url="#" />
+                                        <p:menuitem value="TV.2.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <p:column>
+                                    <p:submenu label="TV.4">
+                                        <p:menuitem value="TV.4.1" url="#" />
+                                        <p:menuitem value="TV.4.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="TV.5">
+                                        <p:menuitem value="TV.5.1" url="#" />
+                                        <p:menuitem value="TV.5.2" url="#" />
+                                        <p:menuitem value="TV.5.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <!--<p:column>
+                                    <strong>Image</strong>
+                                    <p:graphicImage name="/demo/images/nature/nature1.jpg" width="200"/>
+                                </p:column>-->
+                            </p:submenu>
+
+                            <p:submenu label="Sports" icon="ui-icon-timer">
+                                <p:column>
+                                    <p:submenu label="Sports.1">
+                                        <p:menuitem value="Sports.1.1" url="#" />
+                                        <p:menuitem value="Sports.1.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Sports.2">
+                                        <p:menuitem value="Sports.2.1" url="#" />
+                                        <p:menuitem value="Sports.2.2" url="#" />
+                                        <p:menuitem value="Sports.2.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <p:column>
+                                    <p:submenu label="Sports.4">
+                                        <p:menuitem value="Sports.4.1" url="#" />
+                                        <p:menuitem value="Sports.4.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Sports.5">
+                                        <p:menuitem value="Sports.5.1" url="#" />
+                                        <p:menuitem value="Sports.5.2" url="#" />
+                                        <p:menuitem value="Sports.5.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+                                <p:column>
+                                    <p:submenu label="Sports.7">
+                                        <p:menuitem value="Sports.7.1" url="#" />
+                                        <p:menuitem value="Sports.7.2" url="#" />
+                                    </p:submenu>
+                                </p:column>
+                            </p:submenu>
+
+                            <p:submenu label="Entertainment" icon="ui-icon-camera">
+                                <p:column>
+                                    <p:submenu label="Entertainment.1">
+                                        <p:menuitem value="Entertainment.1.1" url="#" />
+                                        <p:menuitem value="Entertainment.1.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Entertainment.2">
+                                        <p:menuitem value="Entertainment.2.1" url="#" />
+                                        <p:menuitem value="Entertainment.2.2" url="#" />
+                                        <p:menuitem value="Entertainment.2.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <p:column>
+                                    <p:submenu label="Entertainment.4">
+                                        <p:menuitem value="Entertainment.4.1" url="#" />
+                                        <p:menuitem value="Entertainment.4.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Entertainment.5">
+                                        <p:menuitem value="Entertainment.5.1" url="#" />
+                                        <p:menuitem value="Entertainment.5.2" url="#" />
+                                        <p:menuitem value="Entertainment.5.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+                            </p:submenu>
+
+                            <p:submenu label="Tech" icon="ui-icon-laptop">
+                                <p:column>
+                                    <p:submenu label="Tech.1">
+                                        <p:menuitem value="Tech.1.1" url="#" />
+                                        <p:menuitem value="Tech.1.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Tech.2">
+                                        <p:menuitem value="Tech.2.1" url="#" />
+                                        <p:menuitem value="Tech.2.2" url="#" />
+                                        <p:menuitem value="Tech.2.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <p:column>
+                                    <p:submenu label="Tech.4">
+                                        <p:menuitem value="Tech.4.1" url="#" />
+                                        <p:menuitem value="Tech.4.2" url="#" />
+                                    </p:submenu>
+                                </p:column>
+                            </p:submenu>
+
+                            <p:menuitem value="Quit" url="http://www.primefaces.org/" icon="ui-icon-exit-to-app" />
+                        </p:megaMenu>
+
+                        <h1>MegaMenu - Vertical</h1>
+                        <p:megaMenu orientation="vertical" style="width:200px">
+                            <p:submenu label="TV" icon="ui-icon-tv">
+                                <p:column>
+                                    <p:submenu label="TV.1">
+                                        <p:menuitem value="TV.1.1" url="#" />
+                                        <p:menuitem value="TV.1.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="TV.2">
+                                        <p:menuitem value="TV.2.1" url="#" />
+                                        <p:menuitem value="TV.2.2" url="#" />
+                                        <p:menuitem value="TV.2.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <p:column>
+                                    <p:submenu label="TV.4">
+                                        <p:menuitem value="TV.4.1" url="#" />
+                                        <p:menuitem value="TV.4.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="TV.5">
+                                        <p:menuitem value="TV.5.1" url="#" />
+                                        <p:menuitem value="TV.5.2" url="#" />
+                                        <p:menuitem value="TV.5.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <!--<p:column>
+                                    <strong>Image</strong>
+                                    <p:graphicImage name="/demo/images/nature/nature1.jpg" width="200"/>
+                                </p:column>-->
+                            </p:submenu>
+
+                            <p:submenu label="Sports" icon="ui-icon-timer">
+                                <p:column>
+                                    <p:submenu label="Sports.1">
+                                        <p:menuitem value="Sports.1.1" url="#" />
+                                        <p:menuitem value="Sports.1.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Sports.2">
+                                        <p:menuitem value="Sports.2.1" url="#" />
+                                        <p:menuitem value="Sports.2.2" url="#" />
+                                        <p:menuitem value="Sports.2.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <p:column>
+                                    <p:submenu label="Sports.4">
+                                        <p:menuitem value="Sports.4.1" url="#" />
+                                        <p:menuitem value="Sports.4.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Sports.5">
+                                        <p:menuitem value="Sports.5.1" url="#" />
+                                        <p:menuitem value="Sports.5.2" url="#" />
+                                        <p:menuitem value="Sports.5.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+                                <p:column>
+                                    <p:submenu label="Sports.7">
+                                        <p:menuitem value="Sports.7.1" url="#" />
+                                        <p:menuitem value="Sports.7.2" url="#" />
+                                    </p:submenu>
+                                </p:column>
+                            </p:submenu>
+
+                            <p:submenu label="Entertainment" icon="ui-icon-camera">
+                                <p:column>
+                                    <p:submenu label="Entertainment.1">
+                                        <p:menuitem value="Entertainment.1.1" url="#" />
+                                        <p:menuitem value="Entertainment.1.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Entertainment.2">
+                                        <p:menuitem value="Entertainment.2.1" url="#" />
+                                        <p:menuitem value="Entertainment.2.2" url="#" />
+                                        <p:menuitem value="Entertainment.2.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <p:column>
+                                    <p:submenu label="Entertainment.4">
+                                        <p:menuitem value="Entertainment.4.1" url="#" />
+                                        <p:menuitem value="Entertainment.4.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Entertainment.5">
+                                        <p:menuitem value="Entertainment.5.1" url="#" />
+                                        <p:menuitem value="Entertainment.5.2" url="#" />
+                                        <p:menuitem value="Entertainment.5.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+                            </p:submenu>
+
+                            <p:submenu label="Tech" icon="ui-icon-laptop">
+                                <p:column>
+                                    <p:submenu label="Tech.1">
+                                        <p:menuitem value="Tech.1.1" url="#" />
+                                        <p:menuitem value="Tech.1.2" url="#" />
+                                    </p:submenu>
+                                    <p:submenu label="Tech.2">
+                                        <p:menuitem value="Tech.2.1" url="#" />
+                                        <p:menuitem value="Tech.2.2" url="#" />
+                                        <p:menuitem value="Tech.2.3" url="#" />
+                                    </p:submenu>
+                                </p:column>
+
+                                <p:column>
+                                    <p:submenu label="Tech.4">
+                                        <p:menuitem value="Tech.4.1" url="#" />
+                                        <p:menuitem value="Tech.4.2" url="#" />
+                                    </p:submenu>
+                                </p:column>
+                            </p:submenu>
+
+                            <p:menuitem value="Quit" url="http://www.primefaces.org/" icon="ui-icon-exit-to-app" />
+                        </p:megaMenu>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
