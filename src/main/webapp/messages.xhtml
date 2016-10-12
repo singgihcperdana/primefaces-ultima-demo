@@ -4,7 +4,6 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:p="http://primefaces.org/ui"
                 template="/WEB-INF/template.xhtml">
-
     <ui:define name="head">
         <style type="text/css">
             .ui-button {
@@ -25,7 +24,7 @@
                         <h1>Messages</h1>
 
                         <p:tooltip />
-                        <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+                        <p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
 
                         <p:commandButton value="Info" actionListener="#{messagesView.info}" immediate="true" style="width:100px"/>
                         <p:commandButton value="Warn" actionListener="#{messagesView.warn}" immediate="true" styleClass="deep-orange-btn" style="width:100px"/>
@@ -36,7 +35,7 @@
 
                         <p:panelGrid id="grid" columns="3" styleClass="ui-panelgrid-blank form-group" style="margin-top:20px">
                             <p:outputLabel for="default" value="Default:" />
-                            <p:inputText id="default" required="true"/>
+                            <p:inputText id="default" required="true" />
                             <p:message for="default" />
 
                             <p:outputLabel for="txt" value="Text:" />
