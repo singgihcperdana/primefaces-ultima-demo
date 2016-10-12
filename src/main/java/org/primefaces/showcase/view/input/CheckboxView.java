@@ -37,7 +37,7 @@ public class CheckboxView implements Serializable {
     public void init() {
         cities = new ArrayList<>();
         cities.add("Icarus");
-        cities.add("Ultima");
+        cities.add("Omega");
         cities.add("Apollo");
         cities.add("Morpheus");
     }
