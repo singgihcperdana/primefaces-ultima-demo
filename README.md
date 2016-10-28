@@ -7,19 +7,13 @@ primefaces-ultimaÓëprimefaces-ultima-demoÊÇ¶Ô[¹ÙÍøultimaÑÝÊ¾³ÌÐò](http://www.pri
 ÕâÁ½¸öÏîÄ¿ÏÖÔÚÒÑ¾­¿ÉÒÔÔËÐÐÁË :-)
 »¶Ó­ÆäËûÈËÔ±¼ÓÈë£¬´ó¼ÒÒ»Æð½»Á÷¡¢²âÊÔ¡¢¸Ä½ø¡¢ÊÔÓÃ£¬¶¼»¶Ó­¡£
 
-* QQÈºÃû£ºprimefaces
-* QQÈººÅ£º31551213
-
-* QQÈºÃû£ºJSF/EJB/JPA¼¼Êõ½»Á÷Èº
-* QQÈººÅ£º84376982
-
-* QQÈºÃû£ºJava EE 7
-* QQÈººÅ£º335997118
+* QQÈºÃû£ºprimefaces£¨QQÈººÅ£º31551213£©
+* QQÈºÃû£ºJSF/EJB/JPA¼¼Êõ½»Á÷Èº£¨QQÈººÅ£º84376982£©
+* QQÈºÃû£ºJava EE 7£¨QQÈººÅ£º335997118£©
 
 ## ÏîÄ¿½éÉÜ
-
-Ultima£¨´´ÊÀ¼Í£©ÊÇÒ»¸ö¸ß¶È¿É¶¨ÖÆµÄ¸ß¼¶Ó¦ÓÃ³ÌÐòÄ£°å£¬¾ßÓÐ3ÖÖ²Ëµ¥Ä£Ê½£¨ÄÚÁªInline¡¢¸²¸ÇOverlay¡¢Ë®Æ½Horizontal£©¡¢12ÖÖÖ÷ÌâÅäÉ«¡¢Ã÷°µÁ½ÖÖ²Ëµ¥ºÍ2ÖÖÓÃ»§ÅäÖÃÄ£Ê½£¬×Ü¹²ÓÐ144ÖÖ¿ÉÄÜµÄ²¼¾Ö×éºÏ¡£
-Ëü»ùÓÚmaterial design£¨²ÄÁÏÉè¼Æ£©ÓïÑÔ£¬ÊÇÍêÈ«ÏìÓ¦Ê½µÄ£¬²¢½øÐÐÁË´¥ÃþÓÅ»¯£¬²ÉÓÃSASS¡¢CSS3ºÍHTML5¹¹½¨¡£
+Ultima£¨´´ÊÀ¼Í£©ÊÇÒ»¸ö¸ß¶È¿É¶¨ÖÆµÄ¸ß¼¶Ó¦ÓÃ³ÌÐòÄ£°å£¬¾ßÓÐ3ÖÖ²Ëµ¥Ä£Ê½¡¢12ÖÖÖ÷ÌâÅäÉ«¡¢Ã÷°µÁ½ÖÖ²Ëµ¥ºÍ2ÖÖÓÃ»§ÅäÖÃÄ£Ê½£¬×Ü¹²ÓÐ144ÖÖ¿ÉÄÜµÄ²¼¾Ö×éºÏ¡£
+Ëü»ùÓÚ[material design](https://material.google.com/)£¨²ÄÁÏÉè¼Æ£©ÓïÑÔ£¬ÊÇÍêÈ«ÏìÓ¦Ê½µÄ£¬²¢½øÐÐÁË´¥ÃþÓÅ»¯£¬²ÉÓÃ[SASS](http://www.sass-zh.com/)¡¢CSS3ºÍHTML5¹¹½¨¡£
 
 Ê×ÏÈ£¬ÆäÊµÓÐÁ½¸öÏîÄ¿£º
 
@@ -50,14 +44,11 @@ Ultima£¨´´ÊÀ¼Í£©ÊÇÒ»¸ö¸ß¶È¿É¶¨ÖÆµÄ¸ß¼¶Ó¦ÓÃ³ÌÐòÄ£°å£¬¾ßÓÐ3ÖÖ²Ëµ¥Ä£Ê½£¨ÄÚÁªInline¡
 Ä£°åÒ³Ãæ£º
 <p align="center"><img src="http://www.primefaces.org/images/market/ultima/feature-4.png" alt="Ä£°åÒ³Ãæ"/></p>
 
-²ÄÁÏÉè¼Æ£¨Material Design£©
+Material Design£¨²ÄÁÏÉè¼Æ£©
 <p align="center"><img src="http://www.primefaces.org/images/market/ultima/feature-8.png" alt="²ÄÁÏÉè¼Æ£¨Material Design£©"/></p>
 
-Sass£º
+Sass£¨Óï·¨ºÜºÃµÄÑùÊ½±í£©£º
 <p align="center"><img src="http://www.primefaces.org/images/market/ultima/feature-2.png" alt="Sass"/></p>
-
-Á¼ºÃµÄÖ§³Ö£º
-<p align="center"><img src="http://www.primefaces.org/images/market/ultima/feature-5.png" alt="Á¼ºÃµÄÖ§³Ö"/></p>
 
 ## Ô´ÂëµØÖ·
 primefaces-ultimaµÄGITÔ´´úÂëÎ»ÓÚ
