@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.primefaces</groupId>
     <artifactId>primefaces-ultima-demo</artifactId>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.5</version>
     <packaging>war</packaging>
     <name>primefaces-ultima-demo</name>
     <description>primefaces-ultima-demo是PrimeFaces的Ultima布局与主题的演示程序</description>
@@ -51,7 +51,7 @@
         <dependency>
             <groupId>org.primefaces.themes</groupId>
             <artifactId>primefaces-ultima</artifactId>
-            <version>1.0.5-SNAPSHOT</version>
+            <version>1.0.5</version>
         </dependency>
         <dependency>
             <groupId>org.atmosphere</groupId>
