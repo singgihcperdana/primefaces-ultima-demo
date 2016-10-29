@@ -13,17 +13,17 @@ primefaces-ultima与primefaces-ultima-demo是对[官网ultima演示程序](http://www.pri
 
 ## 项目介绍
 Ultima（创世纪）是一个高度可定制的高级应用程序模板，具有3种菜单模式、12种主题配色、明暗两种菜单和2种用户配置模式，总共有144种可能的布局组合。
-它基于[material design](https://material.google.com/)（材料设计）语言，是完全响应式的，并进行了触摸优化，采用[SASS](http://www.sass-zh.com/)、CSS3和HTML5构建。
+它基于[material design](https://material.google.com/)（材料设计）语言，是完全响应式的，并进行了触摸优化，采用[SASS](http://www.sass-zh.com/)、[CSS3](https://www.w3.org/Style/CSS/)和[HTML5](https://www.w3.org/TR/html5/)构建。
 
 首先，其实有两个项目：
 
 一个是[primefaces-ultima](http://git.oschina.net/ratking/primefaces-ultima)，它提供Ultima响应式页面布局(layout)与主题风格(theme)，
 最后会生成一个primefaces-ultima.jar包，供基于PrimeFaces的Web项目使用。
-使用的技术包括JSF、jQuery、CSS……
+使用的技术包括[JSF](https://jcp.org/en/jsr/detail?id=344)、[jQuery](http://jqueryui.org/)、[CSS](https://www.w3.org/Style/CSS/)……
 
 另一个是[primefaces-ultima-demo](http://git.oschina.net/ratking/primefaces-ultima-demo)，这是一个使用primefaces-ultima.jar的web演示程序，
-最后会生成一个primefaces-ultima-demo.war包，可以部署到Java EE 6或Java EE 7（比如GlassFish 4.x、Payara 4.1.1或WildFly 10.x）里运行。
-使用的技术主要是PrimeFaces 6.x、JSF 2.x、CDI 1.x、一点儿HTML 5、OmniFaces 2.x……
+最后会生成一个primefaces-ultima-demo.war包，可以部署到[Java EE 6或Java EE 7应用服务器](http://www.oracle.com/technetwork/java/javaee/overview/compatibility-jsp-136984.html)（比如[GlassFish](https://glassfish.java.net/) 4.x、[Payara](http://www.payara.fish/) 4.1.x或[WildFly](http://wildfly.org/) 10.x）里运行。
+使用的技术主要是[JSF](https://javaserverfaces.java.net/) 2.x、[PrimeFaces](http://www.primefaces.org/) 6.x、[CDI](http://cdi-spec.org/) 1.x、[OmniFaces](http://omnifaces.org/) 2.x、一点儿HTML 5……
 
 ## Ultima布局与主题预览
 <p align="center"><img src="http://www.primefaces.org/images/market/ultima/ultima.png" alt="Ultima布局与主题"/></p>
