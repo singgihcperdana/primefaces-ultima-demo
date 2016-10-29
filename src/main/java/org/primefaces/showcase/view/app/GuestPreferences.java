@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.primefaces.showcase.view.misc;
+package org.primefaces.showcase.view.app;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -25,33 +25,33 @@ import javax.inject.Named;
 
 @Named
 @SessionScoped
-public class ThemeView implements Serializable {
+public class GuestPreferences implements Serializable {
 
     /** 默认主题：ultima-indigo */
     public static final String DEFAULT_THEME = "ultima-indigo";
-    /** 默认字体样式：layout-compact */
-    public static final String DEFAULT_SIZE = "layout-compact";
+    /** 默认字体大小：layout-compact */
+    public static final String DEFAULT_FONT_SIZE = "layout-compact";
     /** 默认菜单位置样式：static */
     public static final String DEFAULT_MENU_MODE = "static";
     /** 默认菜单背景样式：menu-layout-static */
     public static final String DEFAULT_MENU_COLOR = "";
-    /** 默认简介位置：inline */
+    /** 默认用户配置模式：inline */
     public static final String DEFAULT_PROFILE = "inline";
     /** 布局的主题(其它可选主题：ultima-blue/ultima-blue-grey/ultima-brown/ultima-cyan/ultima-dark-blue/ultima-dark-green/ultima-green/ultima-grey/ultima-indigo/ultima-purple-amber/ultima-purple-cyan/ultima-teal) */
     private String theme;
     /** 布局的CSS样式文件(其它可选样式：layout-blue/layout-blue-grey/layout-brown/layout-cyan/layout-dark-blue/layout-dark-green/layout-green/layout-grey/layout-indigo/layout-purple-amber/layout-purple-cyan/layout-teal) */
     private String layoutCss;// = "css/layout-indigo.css";
     private String themeColor;// = "#3F51B5";
-    /** 字体样式(layout-compact或"") */
-    private String size;// = "layout-compact";
+    /** 字体大小(layout-compact或"") */
+    private String fontSize;// = "layout-compact";
     /** 菜单样式(static/overlay/horizontal) */
     private String menuMode;// = "static";
     /** 菜单位置样式(layout-wrapper menu-layout-static/layout-wrapper menu-layout-overlay/layout-wrapper menu-layout-static menu-layout-horizontal) */
     private String menuModeClass;
     /** 菜单背景样式(""/layout-menu-dark) */
     private String menuColor; // = "";
-    /** 简介位置(inline/top) */
-    private String profileLocation; // = "inline";
+    /** 用户配置模式(inline/top) */
+    private String profile; // = "inline";
     private Map<String, String> layoutMap;
     private Map<String, String> themeColorMap;
     private Map<String, String> menuModeClassMap;
@@ -92,10 +92,10 @@ public class ThemeView implements Serializable {
         menuModeClassMap.put("horizontal", "layout-wrapper menu-layout-static menu-layout-horizontal");
 
         setTheme(DEFAULT_THEME);
-        setSize(DEFAULT_SIZE);
+        setFontSize(DEFAULT_FONT_SIZE);
         setMenuMode(DEFAULT_MENU_MODE);
         setMenuColor(DEFAULT_MENU_COLOR);
-        setProfileLocation(DEFAULT_PROFILE);
+        setProfile(DEFAULT_PROFILE);
     }
 
     public String getTheme() {
@@ -125,12 +125,12 @@ public class ThemeView implements Serializable {
         this.themeColor = themeColor;
     }
 
-    public String getSize() {
-        return size;
+    public String getFontSize() {
+        return fontSize;
     }
 
-    public void setSize(String size) {
-        this.size = size;
+    public void setFontSize(String fontSize) {
+        this.fontSize = fontSize;
     }
 
     public String getMenuMode() {
@@ -158,11 +158,11 @@ public class ThemeView implements Serializable {
         this.menuColor = menuColor;
     }
 
-    public String getProfileLocation() {
-        return profileLocation;
+    public String getProfile() {
+        return profile;
     }
 
-    public void setProfileLocation(String profileLocation) {
-        this.profileLocation = profileLocation;
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 }

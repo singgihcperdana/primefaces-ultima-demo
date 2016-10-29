@@ -10,7 +10,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
-            <meta name="theme-color" content="#{themeView.themeColor}" />
+            <meta name="theme-color" content="#{guestPreferences.themeColor}" />
         </f:facet>
         <title><ui:insert name="title">PrimeFaces Ultima</ui:insert></title>
         <h:outputScript library="ultima-layout" name="js/nanoscroller.js"/>
@@ -20,13 +20,13 @@
         <h:outputScript name="js/locales_zh.js"/>
         <ui:insert name="head"/>
     </h:head>
-    <h:body class="main-body #{themeView.size}">
+    <h:body class="main-body #{guestPreferences.fontSize}">
         <h:outputStylesheet library="ultima-layout" name="css/nanoscroller.css"/>
         <h:outputStylesheet library="ultima-layout" name="css/animate.css"/>
         <h:outputStylesheet library="ultima-layout" name="css/ripple.css"/>
-        <h:outputStylesheet library="ultima-layout" name="#{themeView.layoutCss}"/>
+        <h:outputStylesheet library="ultima-layout" name="#{guestPreferences.layoutCss}"/>
 
-        <div class="#{themeView.menuModeClass}">
+        <div class="#{guestPreferences.menuModeClass}">
             <ui:include src="./topbar.xhtml"/>
             <ui:include src="./menu.xhtml"/>
 

@@ -86,7 +86,7 @@
         ultima-dark-blue/ultima-dark-green/ultima-green/ultima-grey/
         ultima-indigo/ultima-purple-amber/ultima-purple-cyan/ultima-teal -->
         <!--<param-value>ultima-indigo</param-value>-->
-        <param-value>#{themeView.theme}</param-value>
+        <param-value>#{guestPreferences.theme}</param-value>
     </context-param>
     <context-param>
         <param-name>primefaces.FONT_AWESOME</param-name>

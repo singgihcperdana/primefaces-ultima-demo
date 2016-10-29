@@ -5,10 +5,10 @@
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:pu="http://primefaces.org/ultima">
     <h:form id="menuform">
-        <div class="layout-menu #{themeView.menuColor}">
+        <div class="layout-menu #{guestPreferences.menuColor}">
             <div class="nano">
                 <div class="nano-content menu-scroll-content">
-                    <h:panelGroup rendered="#{(themeView.menuMode ne 'horizontal') and (themeView.profileLocation ne 'top')}">
+                    <h:panelGroup rendered="#{(guestPreferences.menuMode ne 'horizontal') and (guestPreferences.profile ne 'top')}">
                         <div class="profile">
                             <div class="profile-image"/>
                             <a id="profile-options" href="#">
@@ -49,30 +49,30 @@
                         <p:menuitem id="um_dashboards" outcome="/dashboard.xhtml" icon="material-icons " value="Dashboard"/>
 
                         <p:submenu id="themes" label="Themes" icon="material-icons palette">
-                            <p:menuitem id="theme1" icon="material-icons brush" value="Indigo - Pink" actionListener="#{themeView.setTheme('ultima-indigo')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme2" icon="material-icons brush" value="Brown - Green" actionListener="#{themeView.setTheme('ultima-brown')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme3" icon="material-icons brush" value="Blue - Amber" actionListener="#{themeView.setTheme('ultima-blue')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme4" icon="material-icons brush" value="Blue Grey - Green" actionListener="#{themeView.setTheme('ultima-blue-grey')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme5" icon="material-icons brush" value="Dark - Blue" actionListener="#{themeView.setTheme('ultima-dark-blue')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme6" icon="material-icons brush" value="Dark - Green" actionListener="#{themeView.setTheme('ultima-dark-green')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme7" icon="material-icons brush" value="Green - Yellow" actionListener="#{themeView.setTheme('ultima-green')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme8" icon="material-icons brush" value="Purple - Cyan" actionListener="#{themeView.setTheme('ultima-purple-cyan')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme9" icon="material-icons brush" value="Purple - Amber" actionListener="#{themeView.setTheme('ultima-purple-amber')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme10" icon="material-icons brush" value="Teal - Lime" actionListener="#{themeView.setTheme('ultima-teal')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme11" icon="material-icons brush" value="Cyan - Amber" actionListener="#{themeView.setTheme('ultima-cyan')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="theme12" icon="material-icons brush" value="Grey - Deep Orange" actionListener="#{themeView.setTheme('ultima-grey')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme1" icon="material-icons brush" value="Indigo - Pink" actionListener="#{guestPreferences.setTheme('ultima-indigo')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme2" icon="material-icons brush" value="Brown - Green" actionListener="#{guestPreferences.setTheme('ultima-brown')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme3" icon="material-icons brush" value="Blue - Amber" actionListener="#{guestPreferences.setTheme('ultima-blue')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme4" icon="material-icons brush" value="Blue Grey - Green" actionListener="#{guestPreferences.setTheme('ultima-blue-grey')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme5" icon="material-icons brush" value="Dark - Blue" actionListener="#{guestPreferences.setTheme('ultima-dark-blue')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme6" icon="material-icons brush" value="Dark - Green" actionListener="#{guestPreferences.setTheme('ultima-dark-green')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme7" icon="material-icons brush" value="Green - Yellow" actionListener="#{guestPreferences.setTheme('ultima-green')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme8" icon="material-icons brush" value="Purple - Cyan" actionListener="#{guestPreferences.setTheme('ultima-purple-cyan')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme9" icon="material-icons brush" value="Purple - Amber" actionListener="#{guestPreferences.setTheme('ultima-purple-amber')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme10" icon="material-icons brush" value="Teal - Lime" actionListener="#{guestPreferences.setTheme('ultima-teal')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme11" icon="material-icons brush" value="Cyan - Amber" actionListener="#{guestPreferences.setTheme('ultima-cyan')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="theme12" icon="material-icons brush" value="Grey - Deep Orange" actionListener="#{guestPreferences.setTheme('ultima-grey')}" immediate="true" ajax="false"/>
                         </p:submenu>
 
                         <p:submenu id="um_customization" label="Customization" icon="material-icons settings">
-                            <p:menuitem id="custom1" icon="material-icons fiber_manual_record" value="Compact Size" actionListener="#{themeView.setSize('layout-compact')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom2" icon="material-icons fiber_smart_record" value="Material Size" actionListener="#{themeView.setSize('')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom3" icon="material-icons menu" value="Static Menu" actionListener="#{themeView.setMenuMode('static')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom4" icon="material-icons exit_to_app" value="Overlay Menu" actionListener="#{themeView.setMenuMode('overlay')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom5" icon="material-icons border_horizontal" value="Horizontal Menu" actionListener="#{themeView.setMenuMode('horizontal')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom6" icon="material-icons label_outline" value="Light Menu" actionListener="#{themeView.setMenuColor('')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom7" icon="material-icons label" value="Dark Menu" actionListener="#{themeView.setMenuColor('layout-menu-dark')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom8" icon="material-icons contacts" value="Inline Profile" actionListener="#{themeView.setProfileLocation('inline')}" immediate="true" ajax="false"/>
-                            <p:menuitem id="custom9" icon="material-icons person_pin" value="Top Profile" actionListener="#{themeView.setProfileLocation('top')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom1" icon="material-icons fiber_manual_record" value="Compact Size" actionListener="#{guestPreferences.setFontSize('layout-compact')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom2" icon="material-icons fiber_smart_record" value="Material Size" actionListener="#{guestPreferences.setFontSize('')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom3" icon="material-icons menu" value="Static Menu" actionListener="#{guestPreferences.setMenuMode('static')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom4" icon="material-icons exit_to_app" value="Overlay Menu" actionListener="#{guestPreferences.setMenuMode('overlay')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom5" icon="material-icons border_horizontal" value="Horizontal Menu" actionListener="#{guestPreferences.setMenuMode('horizontal')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom6" icon="material-icons label_outline" value="Light Menu" actionListener="#{guestPreferences.setMenuColor('')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom7" icon="material-icons label" value="Dark Menu" actionListener="#{guestPreferences.setMenuColor('layout-menu-dark')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom8" icon="material-icons contacts" value="Inline Profile" actionListener="#{guestPreferences.setProfile('inline')}" immediate="true" ajax="false"/>
+                            <p:menuitem id="custom9" icon="material-icons person_pin" value="Top Profile" actionListener="#{guestPreferences.setProfile('top')}" immediate="true" ajax="false"/>
                         </p:submenu>
 
                         <p:submenu id="um_components" label="Components" icon="material-icons list">
