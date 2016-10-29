@@ -42,13 +42,13 @@ public class ThemeView implements Serializable {
     /** 布局的CSS样式文件(其它可选样式：layout-blue/layout-blue-grey/layout-brown/layout-cyan/layout-dark-blue/layout-dark-green/layout-green/layout-grey/layout-indigo/layout-purple-amber/layout-purple-cyan/layout-teal) */
     private String layoutCss;// = "css/layout-indigo.css";
     private String themeColor;// = "#3F51B5";
-    /** 字体样式：layout-compact或"" */
+    /** 字体样式(layout-compact或"") */
     private String size;// = "layout-compact";
-    /** 菜单样式：static/overlay/horizontal */
+    /** 菜单样式(static/overlay/horizontal) */
     private String menuMode;// = "static";
-    /** 菜单位置样式：layout-wrapper menu-layout-static/layout-wrapper menu-layout-overlay/layout-wrapper menu-layout-static menu-layout-horizontal */
+    /** 菜单位置样式(layout-wrapper menu-layout-static/layout-wrapper menu-layout-overlay/layout-wrapper menu-layout-static menu-layout-horizontal) */
     private String menuModeClass;
-    /** 菜单背景样式：""/layout-menu-dark */
+    /** 菜单背景样式(""/layout-menu-dark) */
     private String menuColor; // = "";
     /** 简介位置(inline/top) */
     private String profileLocation; // = "inline";
@@ -107,9 +107,6 @@ public class ThemeView implements Serializable {
         // 根据主题的颜色变化，重置页面布局CSS
         layoutCss = layoutMap.get(theme);
         themeColor = themeColorMap.get(theme);
-//        if (layoutCss == null) {
-//            layoutCss = "css/layout-indigo.css";
-//        }
     }
 
     public String getLayoutCss() {
@@ -142,12 +139,7 @@ public class ThemeView implements Serializable {
 
     public void setMenuMode(String menuMode) {
         this.menuMode = menuMode;
-
-        this.theme = theme;
         menuModeClass = menuModeClassMap.get(menuMode);
-//        if (menuModeClass == null) {
-//            menuModeClass = "layout-wrapper menu-layout-static";
-//        }
     }
 
     public String getMenuModeClass() {
